@@ -1,5 +1,3 @@
-cd Educa-platform
-
 # 🎓 Educa - Advanced Learning Platform
 
 > **A high-performance, fully responsive Educaional web application focusing on dynamic data rendering and modern UI architecture.**
