@@ -1,0 +1,138 @@
+// media queries styles
+
+@media screen and (min-width: 450px) {
+  section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .home {
+    .columns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  .header-navbar {
+    display: flex;
+    a {
+      color: $bg-white;
+      margin-left: 2rem;
+      font-size: 1.4rem;
+      font-weight: 1.5rem;
+      display: flex;
+      text-decoration: none;
+      &:hover {
+        color: $dark-purple4;
+        transition: 0.3s ease;
+        text-decoration: underline;
+      }
+    }
+  }
+  #menu-btn {
+    display: none;
+  }
+  .system-container {
+    display: grid;
+  }
+  .teachers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+
+    .teacher-card {
+      gap: 0.3rem;
+    }
+  }
+  .features-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .weekly-schedule,
+  .today-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    display: none;
+
+    .class-schedule {
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .class-info span {
+      display: block;
+    }
+  }
+  .courses-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .cources-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 5%;
+  }
+  .footer-links,
+  .socail-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-credits,
+  .footer-copyright {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 0.3rem;
+
+    .contact-numbers {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .today-cards {
+    .today-card {
+      p {
+        // span {
+        display: inline;
+        // }
+      }
+    }
+  }
+}
