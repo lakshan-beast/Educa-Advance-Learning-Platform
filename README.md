@@ -1,6 +1,6 @@
 # 🎓 Educa - Advanced Learning Platform
 
-> **A high-performance, fully responsive Educaional web application focusing on dynamic data rendering and modern UI architecture.**
+> **A high-performance, fully responsive Educational web application focusing on dynamic data rendering and modern UI architecture.**
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Build](https://img.shields.io/badge/build-passing-success)
@@ -44,11 +44,7 @@ Check out how **Educa** adapts to different screen sizes:
 | :-------------------------------: | :------------------------------: | :------------------------------: |
 | ![Desktop](assets/hero-image.png) | ![Tablet](assets/hero-image.png) | ![Mobile](assets/hero-image.png) |
 
-<!-- ![Mobile](.images/desktop.png) -->
-
 <p>
-<!-- <img src=".images/desktop.png" width="60%">  -->
-<!-- <img src=".images/mobile.png" width="30%">  -->
 <img src="/assets/english-class.jpg" width="60%"> 
 <img src="/assets/maths-class.jpg" width="30%"> 
 <img src="/assets/science-class.jpg" width="10%"> 
@@ -58,7 +54,74 @@ Check out how **Educa** adapts to different screen sizes:
 
 ## ⚙️ Installation & Usage
 
-1. **Clone the Project:**
-   ```bash
-   git clone https://github.com/lakshan-beast/Educa-Platform.git
-   ```
+### 1. 🚀 **Clone the Project:**
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+```
+
+---
+
+### 2. **Navigate to the folder**
+
+```bash
+cd Educa-Platform
+```
+
+---
+
+### 3. 📂 **Project Structure**
+
+Educa - Advanced Learning Platform/
+├── assets/
+│ ├── images/
+│ └── pdf/
+├── css/
+├── data/
+├── html/
+│ ├── login/
+│ │ └── login.html
+│ ├── class.html
+│ ├── daily.html
+│ ├── index.html
+│ ├── materials.html
+│ ├── reviews.html
+│ └── tools.html
+├── js/
+├── sass/
+└── README.md
+
+### 4. 🧠 **What I Learned**
+
+- Advanced responsive design using Sass media queries
+- Fetch API for dynamic data rendering
+- Writing scalable and maintainable SCSS architecture
+- Handling asynchronous JavaScript operations
+
+---
+
+### 5. 🔗
+
+```md
+## 🔗 Live Demo
+
+👉 https://your-live-link.com
+
+---
+
+### 6. 📜 **License**
+
+This project is licensed under the MIT License.
+
+### 8. 🎓 **Course Categories**
+
+![English](./assets/english-class.jpg)
+![Maths](./assets/maths-class.jpg)
+![Science](./assets/science-class.jpg)
+
+### 8. 📌 **Future Improvements**
+
+- User authentication system
+- Backend integration (Node.js / Firebase)
+- Course enrollment system
+```
