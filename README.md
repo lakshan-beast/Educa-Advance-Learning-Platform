@@ -2,9 +2,12 @@
 
 > **A high-performance, fully responsive Educaional web application focusing on dynamic data rendering and modern UI architecture.**
 
-![Build Status](https://img.shields.io)
-![Tech Stack](https://img.shields.io)
-![License](https://img.shields.io)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Build](https://img.shields.io/badge/build-passing-success)
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
