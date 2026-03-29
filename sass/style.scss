@@ -11,19 +11,13 @@
 
 // full system conatiner div style
 .system-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
   margin: $margin-none;
   padding: $padding-none;
 }
 // main part div style
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
   margin-bottom: $margin-xlarge;
 }
 
@@ -54,16 +48,10 @@ main {
   padding: 0 20px;
   padding-bottom: 4rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
 
   .columns {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+    @include flex-custom(center, center, column-reverse);
     padding: 0 0.3rem;
     padding-top: 5rem;
   }
@@ -79,10 +67,8 @@ main {
       }
     }
     .home-links {
-      display: flex;
-      align-items: center;
       padding: $padding-none;
-      flex-direction: row;
+      @include flex-custom(center, center, row);
 
       a {
         width: 180px;
@@ -100,9 +86,7 @@ main {
       width: 100%;
       height: auto;
       margin: 5rem auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center-everything;
     }
   }
   .description {
@@ -120,10 +104,7 @@ section {
   width: 100%;
   border-radius: $border-radius-medium;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
 }
 .parts {
   padding: 0 1rem;
@@ -136,10 +117,7 @@ section {
   background: transparent;
   border-radius: $border-radius-medium;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
 
   h2 {
     margin: 0.8rem 0;
@@ -169,12 +147,8 @@ section {
 
   .features-card {
     background: $bg-white;
-    // padding: 0rem 12px;
     border-radius: $border-radius-medium;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-custom(space-between, center, column);
     animation: cardBottom 0.6s ease-in forwards;
     box-shadow: 0px 1px 8px $blue-light;
     img {
@@ -241,10 +215,7 @@ section {
       margin: $margin-none;
       margin-bottom: 2rem;
       border-radius: $border-radius-medium;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-custom(space-between, center, column);
       animation: cardBottom 1.6s ease-in forwards;
       box-shadow: 0px 0px 20px $blue-light;
       gap: 6px;
@@ -257,11 +228,7 @@ section {
         // box-shadow: 0px 3px 6px $blue-light;
       }
       .classes-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: nowrap;
+        @include flex-custom(flex-start, center, column, nowrap);
         padding: 0 2rem;
 
         h3 {
@@ -309,12 +276,9 @@ section {
 }
 
 .more-btn {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  @include flex-custom(flex-end, flex-end, row);
   margin-top: 0;
   margin-bottom: 1rem;
-  // float: right;
 
   a {
     border-radius: $border-radius-xlarge;
@@ -340,10 +304,7 @@ section {
 
     .teacher-card {
       border: 2px solid $blue-light;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
+      @include flex-custom(space-between, flex-start, column);
       margin-bottom: 1rem;
       border-radius: $border-radius-medium;
       box-shadow: 0px 4px 15px $blue-light;
@@ -371,13 +332,9 @@ section {
         }
 
         .share {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          @include flex-custom(space-between, center, column, nowrap);
           margin: $margin-medium;
           padding: 0 1rem;
-          flex-wrap: nowrap;
-          justify-content: space-around;
           width: 100%;
           a {
             border-radius: $border-radius-medium;
@@ -406,10 +363,7 @@ section {
 
       .teacher-info {
         background-color: $blue-light;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        // align-items: flex-start;
+        @include flex-custom(center, column);
         margin: $margin-none;
         padding: 1rem 0.5rem;
         // margin-bottom: 2px;
@@ -461,11 +415,7 @@ section {
   box-shadow: 0px 0px 6px $blue-light;
   border-radius: $border-radius-medium;
   height: 100%;
-  // padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  @include flex-custom(space-around, center, column);
 
   h2 {
     color: $h2-color;
@@ -526,11 +476,8 @@ section {
         background-color: $bg-white;
         border-radius: $border-radius-small;
         box-shadow: 0px 3px 6px $dark-purple;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        align-items: center;
+
+        @include flex-custom(space-between, center, column);
 
         i {
           font-size: $font-size-huge;
@@ -640,21 +587,14 @@ section {
         margin: 6px;
         padding: 6px;
         border-radius: $border-radius-small;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        text-align: left;
-        // display: none;
+
+        @include flex-custom(flex-start, flex-start, column);
 
         h3 {
           /* background-color: white; */
           margin: 0px auto;
           padding: 9px;
           border-radius: $border-radius-small;
-          /* display: flex; */
-          /* align-items: flex-start; */
-          flex-direction: column;
-          /* text-align: center; */
           color: $blue-medium;
         }
         p,
@@ -858,10 +798,7 @@ section {
   top: 0;
   right: 0;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
   display: none;
 
   h3 {
@@ -873,10 +810,7 @@ section {
 }
 
 #sidenavLinks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-custom;
   overflow: hidden;
   // background-color: #40d1db;
   align-content: center;
@@ -907,8 +841,7 @@ section {
   font-size: $font-size-h3;
   color: $light-text;
   border-radius: $border-radius-small;
-  display: flex;
-  align-items: center;
+  @include flex-custom(center);
 }
 #sidenavLlinks a::after {
   content: ">>";
@@ -987,10 +920,7 @@ section {
   }
   .home {
     .columns {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-custom(space-between, center, row);
       width: 100%;
     }
   }
@@ -1069,10 +999,7 @@ section {
     gap: 1rem;
 
     .classes-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flex-custom(center, center, column);
     }
   }
   .teachers .teachers-container .teacher-card .card-column img {
@@ -1099,38 +1026,25 @@ section {
     }
   }
   footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
+    @include flex-custom(space-between, center, column);
     margin: $margin-none;
     padding: $padding-none;
   }
   .footer-contents {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: flex-start;
-    // align-items: flex-start;
-    // padding: 0 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
     gap: 30px;
     padding: 40px 10%;
   }
   .socail-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    @include flex-custom(center, flex-start, row);
   }
   .footer-credits,
   .footer-copyright {
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    @include flex-custom(center, center, column);
   }
   .information {
     display: grid;
@@ -1145,17 +1059,11 @@ section {
   }
 
   .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+    @include flex-custom;
     gap: 0.3rem;
 
     .contact-numbers {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      @include flex-custom(center, center, row);
     }
   }
   .today-cards {
