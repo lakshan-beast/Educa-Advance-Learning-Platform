@@ -40,9 +40,9 @@
 
 Check out how **Educa** adapts to different screen sizes:
 
-|           Desktop View            |           Tablet View            |           Mobile View            |
-| :-------------------------------: | :------------------------------: | :------------------------------: |
-| ![Desktop](assets/hero-image.png) | ![Tablet](assets/hero-image.png) | ![Mobile](assets/hero-image.png) |
+|               Desktop View               |               Tablet View               |               Mobile View               |
+| :--------------------------------------: | :-------------------------------------: | :-------------------------------------: |
+| ![Desktop](assets/images/hero-image.png) | ![Tablet](assets/images/hero-image.png) | ![Mobile](assets/images/hero-image.png) |
 
 <p>
 <img src="/assets/english-class.jpg" width="60%"> 
