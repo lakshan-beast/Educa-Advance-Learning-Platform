@@ -1,0 +1,26 @@
+// all btns buttun and buttons
+.btn,
+button {
+  background-image: linear-gradient(
+    to right,
+    #f7786f 0%,
+    #484aee 51%,
+    #4e6ab9 100%
+  );
+  color: $bg-white;
+  box-shadow: 0px 0px 6px rgb(208, 208, 228);
+}
+.btn,
+button {
+  text-align: center;
+  transition: 0.6s;
+  background-size: 200% auto;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.btn:hover,
+button:hover {
+  background-position: right center;
+}

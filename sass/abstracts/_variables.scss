@@ -1,41 +1,128 @@
 // variables.scss
-$background: #21596e;
-$background-linear: radial-gradient(
-  rgb(0, 47, 100) 0%,
-  rgb(3, 69, 155) 19.7%,
-  rgb(69, 255, 227) 100.2%
-);
-$backgrounds: linear-gradient(
-  130deg,
+
+// stores colors and other variables used in the project
+$background: #ffffff;
+$background-linear: linear-gradient(
+  155deg,
   #5454d9 0%,
-  rgb(255, 255, 255) 10%,
-  rgb(255, 255, 255) 80%,
+  rgb(255, 255, 255) 5%,
+  rgb(255, 255, 255) 85%,
   #5454d9 100%
 );
-
-$skyblue: #00eeff;
-$skyblue1: #00b7c4;
+$desktop-background: linear-gradient(
+  155deg,
+  #5454d9 0%,
+  rgb(255, 255, 255) 5%,
+  rgb(255, 255, 255) 85%,
+  #5454d9 100%
+);
 $orange: #f7786f;
-$green: rgba(35, 243, 53, 0.8);
+
+$h2-color: #190f8e;
+
+$blue-light: #c6d4fa;
+$blue-medium: rgb(78, 106, 185);
+$dark-blue: rgb(3, 3, 48);
+$extra-blue: #4e6ab9;
+
+$label-color: #7f91ec;
+
+$facebook-color: #1877f2;
+$insta-primary-color: #833ab4;
+$whatsapp-color: #5bf099;
+$call-color: #2596be;
 
 $bg-white: #fcfcfc;
-$light-bg: #e9e9e9;
+$bg-light: #e0e8ff;
 
 $light-text: #f7f7f7;
-$medium-text: #717d85;
+$medium-text: rgb(123, 128, 143);
 $dark-text: #20405a;
-
-$light-blue: #3a4069;
-$dark-blue: rgb(0, 0, 63);
-
-$light-black: #112325;
-$dark-black: #011315;
 
 $dark-purple1: #484aee;
 $dark-purple2: #5454d9;
-$dark-purple3: #26136d;
-$dark-purple4: #7f91ec;
-$dark-purple5: #c6d4fa;
-$dark-purple55: rgb(78, 106, 185);
-$dark-purple6: #190f8e;
-$dark-purple7: #2596be;
+$dark-purple: #26136d;
+
+$link-shadow: #c3c3ff;
+
+// fonts
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Exo 2", sans-serif;
+
+// font-sizes
+$font-size-h1: 2.5rem;
+$font-size-h2: 1.8rem;
+$font-size-h3: 1.4rem;
+$font-size-p: 1rem;
+$font-size-small: 0.8rem;
+$font-size-xsmall: 0.6rem;
+$font-size-xxsmall: 0.5rem;
+$font-size-huge: 1.2rem;
+$font-size-xhuge: 1.5rem;
+$font-size-xxhuge: 2rem;
+
+// font-weights
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+// font-styles
+$font-style-normal: normal;
+$font-style-italic: italic;
+
+// transitions
+$transition-fast: 0.3s ease;
+
+// breakpoints
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 900px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large-desktop: 1800px;
+$breakpoint-small-mobile: 350px;
+
+// border-radius
+$border-radius-small: 0.5rem;
+$border-radius-medium: 1rem;
+$border-radius-large: 1.5rem;
+$border-radius-xlarge: 2rem;
+$border-radius-xxlarge: 3rem;
+$border-radius-circle: 50%;
+$border-radius-xsmall: 0.3rem;
+$border-radius-none: 0rem;
+$border-radius-styles: 0 0 1rem 1rem;
+$border-radius-styles2: 1rem 1rem 0 0;
+
+// shadows
+$shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
+$shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+// z-index
+$z-index-header: 999;
+$z-index-footer: 998;
+$z-index-modal: 1000;
+$z-index-dropdown: 997;
+$z-index-tooltip: 996;
+$z-index-overlay: 995;
+$z-index-default: 1;
+$z-index-negative: -1;
+
+// paddings
+$padding-small: 0.5rem;
+$padding-medium: 1rem;
+$padding-large: 1.5rem;
+$padding-xlarge: 2rem;
+$padding-xsmall: 0.3rem;
+$padding-xxsmall: 0.1rem;
+$padding-none: 0;
+// $padding-styles: 0 ;
+
+// margins
+$margin-small: 0.5rem;
+$margin-medium: 1rem;
+$margin-large: 1.5rem;
+$margin-xlarge: 2rem;
+$margin-xsmall: 0.3rem;
+$margin-xxsmall: 0.1rem;
+$margin-none: 0;

@@ -1,9 +1,9 @@
-// reset styles 
+// reset styles
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: $font-primary;
   text-decoration: none;
   text-transform: capitalize;
   border: none;
@@ -15,7 +15,7 @@
 }
 
 *::selection {
-  background-color: $dark-purple4;
+  background-color: $dark-purple1;
   color: $bg-white;
 }
 ::-webkit-scrollbar {
@@ -33,5 +33,13 @@ html {
   overflow-x: hidden;
 }
 body {
-  background: $backgrounds;
+  background: $background-linear;
+}
+
+h1,
+h2,
+h3,
+h4,
+span {
+  font-family: $font-secondary;
 }
