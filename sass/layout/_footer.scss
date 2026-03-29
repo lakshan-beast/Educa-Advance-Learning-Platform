@@ -41,7 +41,11 @@ footer {
   .footer-cards {
     margin: 1rem 0;
     width: 100%;
-    padding: 0rem;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     p {
       font-size: 0.6rem;
       color: $dark-purple5;
@@ -140,9 +144,15 @@ footer {
     display: none;
   }
 }
-.footer-bottom {
+#footer-bottom {
   border-top: 2px solid $dark-purple4;
   margin-bottom: 6px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-content: center;
 }
 .footer-credits,
 .footer-copyrights {
