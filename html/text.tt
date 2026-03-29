@@ -1179,3 +1179,285 @@
                 loading="lazy"
                 title="english"></iframe>
             </div>
+
+
+
+            <div class="cources-box box">
+                <i class="fas fa-graduation-cap"> </i>
+                <h3 id="classesCount">3+</h3>
+                <p>classes</p>
+              </div>
+              <div class="teachers-box box">
+                <i class="fas fa-graduation-cap"> </i>
+                <h3 id="classesCount">3+</h3>
+                <p>teachers</p>
+              </div>
+              <div class="students-box box">
+                <i class="fas fa-graduation-cap"> </i>
+                <h3 id="classesCount">2500+</h3>
+                <p>students</p>
+              </div>
+              <div class="satisfaction-box box">
+                <i class="fas fa-graduation-cap"> </i>
+                <h3 id="classesCount">100%</h3>
+                <p>satisfaction</p>
+              </div>
+
+
+
+
+
+
+              .weekly-schedule {
+  background-color: $dark-purple5;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  display: none;
+
+  .class-schedule {
+    padding: 1rem;
+
+    h3 {
+      color: $dark-purple3;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .class-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.2rem 1rem;
+      padding: 0px 1rem;
+      background: $light-bg;
+      border-radius: 8px;
+
+      p {
+        color: $dark-black;
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        span {
+          color: $dark-purple6;
+          font-size: 1.1rem;
+          font-weight: normal;
+          margin: 0 6px;
+          display: inline-flex;
+        }
+      }
+      a {
+        border-radius: 1.5rem;
+        padding: 6px 12px;
+        width: 120px;
+        background: $dark-purple2;
+
+        .fa-brands {
+          margin-left: 3px;
+        }
+
+        i {
+          color: $bg-white;
+        }
+      }
+    }
+  }
+}
+
+.today-class {
+  padding: 1rem;
+  display: none;
+  h3 {
+    color: $dark-purple1;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 6px;
+
+    span {
+      background-color: $dark-purple3;
+      color: $dark-purple5;
+      padding: 3px 12px;
+      margin-left: 3px;
+      border-radius: 3px;
+    }
+  }
+
+  .today-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+
+    .today-card {
+      // background-color: $dark-purple5;
+      background-color: $bg-white;
+      border: 2px solid $dark-purple5;
+      box-shadow: 0px 1px 6px $dark-purple4;
+      margin: 6px 0;
+
+      padding: 12px;
+      border-radius: 1rem;
+      h3 {
+        color: $dark-purple2;
+        text-align: center;
+        margin-bottom: 6px;
+        span {
+          background-color: transparent;
+          //       i {
+          //       }
+          //     }
+        }
+      }
+      p {
+        color: $dark-purple3;
+        margin-top: 8px;
+
+        span {
+          display: block;
+          color: $bg-white;
+          background-color: $dark-purple4;
+          padding: 3px 6px;
+          margin: 0 2px;
+          border-radius: 6px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.box {
+  padding: 6px 12px;
+  background-color: $bg-white;
+  border-radius: 0.5rem;
+  height: 40px;
+  box-shadow: 0px 3px 6px $dark-purple4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 9;
+  display: none;
+
+  i {
+    font-size: 2rem;
+    font-weight: bolder;
+    animation: iconLeft 1s ease-in forwards;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $dark-purple3;
+    font-weight: bolder;
+    animation: numPop 1s ease-in forwards;
+    margin-right: 12px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $dark-purple4;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    animation: bottomText 1s ease-in forwards;
+  }
+}
+.cources-box {
+  top: 17rem;
+  left: 3rem;
+}
+.teachers-box {
+  bottom: 33rem;
+  left: 1rem;
+}
+.students-box {
+  top: 15rem;
+  right: 7rem;
+}
+.satisfaction-box {
+  bottom: 35rem;
+  right: 1rem;
+}
+@keyframes iconLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes numPop {
+  from {
+    opacity: 0.2;
+    transform: translateY(-25px) rotate(-120deg) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+@keyframes bottomText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+// .result {
+//   margin-top: 1.5rem;
+//   border-top: 2px solid $light-blue;
+// }
+// .result-container {
+//   background: transparent;
+
+//   h2 {
+//     margin: 0.8rem 0;
+//     font-size: 1.8rem;
+//     color: $skyblue1;
+//     font-weight: bold;
+//     text-align: center;
+//     border: none;
+//   }
+
+//   .year-results {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 0.8rem;
+//     margin: 0.5rem 1rem;
+//     padding: 0.5rem;
+
+//     .results-box {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       gap: 1rem;
+//       background-color: $light-white;
+//     }
+//   }
+// }
+
+// .goal-content {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: flex-start;
+//   padding: 1rem;
+//   color: $light-white;
+//   text-align: center;
+
+//   ul {
+//     list-style-type: circle;
+//     text-align: left;
+//     margin: 1rem;
+//   }
+// }
+
+
+<i class="fa-solid fa-spinner fa-spin-pulse fa-2xs" style="color: rgb(177, 151, 252);"></i>

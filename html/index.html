@@ -10,7 +10,7 @@
     <!-- index.html styles  -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- all styles - header & footer  -->
-    <link rel="stylesheet" href="../css/all.css" />
+    <!-- <link rel="stylesheet" href="../css/all.css" /> -->
 
     <link
       rel="stylesheet"
@@ -25,8 +25,15 @@
   <body>
     <header>
       <div class="header">
+        <div class="header-menu">
+          <i
+            class="fa-solid fa-bars-staggered"
+            title="Menu"
+            id="menu-btn"
+            class="menu-btn"></i>
+        </div>
         <a href="#home" class="header-logo"
-          ><i class="fa-solid fa-circle"></i> educa.</a
+          ><i class="fa-regular fa-circle"></i> educa.</a
         >
         <div class="header-navbar" id="header-navbar">
           <a href="#home">Home</a>
@@ -37,17 +44,10 @@
           <a href="#contacts">Contact us</a>
         </div>
         <div class="header-actions">
-          <i
-            class="fa-solid fa-bars-staggered"
-            title="Menu"
-            id="menu-btn"
-            class="menu-btn"></i>
-          <a href="#" class="btn" id="formBtn"
-            >sign in <i class="fa-solid fa-user-plus"></i
-          ></a>
-          <a href="#" class="btn" id="profile"
-            ><i class="fa-solid fa-user"></i
-          ></a>
+          <button type="button" class="btn" id="formBtn">sign in</button>
+          <button type="button" class="btn" id="profile">
+            <i class="fa-solid fa-user"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -103,8 +103,8 @@
                 class="password"
                 id="password "
                 placeholder="Password"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required />
+              <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
             </div>
 
             <div class="input-box">
@@ -116,8 +116,8 @@
                 class="password"
                 id="password"
                 placeholder="Confirm Password"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required />
+              <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
             </div>
             <input
               type="submit"
@@ -185,7 +185,7 @@
         </div>
       </div>
 
-      <div class="profile-card">
+      <div class="profile-card" id="profile-card">
         <i class="fa-solid fa-xmark"></i>
         <div class="student-details">
           <div class="student-image">
@@ -254,36 +254,17 @@
                 day.
               </p>
 
-              <a href="#features" class="btn">
-                start learning <i class="fa-solid fa-rocket"></i
-              ></a>
-              <a href="#classes" class="btn">
-                View classes <i class="fa-solid fa-book"></i
-              ></a>
+              <div class="home-links">
+                <a href="#features" class="btn">
+                  start learning <i class="fa-solid fa-rocket"></i
+                ></a>
+                <a href="#classes" class="btn">
+                  View classes <i class="fa-solid fa-book"></i
+                ></a>
+              </div>
             </div>
 
             <div class="column hero-img">
-              <div class="cources-box box">
-                <i class="fas fa-graduation-cap"> </i>
-                <h3 id="classesCount">3+</h3>
-                <p>classes</p>
-              </div>
-              <div class="teachers-box box">
-                <i class="fas fa-graduation-cap"> </i>
-                <h3 id="classesCount">3+</h3>
-                <p>teachers</p>
-              </div>
-              <div class="students-box box">
-                <i class="fas fa-graduation-cap"> </i>
-                <h3 id="classesCount">2500+</h3>
-                <p>students</p>
-              </div>
-              <div class="satisfaction-box box">
-                <i class="fas fa-graduation-cap"> </i>
-                <h3 id="classesCount">100%</h3>
-                <p>satisfaction</p>
-              </div>
-
               <img src="../assets/hero-image.png" alt="" />
             </div>
           </div>
@@ -356,9 +337,9 @@
             <h3><i class="fa-solid fa-comments"></i> Student Reviews</h3>
             <p>See what students say about classes & learning experience.</p>
             <a
-              href="reviews.html"
+              href="reviews.html#reviews"
               class="btn"
-              target="_blank"
+              target="_parent"
               rel="noopener noreferrer"
               >Read Reviews</a
             >
@@ -384,13 +365,13 @@
       <section class="classes parts" id="classes">
         <h2 class="heading">our <span>classes</span></h2>
 
-        <div class="cources-container">
+        <div class="classes-container">
           <div class="classes-content">
             <div class="classes-card">
-              <div class="cources-column">
+              <div class="classes-column">
                 <img src="../assets/maths-class.jpg" alt="" />
               </div>
-              <div class="cources-info">
+              <div class="classes-info">
                 <h3>O/L Methamatics</h3>
                 <h4>strong foundation for O/L success</h4>
                 <p>
@@ -404,10 +385,10 @@
             </div>
 
             <div class="classes-card">
-              <div class="cources-column">
+              <div class="classes-column">
                 <img src="../assets/science-class.jpg" alt="" />
               </div>
-              <div class="cources-info">
+              <div class="classes-info">
                 <h3>O/L Science</h3>
                 <h4>Concept based learning</h4>
                 <p>
@@ -421,10 +402,10 @@
             </div>
 
             <div class="classes-card">
-              <div class="cources-column">
+              <div class="classes-column">
                 <img src="../assets/english-class.jpg" alt="" />
               </div>
-              <div class="cources-info">
+              <div class="classes-info">
                 <h3>O/L English</h3>
                 <h4>Grammer & spoken Improvement</h4>
                 <p>
@@ -441,7 +422,7 @@
           <div class="more-btn">
             <a href="../html/class.html" class="btn">More Class Details</a>
           </div>
-          <!-- cources-container  -->
+          <!-- classes-container  -->
 
           <div class="today-class">
             <h3>Today Class <span>Monday 12, 2026</span></h3>
@@ -501,7 +482,7 @@
           <div class="teacher-card">
             <div class="card-column">
               <img src="../assets/maths  teacher.jpg" alt="" />
-              <div class="share">
+              <!-- <div class="share">
                 <a href="#" title="brands"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
@@ -511,7 +492,22 @@
                 <a href="#" title="brands"
                   ><i class="fa-brands fa-whatsapp"></i
                 ></a>
-                <button type="button">Call</button>
+                <a href="tel:+94787030317" class="btn">Call</a>
+              </div> -->
+              <div class="sidenav-links" id="sidenavLinks">
+                <a href="#" title="brands" id="facebook"
+                  ><i class="fa-brands fa-facebook"></i>facebook</a
+                >
+                <a href="#" title="brands" id="instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="#" title="brands" id="whatsapp"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+
+                <a href="tel:+94787030317" id="call"
+                  ><i class="fa-solid fa-phone"></i
+                ></a>
               </div>
             </div>
             <div class="card-column teacher-info">
@@ -533,17 +529,20 @@
           <div class="teacher-card">
             <div class="card-column">
               <img src="../assets/science teacher.jpg" alt="" />
-              <div class="share">
-                <a href="#" title="brands"
+              <div class="sidenav-links" id="sidenavLinks">
+                <a href="#" title="brands" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
-                <a href="#" title="brands"
+                <a href="#" title="brands" id="instagram"
                   ><i class="fa-brands fa-instagram"></i
                 ></a>
-                <a href="#" title="brands"
+                <a href="#" title="brands" id="whatsapp"
                   ><i class="fa-brands fa-whatsapp"></i
                 ></a>
-                <button type="button">Call</button>
+
+                <a href="tel:+94787030317" id="call"
+                  ><i class="fa-solid fa-phone"></i
+                ></a>
               </div>
             </div>
             <div class="card-column teacher-info">
@@ -564,17 +563,20 @@
           <div class="teacher-card">
             <div class="card-column">
               <img src="../assets/english teacher.jpg" alt="" />
-              <div class="share">
-                <a href="#" title="brands"
+              <div class="sidenav-links" id="sidenavLinks">
+                <a href="#" title="brands" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
-                <a href="#" title="brands"
+                <a href="#" title="brands" id="instagram"
                   ><i class="fa-brands fa-instagram"></i
                 ></a>
-                <a href="#" title="brands"
+                <a href="#" title="brands" id="whatsapp"
                   ><i class="fa-brands fa-whatsapp"></i
                 ></a>
-                <button type="button">Call</button>
+
+                <a href="tel:+94787030317" id="call"
+                  ><i class="fa-solid fa-phone"></i
+                ></a>
               </div>
             </div>
             <div class="card-column teacher-info">
@@ -592,73 +594,160 @@
         </div>
       </section>
 
-      <section class="contact parts" id="contacts">
-        <h2>Contact <span>Us</span></h2>
+      <section class="information parts" id="information">
+        <div class="about-container info-column" id="about">
+          <h2>Why <span>Choose Us</span></h2>
+          <p>
+            We help students learn iin simple & effective way through clear
+            lessons, regular practce, & continuous support. Our goal is to build
+            confidence & guide every student towards succesd.
+          </p>
 
-        <div class="contact-container">
-          <div class="contact-info">
-            <div class="contact-numbers">
-              <p>maths class <a href="#" class="btnx">+941234567</a></p>
-              <p>science class <a href="#" class="btnx">+941234567</a></p>
-              <p>english class <a href="#" class="btnx">+941234567</a></p>
+          <div class="about-content">
+            <div class="about-cards">
+              <div class="about-card">
+                <h3>Experienced Teachers</h3>
+                <p>Guided by skilled & dedicated teachers.</p>
+              </div>
+              <div class="about-card">
+                <h3>Structured Lessons</h3>
+                <p>step-by-step lessons designed for easy understanding.</p>
+              </div>
+              <div class="about-card">
+                <h3>Friendly Learning</h3>
+                <p>A supportivve & motivating learning enviroment.</p>
+              </div>
+            </div>
+
+            <div class="about-status">
+              <div class="cources-box box">
+                <i class="fas fa-chalkboard"></i>
+                <h3 id="classesCount">3+</h3>
+                <p>classes</p>
+              </div>
+              <div class="teachers-box box">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3 id="classesCount">3+</h3>
+                <p>teachers</p>
+              </div>
+              <div class="students-box box">
+                <i class="fas fa-user-graduate"> </i>
+                <h3 id="classesCount">2500+</h3>
+                <p>students</p>
+              </div>
+              <div class="satisfaction-box box">
+                <i class="fas fa-face-smile"> </i>
+                <h3 id="classesCount">100%</h3>
+                <p>satisfaction</p>
+              </div>
+            </div>
+
+            <div class="result-container">
+              <canvas id="olResultChart" width="400" height="250"></canvas>
             </div>
           </div>
+        </div>
 
-          <div class="contact-form">
-            <form action="#" method="post">
-              <fieldset>
-                <legend>Contact Form</legend>
-                <label for="name">Your Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Your name"
-                  required />
+        <div class="contact-container info-column" id="contacts">
+          <h2>Contact <span>Us</span></h2>
 
-                <label for="mail">Email Address </label>
-                <input
-                  type="email"
-                  name="mail"
-                  id="mail"
-                  placeholder="Your Email"
-                  required />
+          <div class="contact-content">
+            <div class="contact-cards">
+              <div class="contact-card">
+                <h3>Maths Class</h3>
+                <a href="#" class="btnx"
+                  ><i class="fas fa-mobile"></i>+941234567</a
+                >
+                <a href="mailto:educa@maths.com"
+                  ><i class="fas fa-envelope"></i>educa@maths.com</a
+                >
+                <p>
+                  <i class="fas fa-location-dot"></i>Location : Teldeniya /
+                  Kandy
+                </p>
 
-                <label for="mobile">Phone Number</label>
-                <input
-                  type="text"
-                  name="mobile"
-                  id="mobile"
-                  placeholder="Enter your number..." />
+                <h3>Science Class</h3>
+                <a href="#" class="btnx"
+                  ><i class="fas fa-mobile"></i>+941234567</a
+                >
+                <a href="mailto:educa@maths.com"
+                  ><i class="fas fa-envelope"></i>educa@science.com</a
+                >
+                <p>
+                  <i class="fas fa-location-dot"></i>Location :
+                  <span>Teldeniya / Kandy</span>
+                </p>
 
-                <label for="subject">Subject</label>
-                <select name="subject" id="subject" required>
-                  <option value="">Select Subject</option>
-                  <option value="Maths">Maths</option>
-                  <option value="Science">Science</option>
-                  <option value="English">English</option>
-                </select>
+                <h3>English Class</h3>
+                <a href="#" class="btnx"
+                  ><i class="fas fa-mobile"></i>+941234567</a
+                >
+                <a href="mailto:educa@maths.com"
+                  ><i class="fas fa-envelope"></i>educa@english.com</a
+                >
+                <p>
+                  <i class="fas fa-location-dot"></i>Location :
+                  <span>Teldeniya / Kandy</span>
+                </p>
+              </div>
+            </div>
 
-                <label for="content">Content</label>
-                <select name="content" id="content" required>
-                  <option value="">Select Content</option>
-                  <option value="general">General Question</option>
-                  <option value="class">Class Information</option>
-                  <option value="documents">Papers / Notes</option>
-                  <option value="issues">Technical Issues</option>
-                </select>
+            <div class="contact-form" id="contact-form">
+              <form action="#" method="post">
+                <fieldset>
+                  <legend>Contact Form</legend>
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your name"
+                    required />
 
-                <label for="message">Message</label>
-                <textarea
-                  rows="5"
-                  cols="60"
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  required></textarea>
-                <input type="submit" class="btn" value="Submit Form" />
-              </fieldset>
-            </form>
+                  <label for="mail">Email Address </label>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    placeholder="Your Email"
+                    required />
+
+                  <label for="mobile">Phone Number</label>
+                  <input
+                    type="text"
+                    name="mobile"
+                    id="mobile"
+                    placeholder="Enter your number..." />
+
+                  <label for="subject">Subject</label>
+                  <select name="subject" id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Maths">Maths</option>
+                    <option value="Science">Science</option>
+                    <option value="English">English</option>
+                  </select>
+
+                  <label for="content">Content</label>
+                  <select name="content" id="content" required>
+                    <option value="">Select Content</option>
+                    <option value="general">General Question</option>
+                    <option value="class">Class Information</option>
+                    <option value="documents">Papers / Notes</option>
+                    <option value="issues">Technical Issues</option>
+                  </select>
+
+                  <label for="message">Message</label>
+                  <textarea
+                    rows="5"
+                    cols="60"
+                    name="message"
+                    id="message"
+                    placeholder="Message "
+                    required></textarea>
+                  <input type="submit" class="btn" value="Submit Form" />
+                </fieldset>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -675,15 +764,44 @@
           <a href="#home" class="logo"
             ><i class="fa-solid fa-earth"></i> educa.</a
           >
-          <p>High-quality O/L tution for maths, science & english.</p>
+          <p>
+            Helping students learn better with simple lessons & smart study
+            tools.
+          </p>
+          <p><q>Sri Lanka | O/L Students</q></p>
         </div>
 
         <div class="footer-links footer-cards">
           <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
           <a href="#classes">Classes</a>
           <a href="#teachers">Teachers</a>
-          <a href="#results">Results</a>
-          <a href="#reviews">Reviews</a>
+          <a href="#about">About</a>
+          <a href="#contacts">Contact</a>
+        </div>
+
+        <div class="footer-links footer-cards">
+          <h3>Resourves</h3>
+          <a href="#">Notes</a>
+          <a href="#">Papers</a>
+          <a href="#">Daily Qiuz</a>
+          <a href="#">Study Tools</a>
+          <a href="#">O/L Results</a>
+          <a href="#">Reviews</a>
+        </div>
+
+        <div class="footer-cards footer-contacts">
+          <h3>Contact Info</h3>
+
+          <p>maths class :</p>
+          <a href="mailto:educa@maths.com"> educa@maths.com</a>
+
+          <p>science class :</p>
+          <a href="mailto:educa@science.com"> educa@science.com</a>
+
+          <p>english class :</p>
+          <a href="mailto:educa@english.com"> educa@english.com</a>
         </div>
 
         <div class="footer-newsletter footer-cards">
@@ -707,6 +825,16 @@
       <!-- end first footer-contents -->
 
       <div class="footer-contents footer-bottom">
+        <div class="badge-levelup footer-cards">
+          <p><i class="fa-solid fa-rocket"></i> Version 1.0</p>
+          <p><i class="fa-solid fa-circle-check"></i> Verified Links</p>
+          <p>
+            <i class="fa-solid fa-laptop-code"></i> last updated
+            <span>2026 feb</span>
+          </p>
+          <p><i class="fa-solid fa-users"></i> Comminuty reviewed</p>
+        </div>
+
         <div class="footer-legels footer-cards">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
@@ -746,6 +874,7 @@
     </footer>
 
     <!-- custom js file link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

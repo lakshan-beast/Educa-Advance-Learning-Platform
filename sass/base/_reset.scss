@@ -1,0 +1,37 @@
+// reset styles 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  text-decoration: none;
+  text-transform: capitalize;
+  border: none;
+  // outline: 2px solid red;
+  outline: none;
+  transition: 0.5s linear;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+*::selection {
+  background-color: $dark-purple4;
+  color: $bg-white;
+}
+::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $dark-purple2;
+  border-bottom-left-radius: 2rem;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background: $backgrounds;
+}
