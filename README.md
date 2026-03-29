@@ -44,12 +44,6 @@ Check out how **Educa** adapts to different screen sizes:
 | :--------------------------------------: | :-------------------------------------: | :-------------------------------------: |
 | ![Desktop](assets/images/hero-image.png) | ![Tablet](assets/images/hero-image.png) | ![Mobile](assets/images/hero-image.png) |
 
-<p>
-<img src="/assets/english-class.jpg" width="60%"> 
-<img src="/assets/maths-class.jpg" width="30%"> 
-<img src="/assets/science-class.jpg" width="10%"> 
-</p>
-
 ---
 
 ## ⚙️ Installation & Usage
@@ -103,7 +97,7 @@ Educa - Advanced Learning Platform/
 ### 5. 🔗
 
 ```md
-## 🔗 Live Demo
+## 🔗 **Live Demo**
 
 👉 https://your-live-link.com
 
