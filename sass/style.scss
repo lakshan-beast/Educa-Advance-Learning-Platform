@@ -10,6 +10,42 @@
 
 @import "components/buttons";
 
+// preloader styles
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-white;
+  @include flex-custom(center, center, column);
+  z-index: 99999;
+
+  .loader {
+    border: 6px solid $orange;
+    border-top: 6px solid $dark-purple;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+
+  p {
+    margin-top: 12px;
+    color: $h2-color;
+    font-size: $font-size-small;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
 // full system conatiner div style
 .system-container {
   @include flex-custom;
@@ -48,6 +84,7 @@ main {
   padding-top: $padding-large;
   padding: 0 20px;
   padding-bottom: 4rem;
+  z-index: 1;
 
   @include flex-custom;
 
@@ -163,7 +200,6 @@ section {
     background: $bg-white;
     border-radius: $border-radius-medium;
     @include flex-custom(space-between, center, column);
-    animation: cardBottom 0.6s ease-in forwards;
     box-shadow: 0px 1px 8px $blue-light;
 
     @include respond(large-desktop) {
@@ -214,19 +250,6 @@ section {
     }
   }
 }
-@keyframes cardBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-.features-cardadd:nth-child(1) {
-  transform: rotateX(0deg) rotateY(20deg) rotateZ(355deg);
-}
 
 #result-check a {
   cursor: not-allowed;
@@ -245,7 +268,7 @@ section {
       margin-bottom: 2rem;
       border-radius: $border-radius-medium;
       @include flex-custom(space-between, center, column);
-      animation: cardBottom 1.6s ease-in forwards;
+      // animation: cardBottom 1.6s ease-in forwards;
       box-shadow: 0px 0px 20px $blue-light;
       gap: 6px;
 

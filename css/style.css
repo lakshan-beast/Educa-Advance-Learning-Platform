@@ -1,3 +1,21 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes cardBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -276,7 +294,7 @@ button {
 .btn,
 button {
   text-align: center;
-  transition: 0.6s;
+  transition: all 0.5s ease;
   background-size: 200% auto;
   display: block;
   outline: none;
@@ -286,6 +304,44 @@ button {
 .btn:hover,
 button:hover {
   background-position: right center;
+  box-shadow: 0px 0px 8px rgb(208, 208, 228);
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  flex-wrap: nowrap;
+  z-index: 99999;
+}
+#preloader .loader {
+  border: 6px solid #f7786f;
+  border-top: 6px solid #26136d;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+#preloader p {
+  margin-top: 12px;
+  color: #190f8e;
+  font-size: 0.8rem;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .system-container {
@@ -332,6 +388,7 @@ main {
   padding-top: 1.5rem;
   padding: 0 20px;
   padding-bottom: 4rem;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -475,7 +532,6 @@ section {
   flex-direction: column;
   gap: 0;
   flex-wrap: nowrap;
-  animation: cardBottom 0.6s ease-in forwards;
   box-shadow: 0px 1px 8px #c6d4fa;
 }
 @media only screen and (max-width: 600px) {
@@ -514,20 +570,6 @@ section {
   border-radius: 0 0 1rem 1rem;
 }
 
-@keyframes cardBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-.features-cardadd:nth-child(1) {
-  transform: rotateX(0deg) rotateY(20deg) rotateZ(355deg);
-}
-
 #result-check a {
   cursor: not-allowed;
 }
@@ -547,7 +589,6 @@ section {
   flex-direction: column;
   gap: 0;
   flex-wrap: nowrap;
-  animation: cardBottom 1.6s ease-in forwards;
   box-shadow: 0px 0px 20px #c6d4fa;
   gap: 6px;
 }
