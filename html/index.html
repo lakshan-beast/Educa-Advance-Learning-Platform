@@ -44,200 +44,25 @@
           <a href="#contacts">Contact us</a>
         </div>
         <div class="header-actions">
-          <button type="button" class="btn" id="formBtn">sign in</button>
-          <button type="button" class="btn" id="profile">
+          <!-- <button type="button" class="btn" id="formBtn">sign in</button>
+          <button type="button" class="btn" id="profile"> -->
             <i class="fa-solid fa-user"></i>
           </button>
+          <a
+            href="login page/html/index.html#signup-wrapper"
+            class="btn"
+            id="formBtn"
+            >sign in</a
+          >
+          <a
+            href="login page/html/index.html#login-wrapper"
+            class="btn"
+            id="profile">
+            <i class="fa-solid fa-user"></i>
+          </a>
         </div>
       </div>
     </header>
-
-    <aside>
-      <div class="login-container">
-        <div class="signup-wrapper forms" id="signup-wrapper">
-          <h1>Sign Up</h1>
-
-          <form action="" method="post">
-            <div class="input-box">
-              <label for="studentName"><i class="fa-solid fa-user"></i></label>
-              <input
-                type="text"
-                class="studentName"
-                id="studentName"
-                placeholder="ex: Kasun Sandeepa"
-                pattern="[A-Za-z]{8, 20}"
-                required />
-            </div>
-
-            <div class="input-box">
-              <label for="studentGrade"
-                ><i class="fa-solid fa-graduation-cap"></i
-              ></label>
-              <select name="studentGrade" id="studentGrade" required>
-                <option value="">Select Grade</option>
-                <option value="Grade 06">Grade 06</option>
-                <option value="Grade 07">Grade 07</option>
-                <option value="Grade 08">Grade 08</option>
-                <option value="Grade 09">Grade 09</option>
-                <option value="Grade 10">Grade 10</option>
-                <option value="Grade 11">Grade 11</option>
-              </select>
-            </div>
-
-            <div class="input-box">
-              <label for="studyClass"><i class="fa-solid fa-home"></i></label>
-              <select name="studyClass" id="studyClass" required>
-                <option value="">Select Study Class</option>
-                <option value="Maths class">Maths class</option>
-                <option value="Science Class">Science Class</option>
-                <option value="English Class">English Class</option>
-              </select>
-            </div>
-
-            <div class="input-box">
-              <label for="password"
-                ><i class="fa-solid fa-lock" id="lock"></i
-              ></label>
-              <input
-                type="password"
-                class="password"
-                id="password "
-                placeholder="Password"
-                required />
-              <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
-            </div>
-
-            <div class="input-box">
-              <label for="password"
-                ><i class="fa-solid fa-lock" id="lock"></i
-              ></label>
-              <input
-                type="password"
-                class="password"
-                id="password"
-                placeholder="Confirm Password"
-                required />
-              <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
-            </div>
-            <input
-              type="submit"
-              class="button"
-              id="sign-submit"
-              a
-              href="#"
-              value="Signup" />
-            <div class="signup-link">
-              <p>
-                Already have an account?<button
-                  type="button"
-                  onclick="loginForm()">
-                  Login
-                </button>
-              </p>
-            </div>
-          </form>
-        </div>
-
-        <div class="log-wrapper forms" id="log-wrapper">
-          <form action="">
-            <h1>Login</h1>
-
-            <div class="input-box">
-              <label for="uname"><i class="fa-solid fa-user"></i></label>
-              <input
-                type="text"
-                class="uname"
-                id="uname"
-                placeholder="ex: Kasun Perera"
-                required />
-            </div>
-            <div class="input-box">
-              <label for="password"
-                ><i class="fa-solid fa-lock" id="lock"></i
-              ></label>
-              <input
-                type="password"
-                class="password"
-                id="password"
-                placeholder="ex: Password123"
-                required />
-            </div>
-            <div class="remember-forgot">
-              <label
-                ><input type="checkbox" checked="checked" />Remember Me</label
-              >
-              <a href="#">Forgot password</a>
-            </div>
-            <input
-              type="submit"
-              class="button"
-              id="submit-btn"
-              a
-              href="#"
-              value="Login" />
-            <div class="register-link">
-              <p>
-                Don't have an account ?
-                <button type="button" onclick="signForm()">Sign up</button>
-              </p>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="profile-card" id="profile-card">
-        <i class="fa-solid fa-xmark"></i>
-        <div class="student-details">
-          <div class="student-image">
-            <i class="fa-solid fa-user"></i>
-            <!-- <img src="../assets/image.png" alt=""> -->
-            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
-          </div>
-          <div class="student-info crops">
-            <h2 id="profile-name"></h2>
-            <p id="student-grade">Grade 11</p>
-            <p>2026 O/L batch</p>
-            <p>Mobile Number : 077-1234567</p>
-            <p>Class : <span>Maths, Science, English</span></p>
-            <button type="button"><i class="fa-solid fa-pen"></i></button>
-          </div>
-        </div>
-
-        <div class="parent-details crops">
-          <p>Parent Name :</p>
-          <p>Mobile Number (Parent) : 077-******9</p>
-          <p>NIC number : 1234566789</p>
-        </div>
-
-        <form action="" method="post" class="edit-forms">
-          <h2>Edit Details</h2>
-          <label for="profile-image">Profile Image</label>
-          <input type="file" name="profile-image" id="profile-image" />
-
-          <label for="profile-about">Enter Parent New Number :</label>
-          <input
-            type="text"
-            name="profile-about"
-            id="profile-about"
-            placeholder="Change About.." />
-
-          <label for="mobileNumber">Enter Your new Number :</label>
-          <input
-            type="text"
-            name="mobileNumber"
-            id="mobileNumber"
-            placeholder="Enter Your New Number" />
-
-          <label for="parentNumber">Enter Parent New Number :</label>
-          <input
-            type="text"
-            name="parentNumber"
-            id="parentNumber"
-            placeholder="Enter Parent New Number" />
-          <input type="submit" value="Save" class="btn" />
-        </form>
-      </div>
-    </aside>
 
     <div class="system-container">
       <main>
