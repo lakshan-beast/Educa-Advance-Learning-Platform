@@ -1,15 +1,16 @@
 // footer style
 footer {
-  grid-area: footer;
   margin: 0;
   margin-top: 2rem;
   background-color: $dark-blue;
   color: $dark-purple2;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex-custom(flex-start, flex-start, column);
+
+  @include respond(mobile) {
+    // padding: 0 10px;
+    background-color: $orange;
+  }
 
   h3 {
     color: $blue-light;
@@ -42,10 +43,7 @@ footer {
     margin: 1rem 0;
     width: 100%;
     padding: 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    @include flex-custom(flex-start, flex-start, column);
     p {
       font-size: 0.6rem;
       color: $medium-text;
@@ -87,9 +85,8 @@ footer {
 #footer-bottom {
   border-top: 2px solid #7f91ec;
   margin-bottom: 6px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+
+  @include flex-custom(space-between, center, column, wrap);
 }
 .footer-credits,
 .footer-copyrights {
@@ -105,10 +102,7 @@ footer {
   }
 }
 .socail-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-custom(flex-start, center, row);
 
   a {
     font-size: 1.4rem;

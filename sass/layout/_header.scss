@@ -10,9 +10,7 @@
   background-color: $bg-light;
   border-radius: 0 0 1rem 1rem;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-custom(space-between, center, row);
 
   .header-logo {
     color: $dark-purple;
@@ -27,20 +25,16 @@
   flex-direction: column;
   place-content: stretch space-evenly;
   position: absolute;
+  align-items: flex-start;
+  align-content: flex-end;
   top: 7rem;
   right: 0rem;
   width: 60%;
-  align-content: flex-end;
-  align-items: flex-start;
   padding: 6px;
 }
 .header-actions,
 .header-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  @include flex-custom(center, center, row, 0.5rem);
 
   i {
     color: #26136d;
@@ -55,10 +49,7 @@
     margin: 0 3px;
     border-radius: 1.5rem;
     background: #484aee;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-custom(space-between, center, row);
   }
   #profile {
     width: 35px;

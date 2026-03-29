@@ -1,0 +1,50 @@
+// Flexbox Mixins
+
+// A mixin to center content both horizontally and vertically
+@mixin center-everything {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// A mixin to create a flex container with customizable properties
+@mixin flex-custom(
+  $justify: center,
+  $align: center,
+  $direction: column,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+// Media Query Mixins
+// A mixin for devices
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media only screen and (max-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == large-desktop {
+    @media only screen and (max-width: $breakpoint-large-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == small-mobile {
+    @media only screen and (max-width: $breakpoint-small-mobile) {
+      @content;
+    }
+  }
+}
