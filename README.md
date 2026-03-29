@@ -94,7 +94,7 @@ Educa - Advanced Learning Platform/
 
 ---
 
-### 5. 🔗
+### 5.
 
 ```md
 ## 🔗 **Live Demo**
@@ -103,17 +103,17 @@ Educa - Advanced Learning Platform/
 
 ---
 
-### 6. 📜 **License**
+### 📜 **License**
 
 This project is licensed under the MIT License.
 
-### 8. 🎓 **Course Categories**
+### 🎓 **Course Categories**
 
 ![English](./assets/english-class.jpg)
 ![Maths](./assets/maths-class.jpg)
 ![Science](./assets/science-class.jpg)
 
-### 8. 📌 **Future Improvements**
+### 📌 **Future Improvements**
 
 - User authentication system
 - Backend integration (Node.js / Firebase)
