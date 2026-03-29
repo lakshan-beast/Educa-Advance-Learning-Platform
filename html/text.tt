@@ -1461,3 +1461,34 @@
 
 
 <i class="fa-solid fa-spinner fa-spin-pulse fa-2xs" style="color: rgb(177, 151, 252);"></i>
+
+ <!-- <div class="footer-newsletter footer-cards">
+          <form action="#" method="post">
+            <input
+              type="email"
+              name="newsletter"
+              id="newsletter"
+              placeholder="Your Email"
+              required />
+            <input type="submit" value="Subscribe" class="btn" />
+          </form>
+          <div class="news">
+            <p>
+              Subscribe to our newsletter for the latest class updates, study
+              tips, and important O/L exam resources.
+            </p>
+          </div>
+        </div> -->
+
+         <!-- <div class="footer-cards footer-contacts">
+          <h3>Contact Info</h3>
+
+          <p>maths class :</p>
+          <a href="mailto:educa@maths.com"> educa@maths.com</a>
+
+          <p>science class :</p>
+          <a href="mailto:educa@science.com"> educa@science.com</a>
+
+          <p>english class :</p>
+          <a href="mailto:educa@english.com"> educa@english.com</a>
+        </div> -->
