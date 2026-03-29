@@ -40,9 +40,9 @@
 
 Check out how **Educa** adapts to different screen sizes:
 
-|                             Desktop View                             |                             Tablet View                             |                             Mobile View                             |
-| :------------------------------------------------------------------: | :-----------------------------------------------------------------: | :-----------------------------------------------------------------: |
-| ![Desktop](../Educa-Advance-Learning-Platform/assets/hero-image.png) | ![Tablet](../Educa-Advance-Learning-Platform/assets/hero-image.png) | ![Mobile](../Educa-Advance-Learning-Platform/assets/hero-image.png) |
+|           Desktop View            |           Tablet View            |           Mobile View            |
+| :-------------------------------: | :------------------------------: | :------------------------------: |
+| ![Desktop](assets/hero-image.png) | ![Tablet](assets/hero-image.png) | ![Mobile](assets/hero-image.png) |
 
 <!-- ![Mobile](.images/desktop.png) -->
 
