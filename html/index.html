@@ -9,28 +9,31 @@
 
     <!-- index.html styles  -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
+    <!-- fontawesome cdn link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
 
+    <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
 
+    <!-- animations style -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
-    <!-- preloader -->
     <div id="preLoader">
       <div class="loader"></div>
       <p><i class="fa-solid fa-spinner fa-spin"></i> Educa Loading...</p>
     </div>
 
     <header id="header" class="header-section">
-      <div class="header">
+      <nav class="header">
         <div class="header-menu">
           <i
             class="fa-solid fa-bars-staggered"
@@ -57,7 +60,7 @@
             <i class="fa-solid fa-user"></i>
           </a>
         </div>
-      </div>
+      </nav>
     </header>
 
     <div class="system-container">
@@ -92,14 +95,13 @@
         </div>
       </main>
 
-      <section class="features parts" id="features">
+      <section class="features parts" id="features" data-aos-offset="300">
         <h2>Features</h2>
 
         <div
           class="features-container"
           data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-offset="300">
+          data-aos-duration="1000">
           <div class="features-card">
             <img src="../assets/images/questions.jpg" alt="" />
             <h3><i class="fa-solid fa-calendar-check"></i> Daily Questions</h3>
@@ -182,12 +184,12 @@
         </div>
       </section>
 
-      <section class="classes parts" id="classes">
+      <section class="classes parts" id="classes" data-aos-offset="300">
         <h2 class="heading">our <span>classes</span></h2>
 
-        <div class="classes-container" data-aos-offset="300">
+        <div class="classes-container">
           <div class="classes-content">
-            <div class="classes-card" data-aos="fade-right">
+            <div class="classes-card" data-aos="fade-up">
               <div class="classes-column">
                 <img
                   src="../assets/images/maths-class.jpg"
@@ -206,7 +208,7 @@
               </div>
             </div>
 
-            <div class="classes-card" data-aos="fade-left">
+            <div class="classes-card" data-aos="fade-up">
               <div class="classes-column">
                 <img
                   src="../assets/images/science-class.jpg"
@@ -251,15 +253,15 @@
         </div>
       </section>
 
-      <section class="teachers parts" id="teachers">
+      <section class="teachers parts" id="teachers" data-aos-offset="300">
         <h2 class="heading">our expert <span>tutors</span></h2>
         <p>
           Our experienced teachers are deticated to helping students achieve
           excelleny results in the O/L examiantion.
         </p>
 
-        <div class="teachers-container" data-aos-offset="300">
-          <div class="teacher-card" data-aos="fade-right">
+        <div class="teachers-container">
+          <div class="teacher-card" data-aos="fade-up">
             <div class="card-column">
               <img
                 src="../assets/images/maths  teacher.jpg"
@@ -335,7 +337,7 @@
             </div>
           </div>
 
-          <div class="teacher-card" data-aos="fade-left">
+          <div class="teacher-card" data-aos="fade-up">
             <div class="card-column">
               <img
                 src="../assets/images/english teacher.jpg"
@@ -371,11 +373,8 @@
         </div>
       </section>
 
-      <section class="information parts" id="information">
-        <div
-          class="about-container info-column"
-          id="about"
-          data-aos-offset="300">
+      <section class="information parts" id="information" data-aos-offset="300">
+        <div class="about-container info-column" id="about">
           <h2>Why <span>Choose Us</span></h2>
           <p data-aos="fade-right" data-aos-offset="200">
             We help students learn iin simple & effective way through clear
@@ -383,10 +382,7 @@
             confidence & guide every student towards succesd.
           </p>
 
-          <div
-            class="about-content"
-            data-aos="fade-right"
-            data-aos-offset="300">
+          <div class="about-content" data-aos="fade-up" data-aos-offset="300">
             <div class="about-cards">
               <div class="about-card">
                 <h3>Experienced Teachers</h3>
@@ -404,7 +400,7 @@
 
             <div
               class="about-status"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-offset="200"
               data-aos-duration="1500">
               <div class="cources-box box">
@@ -434,7 +430,7 @@
                 id="olResultChart"
                 width="400"
                 height="250"
-                data-aos="fade-right"
+                data-aos="fade-up"
                 data-aos-offset="200"></canvas>
             </div>
           </div>
@@ -443,11 +439,8 @@
         <div class="contact-container info-column" id="contacts">
           <h2>Contact <span>Us</span></h2>
 
-          <div class="contact-content">
-            <div
-              class="contact-cards"
-              data-aos="fade-left"
-              data-aos-offset="200">
+          <div class="contact-content" data-aos="fade-up">
+            <div class="contact-cards" data-aos-offset="200">
               <div class="contact-card">
                 <h3>Maths Class</h3>
                 <a href="#" class="btnx"
@@ -490,7 +483,7 @@
             <div
               class="contact-form"
               id="contact-form"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-offset="200">
               <form action="#" method="post">
                 <fieldset>
@@ -640,6 +633,7 @@
       </div>
     </footer>
 
+    <!-- animations script link -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -648,6 +642,7 @@
         mirror: false,
       });
     </script>
+
     <!-- custom js file link -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/script.js"></script>
