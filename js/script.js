@@ -4,9 +4,17 @@ window.addEventListener("load", () => {
   preLoader.style.opacity = "0";
   preLoader.style.transition = "opacity 0.5s ease-out";
   setTimeout(function () {
-    preLoader.style.display = "none";
+    // preLoader.style.display = "none";
   }, 500);
 });
+
+// mobile menu
+// const menuBtn = document.getElementById("menu-btn");
+// const navbars = document.getElementById("header-navbar");
+
+// menuBtn.addEventListener("click", () => {
+//   navbars.classList.toggle("active");
+// });
 
 // header sticky
 const header = document.getElementById("header");

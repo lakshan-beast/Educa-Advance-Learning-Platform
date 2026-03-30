@@ -12,21 +12,21 @@
 
 // preloader styles
 #preloader {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: $bg-white;
+  background-color: $bg-white !important;
   @include flex-custom(center, center, column);
-  z-index: 99999;
+  z-index: 99999 !important;
 
   .loader {
-    border: 6px solid $orange;
-    border-top: 6px solid $dark-purple;
+    border: 6px solid orange;
+    border-top: 6px solid purple;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     animation: spin 1s linear infinite;
   }
 
