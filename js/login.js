@@ -1,27 +1,27 @@
 // open form
-const formBtn = document.getElementById("formBtn");
+// const formBtn = document.getElementById("formBtn");
 
-formBtn.addEventListener("click", () => {
-  let logForms = document.getElementById("log-wrapper");
-  logForms.style.display = " block";
-  formBtn.style.display = "none";
-});
+// formBtn.addEventListener("click", () => {
+//   let logForms = document.getElementById("log-wrapper");
+//   logForms.style.display = " block";
+//   formBtn.style.display = "none";
+// });
 
 // text;
-let index = 0;
-let logText = " You’ve successfully Logging.";
-let warningText = `There was an error with the login details provided. Please try again.
-<span id="timer"></span>`;
-let speed = 50;
+// let index = 0;
+// let logText = " You’ve successfully Logging.";
+// let warningText = `There was an error with the login details provided. Please try again.
+// <span id="timer"></span>`;
+// let speed = 50;
 
-function typeWritter() {
-  if (index < logText.length) {
-    let logMsg = document.getElementById("log-msg");
-    logMsg.innerHTML += "";
-    index++;
-    setTimeout(typeWritter, speed);
-  }
-}
+// function typeWritter() {
+//   if (index < logText.length) {
+//     let logMsg = document.getElementById("log-msg");
+//     logMsg.innerHTML += "";
+//     index++;
+//     setTimeout(typeWritter, speed);
+//   }
+// }
 // let timer = 5;
 // let func = setInterval(function () {
 //   if (timer <= 0) {
@@ -34,38 +34,38 @@ function typeWritter() {
 
 // button form
 
-const submitBtn = document.querySelector("#submit-btn");
-submitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log("Clicks");
+// const submitBtn = document.querySelector("#submit-btn");
+// submitBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   console.log("Clicks");
 
-  const userName = document.getElementById("uname").value;
-  const password = document.getElementById("password").value;
-  const successMsg = document.getElementById("message-wrapper");
-  const logForm = document.getElementById("log-wrapper");
-  let headMsg = document.getElementById("head-msg");
-  let logMsg = document.getElementById("log-msg");
+//   const userName = document.getElementById("uname").value;
+//   const password = document.getElementById("password").value;
+//   const successMsg = document.getElementById("message-wrapper");
+//   const logForm = document.getElementById("log-wrapper");
+//   let headMsg = document.getElementById("head-msg");
+//   let logMsg = document.getElementById("log-msg");
 
-  console.log(userName);
-  console.log(password);
+//   console.log(userName);
+//   console.log(password);
 
-  if (userName === "name" && password === "1234") {
-    successMsg.style.display = "block";
-    logForm.style.display = "none";
+//   if (userName === "name" && password === "1234") {
+//     successMsg.style.display = "block";
+//     logForm.style.display = "none";
 
-    headMsg.innerHTML = `Congratuations <i class="fa-solid fa-hand fa-shake"></i>`;
-    logMsg.innerHTML = ` You’ve successfully Logging`;
-    typeWritter();
-    timer.style.display = " none";
-  } else {
-    logForm.style.display = "block";
-    successMsg.style.display = "none";
-    typeWritter();
-    logMsg.innerHTML = `There was an error with the login details provided. Please try again.
-    `;
-    console.log("Error ");
-  }
-});
+//     headMsg.innerHTML = `Congratuations <i class="fa-solid fa-hand fa-shake"></i>`;
+//     logMsg.innerHTML = ` You’ve successfully Logging`;
+//     typeWritter();
+//     timer.style.display = " none";
+//   } else {
+//     logForm.style.display = "block";
+//     successMsg.style.display = "none";
+//     typeWritter();
+//     logMsg.innerHTML = `There was an error with the login details provided. Please try again.
+//     `;
+//     console.log("Error ");
+//   }
+// });
 
 // const lockIcon = document.getElementById("lock");
 // lockIcon.addEventListener("click", () => {

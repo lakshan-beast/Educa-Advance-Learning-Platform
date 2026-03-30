@@ -54,31 +54,31 @@ function signForm() {
   logForm.style.display = "none";
 }
 
-signupForm.addEventListener("submit", (e) => {
-  console.log("submit");
-  // });
-  // const signSubmit = document.getElementById("sign-submit");
-  // signSubmit.addEventListener("click", (e) => {
-  e.preventDefault();
-  // console.log("Currently Stop");
-  // console.log(e.target);
-  // console.log(e.type);
+// signupForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log("submit");
+// });
+// const signSubmit = document.getElementById("sign-submit");
+// signSubmit.addEventListener("click", (e) => {
+// console.log("Currently Stop");
+// console.log(e.target);
+// console.log(e.type);
 
-  const studentName = document.getElementById("studentName");
-  const studentGrade = document.getElementById("studentGrade");
-  const studyClass = document.getElementById("studyClass");
-  const password = document.querySelector("#password");
+//   const studentName = document.getElementById("studentName");
+//   const studentGrade = document.getElementById("studentGrade");
+//   const studyClass = document.getElementById("studyClass");
+//   const password = document.querySelector("#password");
 
-  console.log(studentName.value);
-  // console.log(studentGrade.value);
-  // console.log(studyClass.value);
-  console.log(password.value);
+//   console.log(studentName.value);
+//   // console.log(studentGrade.value);
+//   // console.log(studyClass.value);
+//   console.log(password.value);
 
-  document.getElementById("profile-name").innerHTML = studentName.value;
+//   document.getElementById("profile-name").innerHTML = studentName.value;
 
-  signupForm.style.display = "none";
-  profileCard.style.display = "block";
-});
+//   signupForm.style.display = "none";
+//   profileCard.style.display = "block";
+// });
 
 profileBtn.addEventListener("click", () => {
   profileCard.style.display = "block";
@@ -86,10 +86,10 @@ profileBtn.addEventListener("click", () => {
   logForm.style.display = "none";
 });
 
-const xMark = document.querySelector(".profile-card .fa-xmark");
-xMark.addEventListener("click", () => {
-  profileCard.style.display = "none";
-});
+// const xMark = document.querySelector(".profile-card .fa-xmark");
+// xMark.addEventListener("click", () => {
+//   profileCard.style.display = "none";
+// });
 
 const YEAR = new Date().getFullYear();
 document.getElementById("year").innerHTML = YEAR;
@@ -129,17 +129,17 @@ const olResultChart = new Chart(ctx, {
       {
         label: "Maths Class",
         data: [75, 67, 66],
-        backgroundColor: "rgb(248, 79, 67)",
+        backgroundColor: "rgb(247, 120, 111)",
       },
       {
         label: "Science Class",
         data: [78, 77, 69],
-        backgroundColor: "rgba(20, 236, 38, 0.8)",
+        backgroundColor: "rgb(78, 106, 185)",
       },
       {
         label: "English Class",
         data: [95, 87, 86],
-        backgroundColor: "rgba(28, 146, 224, 0.8)",
+        backgroundColor: "rgb(38, 19, 109)",
       },
     ],
   },

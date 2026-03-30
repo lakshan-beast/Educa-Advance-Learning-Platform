@@ -142,6 +142,33 @@ section {
   border-radius: $border-radius-medium;
 
   @include flex-custom;
+
+  @include respond(large-desktop) {
+    padding: 10rem 0;
+    background-color: aqua;
+  }
+  @include respond(desktop) {
+    background-color: lightsalmon;
+  }
+
+  @include respond(tablet) {
+    padding: 5rem 2rem;
+    background-color: aquamarine;
+  }
+
+  @include respond(mobile) {
+    padding: 3rem 1.5rem;
+    background-color: lightcoral;
+  }
+
+  //   @include respond(large-desktop) {
+  // }
+  // @include respond(desktop) {
+  // }
+  // @include respond(tablet) {
+  // }
+  // @include respond(mobile) {
+  // }
 }
 .parts {
   padding: 0 1rem;
@@ -166,7 +193,7 @@ section {
 
 .features,
 .teachers {
-  background-color: $label-color;
+  // background-color: $label-color;
   border-radius: $border-radius-none;
   margin: $margin-none;
   margin-bottom: 1rem;
@@ -534,7 +561,7 @@ section {
         i {
           font-size: $font-size-huge;
           font-weight: $font-weight-extra-bold;
-          animation: iconLeft 1s ease-in forwards;
+          // animation: iconLeft 1s ease-in forwards;
           color: $dark-purple;
           text-align: center;
         }
@@ -543,7 +570,7 @@ section {
           margin: 0.5rem;
           color: $h2-color;
           font-weight: $font-weight-extra-bold;
-          animation: numPop 1s ease-in forwards;
+          // animation: numPop 1s ease-in forwards;
           text-align: center;
         }
 
@@ -554,7 +581,7 @@ section {
           margin: $margin-none;
           padding: $padding-none;
           text-align: center;
-          animation: bottomText 1s ease-in forwards;
+          // animation: bottomText 1s ease-in forwards;
           border-top: 2px solid $dark-purple;
         }
       }
@@ -959,173 +986,173 @@ section {
 // }
 // media queries styles
 
-@media screen and (min-width: 450px) {
-  section {
-    padding: $padding-medium;
-    margin: $margin-medium;
-  }
-}
+// @media screen and (min-width: 450px) {
+//   section {
+//     padding: $padding-medium;
+//     margin: $margin-medium;
+//   }
+// }
 
-@media screen and (min-width: 900px) {
-  body {
-    background: $desktop-background;
-  }
-  .home {
-    .columns {
-      @include flex-custom(space-between, center, row);
-      width: 100%;
-    }
-  }
-  .home-links {
-    margin: 30px 0;
-  }
-  .home .column .home-links a {
-    margin-right: 16px;
-  }
-  .welcome-msg {
-    margin-left: 0;
-  }
-  .home .column img {
-    width: auto;
-  }
+// @media screen and (min-width: 900px) {
+//   body {
+//     background: $desktop-background;
+//   }
+//   .home {
+//     .columns {
+//       @include flex-custom(space-between, center, row);
+//       width: 100%;
+//     }
+//   }
+//   .home-links {
+//     margin: 30px 0;
+//   }
+//   .home .column .home-links a {
+//     margin-right: 16px;
+//   }
+//   .welcome-msg {
+//     margin-left: 0;
+//   }
+//   .home .column img {
+//     width: auto;
+//   }
 
-  .header-navbar {
-    display: flex;
-    a {
-      color: $blue-medium;
-      margin-left: $margin-xlarge;
-      font-size: $font-size-p;
-      font-weight: $font-weight-medium;
-      display: flex;
-      text-decoration: none;
+//   .header-navbar {
+//     display: flex;
+//     a {
+//       color: $blue-medium;
+//       margin-left: $margin-xlarge;
+//       font-size: 1.1rem;
+//       font-weight: $font-weight-medium;
+//       display: flex;
+//       text-decoration: none;
 
-      &:hover {
-        color: $dark-purple;
-        transition: $transition-fast;
-        text-decoration: underline;
-      }
-    }
-  }
-  .header-menu {
-    display: none;
-  }
-  .system-container {
-    display: grid;
-  }
-  .teachers-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.3rem;
+//       &:hover {
+//         color: $dark-purple;
+//         transition: $transition-fast;
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+//   .header-menu {
+//     display: none;
+//   }
+//   .system-container {
+//     display: grid;
+//   }
+//   .teachers-container {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 0.3rem;
 
-    .teacher-card {
-      gap: 0.3rem;
-    }
-  }
-  .features {
-    background-color: transparent;
-  }
+//     .teacher-card {
+//       gap: 0.3rem;
+//     }
+//   }
+//   .features {
+//     background-color: transparent;
+//   }
 
-  // .features-container {
-  //   display: grid;
-  //   grid-template-columns: repeat(4, 1fr);
-  //   gap: 1rem;
-  // }
-  .weekly-schedule,
-  .today-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    display: none;
+//   // .features-container {
+//   //   display: grid;
+//   //   grid-template-columns: repeat(4, 1fr);
+//   //   gap: 1rem;
+//   // }
+//   .weekly-schedule,
+//   .today-cards {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 1rem;
+//     display: none;
 
-    .class-schedule {
-      padding: $padding-none;
-      margin: 1rem 0;
-    }
-    .class-info span {
-      display: block;
-    }
-  }
-  .classes-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+//     .class-schedule {
+//       padding: $padding-none;
+//       margin: 1rem 0;
+//     }
+//     .class-info span {
+//       display: block;
+//     }
+//   }
+//   .classes-content {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 1rem;
 
-    .classes-card {
-      @include flex-custom(center, center, column);
-    }
-  }
-  .teachers .teachers-container .teacher-card .card-column img {
-    width: 185px;
-    height: 185px;
-  }
-  #sidenavLinks a {
-    position: relative;
-    right: -80px;
-    transition: $transition-fast;
-    padding: 12px 12px;
-    width: 120px;
-    text-decoration: none;
-    /* font-size: 13px; */
-    color: $light-text;
-    border-radius: $border-radius-xxlarge;
-    display: flex;
-    align-items: center;
-    /* z-index: 9999; */
-    font-size: $font-size-small;
+//     .classes-card {
+//       @include flex-custom(center, center, column);
+//     }
+//   }
+//   .teachers .teachers-container .teacher-card .card-column img {
+//     width: 185px;
+//     height: 185px;
+//   }
+//   #sidenavLinks a {
+//     position: relative;
+//     right: -80px;
+//     transition: $transition-fast;
+//     padding: 12px 12px;
+//     width: 120px;
+//     text-decoration: none;
+//     /* font-size: 13px; */
+//     color: $light-text;
+//     border-radius: $border-radius-xxlarge;
+//     display: flex;
+//     align-items: center;
+//     /* z-index: 9999; */
+//     font-size: $font-size-small;
 
-    i {
-      margin-right: 8px;
-    }
-  }
-  footer {
-    width: 100%;
-    @include flex-custom(space-between, center, column);
-    margin: $margin-none;
-    padding: $padding-none;
-  }
-  .footer-contents {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
-    gap: 30px;
-    padding: 40px 10%;
-  }
-  .socail-links {
-    @include flex-custom(center, flex-start, row);
-  }
-  .footer-credits,
-  .footer-copyright {
-    text-align: right;
+//     i {
+//       margin-right: 8px;
+//     }
+//   }
+//   footer {
+//     width: 100%;
+//     @include flex-custom(space-between, center, column);
+//     margin: $margin-none;
+//     padding: $padding-none;
+//   }
+//   .footer-contents {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
+//     gap: 30px;
+//     padding: 40px 10%;
+//   }
+//   .socail-links {
+//     @include flex-custom(center, flex-start, row);
+//   }
+//   .footer-credits,
+//   .footer-copyright {
+//     text-align: right;
 
-    @include flex-custom(center, center, column);
-  }
-  .information {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    gap: 1rem;
-  }
-  .about-status {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-  }
+//     @include flex-custom(center, center, column);
+//   }
+//   .information {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     align-items: start;
+//     gap: 1rem;
+//   }
+//   .about-status {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     gap: 6px;
+//   }
 
-  .contact-container {
-    @include flex-custom;
-    gap: 0.3rem;
+//   .contact-container {
+//     @include flex-custom;
+//     gap: 0.3rem;
 
-    .contact-numbers {
-      @include flex-custom(center, center, row);
-    }
-  }
-  .today-cards {
-    .today-card {
-      p {
-        // span {
-        display: inline;
-        // }
-      }
-    }
-  }
-}
+//     .contact-numbers {
+//       @include flex-custom(center, center, row);
+//     }
+//   }
+//   .today-cards {
+//     .today-card {
+//       p {
+//         // span {
+//         display: inline;
+//         // }
+//       }
+//     }
+//   }
+// }
 // }

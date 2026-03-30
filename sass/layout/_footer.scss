@@ -8,8 +8,8 @@ footer {
   @include flex-custom(flex-start, flex-start, column);
 
   @include respond(mobile) {
-    // padding: 0 10px;
-    background-color: $orange;
+    // // padding: 0 10px;
+    // background-color: $orange;
   }
 
   h3 {
@@ -102,11 +102,18 @@ footer {
   }
 }
 .socail-links {
-  @include flex-custom(flex-start, center, row);
+  @include flex-custom(flex-start, center, column);
 
   a {
     font-size: 1.4rem;
     margin: 0 1rem;
+  }
+}
+.badge-levelup {
+  p {
+    i {
+      margin-right: 10px;
+    }
   }
 }
 .footer-copyrights {

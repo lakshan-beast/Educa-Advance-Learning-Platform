@@ -146,6 +146,7 @@ span {
 .header-menu #profile i {
   font-size: 1rem;
   color: #fcfcfc;
+  padding: 3px;
 }
 
 .header-navbar {
@@ -163,11 +164,6 @@ footer {
   flex-direction: column;
   gap: 0;
   flex-wrap: nowrap;
-}
-@media only screen and (max-width: 600px) {
-  footer {
-    background-color: #f7786f;
-  }
 }
 footer h3 {
   color: #c6d4fa;
@@ -269,13 +265,17 @@ footer a:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0;
   flex-wrap: nowrap;
 }
 .socail-links a {
   font-size: 1.4rem;
   margin: 0 1rem;
+}
+
+.badge-levelup p i {
+  margin-right: 10px;
 }
 
 .footer-copyrights a {
@@ -459,6 +459,29 @@ section {
   gap: 0;
   flex-wrap: nowrap;
 }
+@media only screen and (max-width: 1800px) {
+  section {
+    padding: 10rem 0;
+    background-color: aqua;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  section {
+    background-color: lightsalmon;
+  }
+}
+@media only screen and (max-width: 900px) {
+  section {
+    padding: 5rem 2rem;
+    background-color: aquamarine;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 3rem 1.5rem;
+    background-color: lightcoral;
+  }
+}
 
 .parts {
   padding: 0 1rem;
@@ -486,7 +509,6 @@ section {
 
 .features,
 .teachers {
-  background-color: #7f91ec;
   border-radius: 0rem;
   margin: 0;
   margin-bottom: 1rem;
@@ -811,7 +833,7 @@ section {
 }
 .info-column .about-content .about-cards .about-card h3,
 .info-column .about-content .about-cards .contact-card h3 {
-  color: #4e6ab9;
+  color: rgb(78, 106, 185);
   /* text-align: center; */
   /* margin-bottom: 5px; */
   margin-left: 2rem;
@@ -846,7 +868,6 @@ section {
 .info-column .about-content .about-status .box i {
   font-size: 1.2rem;
   font-weight: 800;
-  animation: iconLeft 1s ease-in forwards;
   color: #26136d;
   text-align: center;
 }
@@ -855,7 +876,6 @@ section {
   margin: 0.5rem;
   color: #190f8e;
   font-weight: 800;
-  animation: numPop 1s ease-in forwards;
   text-align: center;
 }
 .info-column .about-content .about-status .box p {
@@ -865,7 +885,6 @@ section {
   margin: 0;
   padding: 0;
   text-align: center;
-  animation: bottomText 1s ease-in forwards;
   border-top: 2px solid #26136d;
 }
 @keyframes iconLeft {
@@ -1114,189 +1133,6 @@ section {
 #call {
   top: 9px;
   background: #2596be;
-}
-
-@media screen and (min-width: 450px) {
-  section {
-    padding: 1rem;
-    margin: 1rem;
-  }
-}
-@media screen and (min-width: 900px) {
-  body {
-    background: linear-gradient(155deg, #5454d9 0%, rgb(255, 255, 255) 5%, rgb(255, 255, 255) 85%, #5454d9 100%);
-  }
-  .home .columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    gap: 0;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .home-links {
-    margin: 30px 0;
-  }
-  .home .column .home-links a {
-    margin-right: 16px;
-  }
-  .welcome-msg {
-    margin-left: 0;
-  }
-  .home .column img {
-    width: auto;
-  }
-  .header-navbar {
-    display: flex;
-  }
-  .header-navbar a {
-    color: rgb(78, 106, 185);
-    margin-left: 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    text-decoration: none;
-  }
-  .header-navbar a:hover {
-    color: #26136d;
-    transition: 0.3s ease;
-    text-decoration: underline;
-  }
-  .header-menu {
-    display: none;
-  }
-  .system-container {
-    display: grid;
-  }
-  .teachers-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.3rem;
-  }
-  .teachers-container .teacher-card {
-    gap: 0.3rem;
-  }
-  .features {
-    background-color: transparent;
-  }
-  .weekly-schedule,
-  .today-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    display: none;
-  }
-  .weekly-schedule .class-schedule,
-  .today-cards .class-schedule {
-    padding: 0;
-    margin: 1rem 0;
-  }
-  .weekly-schedule .class-info span,
-  .today-cards .class-info span {
-    display: block;
-  }
-  .classes-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  .classes-content .classes-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0;
-    flex-wrap: nowrap;
-  }
-  .teachers .teachers-container .teacher-card .card-column img {
-    width: 185px;
-    height: 185px;
-  }
-  #sidenavLinks a {
-    position: relative;
-    right: -80px;
-    transition: 0.3s ease;
-    padding: 12px 12px;
-    width: 120px;
-    text-decoration: none;
-    /* font-size: 13px; */
-    color: #f7f7f7;
-    border-radius: 3rem;
-    display: flex;
-    align-items: center;
-    /* z-index: 9999; */
-    font-size: 0.8rem;
-  }
-  #sidenavLinks a i {
-    margin-right: 8px;
-  }
-  footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap: 0;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 0;
-  }
-  .footer-contents {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
-    gap: 30px;
-    padding: 40px 10%;
-  }
-  .socail-links {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-    gap: 0;
-    flex-wrap: nowrap;
-  }
-  .footer-credits,
-  .footer-copyright {
-    text-align: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0;
-    flex-wrap: nowrap;
-  }
-  .information {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    gap: 1rem;
-  }
-  .about-status {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-  }
-  .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0;
-    flex-wrap: nowrap;
-    gap: 0.3rem;
-  }
-  .contact-container .contact-numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 0;
-    flex-wrap: nowrap;
-  }
-  .today-cards .today-card p {
-    display: inline;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

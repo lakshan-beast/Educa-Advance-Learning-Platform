@@ -1,4 +1,5 @@
 // Flexbox Mixins
+// @import "abstracts/variables";
 
 // A mixin to center content both horizontally and vertically
 @mixin center-everything {
@@ -26,20 +27,20 @@
 // Media Query Mixins
 // A mixin for devices
 @mixin respond($breakpoint) {
-  @if $breakpoint == mobile {
-    @media only screen and (max-width: $breakpoint-mobile) {
-      @content;
-    }
-  } @else if $breakpoint == tablet {
-    @media only screen and (max-width: $breakpoint-tablet) {
+  @if $breakpoint == large-desktop {
+    @media only screen and (max-width: $breakpoint-large-desktop) {
       @content;
     }
   } @else if $breakpoint == desktop {
     @media only screen and (max-width: $breakpoint-desktop) {
       @content;
     }
-  } @else if $breakpoint == large-desktop {
-    @media only screen and (max-width: $breakpoint-large-desktop) {
+  } @else if $breakpoint == tablet {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media only screen and (max-width: $breakpoint-mobile) {
       @content;
     }
   } @else if $breakpoint == small-mobile {

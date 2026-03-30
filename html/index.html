@@ -9,8 +9,6 @@
 
     <!-- index.html styles  -->
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- all styles - header & footer  -->
-    <!-- <link rel="stylesheet" href="../css/all.css" /> -->
 
     <link
       rel="stylesheet"
@@ -31,7 +29,7 @@
       <p><i class="fa-solid fa-spinner fa-spin"></i> Educa Loading...</p>
     </div>
 
-    <header>
+    <header id="header" class="header-section">
       <div class="header">
         <div class="header-menu">
           <i
@@ -52,16 +50,10 @@
           <a href="#contacts">Contact us</a>
         </div>
         <div class="header-actions">
-          <a
-            href="login page/html/index.html#signup-wrapper"
-            class="btn"
-            id="formBtn"
+          <a href="login page/html/login.html" class="btn" id="formBtn"
             >sign in</a
           >
-          <a
-            href="login page/html/index.html#login-wrapper"
-            class="btn"
-            id="profile">
+          <a href="login page/html/login.html" class="btn" id="profile">
             <i class="fa-solid fa-user"></i>
           </a>
         </div>
@@ -93,7 +85,7 @@
               </div>
             </div>
 
-            <div class="column hero-img">
+            <div class="column hero-img" data-aos="zoom-in">
               <img src="../assets/images/hero-image.png" alt="" />
             </div>
           </div>
@@ -103,7 +95,11 @@
       <section class="features parts" id="features">
         <h2>Features</h2>
 
-        <div class="features-container">
+        <div
+          class="features-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-offset="300">
           <div class="features-card">
             <img src="../assets/images/questions.jpg" alt="" />
             <h3><i class="fa-solid fa-calendar-check"></i> Daily Questions</h3>
@@ -115,7 +111,10 @@
               >Today's Quesation</a
             >
           </div>
-          <div class="features-card">
+          <div
+            class="features-card"
+            data-aos="fade-up"
+            data-aos-duration="2000">
             <img src="../assets/images/quizs.jpg" alt="" />
             <h3><i class="fa-solid fa-circle-question"></i> Daily Quiz</h3>
             <p>
@@ -125,7 +124,10 @@
               >Start Quiz</a
             >
           </div>
-          <div class="features-card">
+          <div
+            class="features-card"
+            data-aos="fade-up"
+            data-aos-duration="3000">
             <img src="../assets/images/resources.png" alt="" />
             <h3><i class="fa-solid fa-book-open"></i> Study Meterials</h3>
             <p>
@@ -136,7 +138,11 @@
               >View Meterials</a
             >
           </div>
-          <div class="features-card result-check" id="result-check">
+          <div
+            class="features-card result-check"
+            id="result-check"
+            data-aos="fade-up"
+            data-aos-duration="4000">
             <img src="../assets/images/results.jpg" alt="" />
             <h3><i class="fa-solid fa-chart-column"></i> O/L Results Check</h3>
             <p>Quick check the official O/L examination results.</p>
@@ -148,7 +154,10 @@
               >Check Results</a
             >
           </div>
-          <div class="features-card">
+          <div
+            class="features-card"
+            data-aos="fade-up"
+            data-aos-duration="5000">
             <img src="../assets/images/comments.jpg" alt="" />
             <h3><i class="fa-solid fa-comments"></i> Student Reviews</h3>
             <p>See what students say about classes & learning experience.</p>
@@ -156,7 +165,10 @@
               >Read Reviews</a
             >
           </div>
-          <div class="features-card">
+          <div
+            class="features-card"
+            data-aos="fade-up"
+            data-aos-duration="6000">
             <img src="../assets/images/study.jpg" alt="" />
             <h3><i class="fa-solid fa-toolbox"></i> Study Tools</h3>
             <p>
@@ -173,11 +185,13 @@
       <section class="classes parts" id="classes">
         <h2 class="heading">our <span>classes</span></h2>
 
-        <div class="classes-container">
+        <div class="classes-container" data-aos-offset="300">
           <div class="classes-content">
-            <div class="classes-card">
+            <div class="classes-card" data-aos="fade-right">
               <div class="classes-column">
-                <img src="../assets/images/maths-class.jpg" alt="" />
+                <img
+                  src="../assets/images/maths-class.jpg"
+                  alt="Maths Class Image" />
               </div>
               <div class="classes-info">
                 <h3>O/L Methamatics</h3>
@@ -192,9 +206,11 @@
               </div>
             </div>
 
-            <div class="classes-card">
+            <div class="classes-card" data-aos="fade-left">
               <div class="classes-column">
-                <img src="../assets/images/science-class.jpg" alt="" />
+                <img
+                  src="../assets/images/science-class.jpg"
+                  alt="Science Class Image" />
               </div>
               <div class="classes-info">
                 <h3>O/L Science</h3>
@@ -209,9 +225,11 @@
               </div>
             </div>
 
-            <div class="classes-card">
+            <div class="classes-card" data-aos="fade-up">
               <div class="classes-column">
-                <img src="../assets/images/english-class.jpg" alt="" />
+                <img
+                  src="../assets/images/english-class.jpg"
+                  alt="English Class Image" />
               </div>
               <div class="classes-info">
                 <h3>O/L English</h3>
@@ -228,53 +246,7 @@
           </div>
 
           <div class="more-btn">
-            <a href="#" class="btn">More Class Details</a>
-          </div>
-          <!-- classes-container  -->
-
-          <div class="today-class">
-            <h3>Today Class <span>Monday 12, 2026</span></h3>
-
-            <div class="today-cards">
-              <div class="today-card maths">
-                <h3>
-                  Maths Class
-                  <span id="active"
-                    ><i class="fa fa-spinner fa-spin" aria-hidden="true"></i
-                  ></span>
-                </h3>
-                <p>Time: <span>4:00pm - 6:00pm</span></p>
-                <p>Batch <span>Grade 11</span></p>
-                <p>Lesson : <span>Algebra</span></p>
-                <p>Class Type : <span> Theory</span></p>
-              </div>
-
-              <div class="today-card maths">
-                <h3>
-                  Science Class
-                  <span id="active"
-                    ><i class="fa fa-spinner fa-spin" aria-hidden="true"></i
-                  ></span>
-                </h3>
-                <p>Time: <span>4:00pm - 6:00pm</span></p>
-                <p>Batch <span>Grade 11</span></p>
-                <p>Lesson : <span>Algebra</span></p>
-                <p>Class Type : <span> Theory</span></p>
-              </div>
-
-              <div class="today-card maths">
-                <h3>
-                  English Class
-                  <span id="active"
-                    ><i class="fa fa-spinner fa-spin" aria-hidden="true"></i
-                  ></span>
-                </h3>
-                <p>Time: <span>4:00pm - 6:00pm</span></p>
-                <p>Batch <span>Grade 11</span></p>
-                <p>Lesson : <span>Algebra</span></p>
-                <p>Class Type : <span> Theory</span></p>
-              </div>
-            </div>
+            <a href="class.html" class="btn">More Class Details</a>
           </div>
         </div>
       </section>
@@ -286,11 +258,16 @@
           excelleny results in the O/L examiantion.
         </p>
 
-        <div class="teachers-container">
-          <div class="teacher-card">
+        <div class="teachers-container" data-aos-offset="300">
+          <div class="teacher-card" data-aos="fade-right">
             <div class="card-column">
-              <img src="../assets/images/maths  teacher.jpg" alt="" />
-              <div class="sidenav-links" id="sidenavLinks">
+              <img
+                src="../assets/images/maths  teacher.jpg"
+                alt="Maths Teacher" />
+              <div
+                class="sidenav-links"
+                id="sidenavLinks"
+                data-aos-placement="left">
                 <a href="#" title="brands" id="facebook"
                   ><i class="fa-brands fa-facebook"></i>facebook</a
                 >
@@ -322,9 +299,11 @@
             </div>
           </div>
 
-          <div class="teacher-card">
+          <div class="teacher-card" data-aos="fade-up">
             <div class="card-column">
-              <img src="../assets/images/science teacher.jpg" alt="" />
+              <img
+                src="../assets/images/science teacher.jpg"
+                alt="Science Teacher" />
               <div class="sidenav-links" id="sidenavLinks">
                 <a href="#" title="brands" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
@@ -356,9 +335,11 @@
             </div>
           </div>
 
-          <div class="teacher-card">
+          <div class="teacher-card" data-aos="fade-left">
             <div class="card-column">
-              <img src="../assets/images/english teacher.jpg" alt="" />
+              <img
+                src="../assets/images/english teacher.jpg"
+                alt="English Teacher" />
               <div class="sidenav-links" id="sidenavLinks">
                 <a href="#" title="brands" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
@@ -391,15 +372,21 @@
       </section>
 
       <section class="information parts" id="information">
-        <div class="about-container info-column" id="about">
+        <div
+          class="about-container info-column"
+          id="about"
+          data-aos-offset="300">
           <h2>Why <span>Choose Us</span></h2>
-          <p>
+          <p data-aos="fade-right" data-aos-offset="200">
             We help students learn iin simple & effective way through clear
             lessons, regular practce, & continuous support. Our goal is to build
             confidence & guide every student towards succesd.
           </p>
 
-          <div class="about-content">
+          <div
+            class="about-content"
+            data-aos="fade-right"
+            data-aos-offset="300">
             <div class="about-cards">
               <div class="about-card">
                 <h3>Experienced Teachers</h3>
@@ -415,31 +402,40 @@
               </div>
             </div>
 
-            <div class="about-status">
+            <div
+              class="about-status"
+              data-aos="fade-right"
+              data-aos-offset="200"
+              data-aos-duration="1500">
               <div class="cources-box box">
                 <i class="fas fa-chalkboard"></i>
-                <h3 id="classesCount">3+</h3>
+                <h3 id="classesCount" data-aos="zoom-in">3+</h3>
                 <p>classes</p>
               </div>
               <div class="teachers-box box">
                 <i class="fas fa-chalkboard-teacher"></i>
-                <h3 id="classesCount">3+</h3>
+                <h3 id="classesCount" data-aos="zoom-in">3+</h3>
                 <p>teachers</p>
               </div>
               <div class="students-box box">
                 <i class="fas fa-user-graduate"> </i>
-                <h3 id="classesCount">2500+</h3>
+                <h3 id="classesCount" data-aos="zoom-in">2500+</h3>
                 <p>students</p>
               </div>
               <div class="satisfaction-box box">
                 <i class="fas fa-face-smile"> </i>
-                <h3 id="classesCount">100%</h3>
+                <h3 id="classesCount" data-aos="zoom-in">100%</h3>
                 <p>satisfaction</p>
               </div>
             </div>
 
             <div class="result-container">
-              <canvas id="olResultChart" width="400" height="250"></canvas>
+              <canvas
+                id="olResultChart"
+                width="400"
+                height="250"
+                data-aos="fade-right"
+                data-aos-offset="200"></canvas>
             </div>
           </div>
         </div>
@@ -448,7 +444,10 @@
           <h2>Contact <span>Us</span></h2>
 
           <div class="contact-content">
-            <div class="contact-cards">
+            <div
+              class="contact-cards"
+              data-aos="fade-left"
+              data-aos-offset="200">
               <div class="contact-card">
                 <h3>Maths Class</h3>
                 <a href="#" class="btnx"
@@ -488,7 +487,11 @@
               </div>
             </div>
 
-            <div class="contact-form" id="contact-form">
+            <div
+              class="contact-form"
+              id="contact-form"
+              data-aos="fade-left"
+              data-aos-offset="200">
               <form action="#" method="post">
                 <fieldset>
                   <legend>Contact Form</legend>
@@ -547,15 +550,10 @@
           </div>
         </div>
       </section>
-
-      <div class="contact-msg">
-        <h3>Thank you! Your message has been sent.</h3>
-        <p>We will contact you soon...</p>
-      </div>
     </div>
 
-    <footer>
-      <div class="footer-contents">
+    <footer data-aos-offset="300">
+      <div class="footer-contents" data-aos="fade-down">
         <div class="footer-logo footer-cards">
           <a href="#home" class="logo"
             ><i class="fa-solid fa-earth"></i> educa.</a
@@ -603,19 +601,22 @@
         </div>
 
         <div class="badge-levelup footer-cards">
-          <h3>Sri Lanka | O/L Students</h3>
+          <h3>for Sri Lanka | O/L Students</h3>
           <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
-          <p><i class="fa-regular fa-square-check"></i> Verified Links</p>
+          <p><i class="fa-regular fa-square-check"></i>Verified Links</p>
           <p>
-            <i class="fa-solid fa-laptop-code"></i> last updated
+            <i class="fa-solid fa-laptop-code"></i>last updated
             <span>2026 March</span>
           </p>
-          <p><i class="fa-solid fa-users"></i> Comminuty reviewed</p>
+          <p><i class="fa-solid fa-users"></i>Comminuty reviewed</p>
         </div>
       </div>
       <!-- end first footer-contents -->
 
-      <div class="footer-contents footer-bottom" id="footer-bottom">
+      <div
+        class="footer-contents footer-bottom"
+        id="footer-bottom"
+        data-aos="fade-right">
         <div class="footer-legels footer-cards">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
@@ -644,6 +645,7 @@
       AOS.init({
         duration: 1000,
         once: true,
+        mirror: false,
       });
     </script>
     <!-- custom js file link -->

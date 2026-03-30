@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login page</title>
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/login.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,70０;1,8００;1,9００&display=swap"
       rel="stylesheet" />
 
     <link
@@ -18,67 +18,118 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
   <body>
-    <!-- <button type="button" class="formBtn" id="formBtn"><i class="fa-regular fa-user"></i></button>
+    <div class="auth-container">
+      <div class="log-wrapper auth-box" id="log-wrapper">
+        <form action="">
+          <h1>Login</h1>
 
-<div class="signup-wrapper forms" id="signup-wrapper">
-    <h1>Sign Up</h1>
-
-    <form action="" method="post">
-        <div class="input-box">
+          <div class="input-box">
             <label for="uname"><i class="fa-solid fa-user"></i></label>
-            <input type="text" class="uname" id="uname" placeholder="Enter  Your Username" pattern="[A-Za-z]{5, 10}"  required >
-        </div>
-
-        <div class="input-box">
-            <label for="passwords"><i class="fa-solid fa-lock" id="lock"></i></label>
-            <input type="password" class="password" id="passwords " placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   required>
-        </div>
-
-        <div class="input-box">
-            <label for="passwords"><i class="fa-solid fa-lock" id="lock"></i></label>
-            <input type="password" class="password" id="passwords" placeholder="Confirm Password"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required>
-        </div>
-        <input type="submit" class="button" id="submit-btn" a href="#" value="Signup">
-        <div class="signup-link">
-            <p>Already have an account? <button type="button" onclick="loginForm()">Login</button></p>
-        </div>
-    </form>
-</div>
-
-<div class="log-wrapper forms" id="log-wrapper">
-    <form action="">
-        <h1>Login</h1>
-
-        <div class="input-box">
-            <label for="uname"><i class="fa-solid fa-user"></i></label>
-            <input type="text" class="uname" id="uname" placeholder="Username"  required >
-        </div>
-        <div class="input-box">
-            <label for="passwords"><i class="fa-solid fa-lock" id="lock"></i></label>
-            <input type="password" class="password" id="password" placeholder="Password"  required>
-        </div>
-        <div class="remember-forgot">
-            <label><input type="checkbox" checked="checked">Remember Me</label>
+            <input
+              type="text"
+              class="uname"
+              id="uname"
+              placeholder="Username"
+              required />
+          </div>
+          <div class="input-box">
+            <label for="passwords"
+              ><i class="fa-solid fa-lock" id="lock"></i
+            ></label>
+            <input
+              type="password"
+              class="password"
+              id="password"
+              placeholder="Password"
+              required />
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" checked="checked" />Remember Me</label
+            >
             <a href="#">Forgot password</a>
-        </div>
-        <input type="submit" class="button" id="submit-btn" a href="#" value="Login">
-        <div class="register-link">
-            <p>Don't have an account ? <button type="button" onclick="signForm()">Sign up</button></p>
-        </div>
-        </button>
-    </form> 
-</div>
+          </div>
+          <input
+            type="submit"
+            class="button"
+            id="submit-btn"
+            a
+            href="#"
+            value="Login" />
+          <div class="register-link">
+            <p>
+              Don't have an account ?
+              <button type="button" onclick="signForm()">Sign up</button>
+            </p>
+          </div>
+          <!-- </button> -->
+        </form>
+      </div>
 
-<div class="message-wrapper" id="message-wrapper">
+      <div class="signup-wrapper auth-box" id="signup-wrapper">
+        <h1>Sign Up</h1>
+
+        <form action="" method="post">
+          <div class="input-box">
+            <label for="uname"><i class="fa-solid fa-user"></i></label>
+            <input
+              type="text"
+              class="uname"
+              id="uname"
+              placeholder="Enter  Your Username"
+              pattern="[A-Za-z]{5, 10}"
+              required />
+          </div>
+
+          <div class="input-box">
+            <label for="passwords"
+              ><i class="fa-solid fa-lock" id="lock"></i
+            ></label>
+            <input
+              type="password"
+              class="password"
+              id="passwords "
+              placeholder="Password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required />
+          </div>
+
+          <div class="input-box">
+            <label for="passwords"
+              ><i class="fa-solid fa-lock" id="lock"></i
+            ></label>
+            <input
+              type="password"
+              class="password"
+              id="passwords"
+              placeholder="Confirm Password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required />
+          </div>
+          <input
+            type="submit"
+            class="button"
+            id="submit-btn"
+            a
+            href="#"
+            value="Signup" />
+          <div class="signup-link">
+            <p>
+              Already have an account?
+              <button type="button" onclick="loginForm()">Login</button>
+              <span id="show-login">Login</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="message-wrapper" id="message-wrapper">
     <h2 id="head-msg"></h2>
     <h2 id="timer">Relogin in, <span >0s</span></h2>
     <p id="log-msg"></p>
-    <!-- <button type="reset" class="button"><i class="fa-solid fa-arrows-rotate"></i> Relogin <span id="timer">0s</span></button> -
-
-
-</div> -->
-
-    <div class="login-container">
+    <!--  <button type="reset" class="button"><i class="fa-solid fa-arrows-rotate"></i> Relogin <span id="timer">0s</span></button>  
+</div>  -->
+    <!-- <div class="login-container">
       <div class="signup-wrapper forms" id="signup-wrapper">
         <h1>Sign Up</h1>
 
@@ -129,7 +180,7 @@
               id="password "
               placeholder="Password"
               required />
-            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" --
           </div>
 
           <div class="input-box">
@@ -142,7 +193,7 @@
               id="password"
               placeholder="Confirm Password"
               required />
-            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
           </div>
           <input
             type="submit"
@@ -215,7 +266,7 @@
       <div class="student-details">
         <div class="student-image">
           <i class="fa-solid fa-user"></i>
-          <!-- <img src="../assets/image.png" alt=""> -->
+           <img src="../assets/image.png" alt=""> -
           <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
         </div>
         <div class="student-info crops">
@@ -261,8 +312,8 @@
           placeholder="Enter Parent New Number" />
         <input type="submit" value="Save" class="btn" />
       </form>
-    </div>
+    </div> -->
 
-    <script src="../js/script.js"></script>
+    <script src="../js/login.js"></script>
   </body>
 </html>
