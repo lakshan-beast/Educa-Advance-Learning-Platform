@@ -76,17 +76,17 @@
 //   }
 // });
 
-const logForm = document.getElementById("log-wrapper");
-const signupForm = document.getElementById("signup-wrapper");
+// const logForm = document.getElementById("log-wrapper");
+// const signupForm = document.getElementById("signup-wrapper");
 
-function loginForm() {
-  logForm.style.display = "block";
-  signupForm.style.display = "none";
-}
-function signForm() {
-  signupForm.style.display = "block";
-  logForm.style.display = "none";
-}
+// function loginForm() {
+//   logForm.style.display = "block";
+//   signupForm.style.display = "none";
+// }
+// function signForm() {
+//   signupForm.style.display = "block";
+//   logForm.style.display = "none";
+// }
 
 // // let count = 1;
 // for (let index = 6; index >= 0; index--) {
@@ -96,3 +96,17 @@ function signForm() {
 //     console.log("Done");
 //   }
 // }
+
+const showLogin = document.getElementById("show-login");
+const showSignup = document.getElementById("show-signup");
+const logForm = document.getElementById("log-wrapper");
+const signupForm = document.getElementById("signup-wrapper");
+
+showLogin.addEventListener("click", () => {
+  logForm.style.display = "block";
+  signupForm.style.display = "none";
+});
+showSignup.addEventListener("click", () => {
+  signupForm.style.display = "block";
+  logForm.style.display = "none";
+});

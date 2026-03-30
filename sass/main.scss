@@ -1,0 +1,49 @@
+// Main Styles for the Educa Advance Learning Platform
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/reset";
+@import "base/typography";
+// Importing page-specific styles
+@import "pages/login";
+@import "pages/dashboard";
+@import "pages/courses";
+@import "pages/profile";
+@import "pages/404";
+@import "components/navbar";
+@import "components/footer";
+@import "components/cards";
+@import "components/forms";
+@import "components/modals";
+@import "components/animations";
+@import "components/alerts";
+@import "components/tabs";
+@import "components/accordions";
+@import "components/pagination";
+
+@import "layouts/header";
+@import "layouts/main-content";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "utilities/helpers";
+
+@import "themes/dark";
+@import "themes/light";
+
+@import "vendor/normalize";
+@import "vendor/animate";
+
+@import "pages/login";
+@import "pages/dashboard";
+@import "pages/courses";
+@import "pages/profile";
+@import "pages/404";
+@import "components/navbar";
+@import "components/footer";
+@import "components/cards";
+
+@import "pages/daily";
+@import "pages/home";
+@import "pages/login";
+@import "pages/meterials";
+@import "pages/reviews";
+@import "pages/tools";
