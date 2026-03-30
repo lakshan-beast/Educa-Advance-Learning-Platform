@@ -172,8 +172,8 @@ footer {
 }
 footer h3 {
   color: #c6d4fa;
-  margin-bottom: 17px;
-  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-size: 1.17rem;
 }
 footer a {
   display: block;
@@ -181,6 +181,7 @@ footer a {
   margin: 5px 0;
   transition: 0.3s;
   color: #f7f7f7;
+  font-size: 0.7rem;
 }
 footer a:hover {
   color: #5454d9;
@@ -193,7 +194,6 @@ footer a:hover {
   gap: 30px;
   padding: 30px 10%;
   transition: 0.3s ease;
-  animation: tobottom 0.3s ease forwards;
   width: 100%;
 }
 .footer-contents .footer-cards {
@@ -217,14 +217,6 @@ footer a:hover {
   margin-top: 12px;
 }
 
-@keyframes tobottom {
-  from {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .logo {
   color: #fcfcfc;
   font-size: 1.4rem;
@@ -232,10 +224,22 @@ footer a:hover {
   font-family: "Exo 2";
 }
 
+.contact-info h4 {
+  color: rgb(123, 128, 143);
+  margin: 6px;
+  padding-top: 1rem;
+}
+.contact-info a {
+  margin: 3px 1.2rem;
+  text-decoration: underline;
+}
+.contact-info i {
+  margin-right: 10px;
+}
+
 .footer-links a {
   padding-left: 10px;
   text-decoration: underline;
-  font-size: 0.7rem;
 }
 
 .footer-contacts a {
@@ -715,6 +719,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 0rem;
   justify-items: end;
+  padding: 0 3rem;
 }
 .teachers .teachers-container .teacher-card .card-column img {
   width: 200px;
@@ -790,18 +795,13 @@ section {
 .teachers .teachers-container .teacher-card .teacher-info .teacher-details p span {
   color: #190f8e;
 }
-.teachers .teachers-container .teacher-card .teacher-info .teacher-details .notes {
-  display: block;
-  text-align: center;
-  margin: 3px 0;
-}
 
 .info-column {
   margin: 0;
   margin-bottom: 16px;
-  box-shadow: 0px 0px 6px #c6d4fa;
-  border-radius: 1rem;
   height: 100%;
+  gap: 0;
+  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -853,16 +853,13 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 6px;
-  margin-top: 12px;
-  background-color: #c6d4fa;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 0 1rem;
 }
 .info-column .about-content .about-status .box {
   padding: 6px;
   background-color: #fcfcfc;
   border-radius: 0.5rem;
-  box-shadow: 0px 3px 6px #26136d;
+  box-shadow: 0px 0px 6px rgba(30, 80, 161, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -892,40 +889,9 @@ section {
   text-align: center;
   border-top: 2px solid #26136d;
 }
-@keyframes iconLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes numPop {
-  from {
-    opacity: 0.2;
-    transform: translateY(-25px) rotate(-120deg) scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotate(0) scale(1);
-  }
-}
-@keyframes bottomText {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .info-column .about-content .result-container {
   background: transparent;
   margin-top: 12px;
-  border-top: 2px solid #484aee;
 }
 .info-column .about-content .result-container canvas {
   margin-top: 16px;
@@ -956,9 +922,6 @@ section {
 }
 .info-column .contact-content .contact-cards .contact-card {
   background-color: #fcfcfc;
-  margin: 6px;
-  padding: 6px;
-  border-radius: 0.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1084,14 +1047,14 @@ section {
 
 #sidenavLinks a {
   position: relative;
-  /* right: -55px; */
   transition: 0.3s ease;
-  padding: 10px 10px;
+  /* padding: 10px 10px; */
   /* width: 194px; */
+  padding: 0.8rem;
   text-decoration: none;
   font-size: 1.4rem;
   color: #f7f7f7;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1112,6 +1075,7 @@ section {
   width: 100px;
   border-radius: 1rem;
   right: 0;
+  transition: 0.3s ease;
 }
 
 #sidenavLinks a:hover::after {

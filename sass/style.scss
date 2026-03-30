@@ -393,6 +393,7 @@ section {
         grid-template-columns: repeat(2, 1fr);
         gap: 0rem;
         justify-items: end;
+        padding: 0 3rem;
 
         img {
           width: 200px;
@@ -474,11 +475,11 @@ section {
               color: $h2-color;
             }
           }
-          .notes {
-            display: block;
-            text-align: center;
-            margin: 3px 0;
-          }
+          // .notes {
+          //   display: block;
+          //   text-align: center;
+          //   margin: 3px 0;
+          // }
           // p:nth-last-child() {
           //   border: none;
           // }
@@ -489,11 +490,12 @@ section {
 }
 
 .info-column {
-  margin: $margin-none;
+  margin: 0;
   margin-bottom: 16px;
-  box-shadow: 0px 0px 6px $blue-light;
-  border-radius: $border-radius-medium;
   height: 100%;
+
+  gap: 0;
+  padding: 0;
   @include flex-custom(space-around, center, column);
 
   h2 {
@@ -546,15 +548,12 @@ section {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 6px;
-      margin-top: 12px;
-      background-color: $blue-light;
-      padding: $padding-medium;
-      border-radius: $border-radius-small;
+      padding: 0 1rem;
       .box {
         padding: 6px;
-        background-color: $bg-white;
-        border-radius: $border-radius-small;
-        box-shadow: 0px 3px 6px $dark-purple;
+        background-color: #fcfcfc;
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 6px rgb(30 80 161 / 50%);
 
         @include flex-custom(space-between, center, column);
 
@@ -585,42 +584,10 @@ section {
           border-top: 2px solid $dark-purple;
         }
       }
-
-      @keyframes iconLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0px);
-        }
-      }
-      @keyframes numPop {
-        from {
-          opacity: 0.2;
-          transform: translateY(-25px) rotate(-120deg) scale(0);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0) rotate(0) scale(1);
-        }
-      }
-      @keyframes bottomText {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
     }
     .result-container {
       background: transparent;
       margin-top: 12px;
-      border-top: 2px solid $dark-purple1;
 
       canvas {
         margin-top: 16px;
@@ -662,10 +629,7 @@ section {
     .contact-cards {
       margin-bottom: 6px;
       .contact-card {
-        background-color: $bg-white;
-        margin: 6px;
-        padding: 6px;
-        border-radius: $border-radius-small;
+        background-color: #fcfcfc;
 
         @include flex-custom(flex-start, flex-start, column);
 
@@ -912,14 +876,15 @@ section {
 // Instagram: The gradient logo consists of shades of purple, dark pink, red, orange, and yellow. Key colors include Royal Blue (#405DE6) and varying shades from #ffdf9e to #c1558b.
 #sidenavLinks a {
   position: relative;
-  /* right: -55px; */
-  transition: $transition-fast;
-  padding: 10px 10px;
+  // right: -45px;
+  transition: 0.3s ease;
+  /* padding: 10px 10px; */
   /* width: 194px; */
+  padding: 0.8rem;
   text-decoration: none;
-  font-size: $font-size-h3;
-  color: $light-text;
-  border-radius: $border-radius-small;
+  font-size: 1.4rem;
+  color: #f7f7f7;
+  border-radius: 50%;
   @include flex-custom(center);
 }
 #sidenavLlinks a::after {
@@ -933,6 +898,7 @@ section {
   width: 100px;
   border-radius: $border-radius-medium;
   right: 0;
+  transition: 0.3s ease;
 }
 #sidenavLinks a:hover::after {
   right: -30px;

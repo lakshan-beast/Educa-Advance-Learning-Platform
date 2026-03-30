@@ -14,8 +14,8 @@ footer {
 
   h3 {
     color: $blue-light;
-    margin-bottom: 17px;
-    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-size: 1.17rem;
   }
 
   a {
@@ -24,6 +24,7 @@ footer {
     margin: 5px 0;
     transition: 0.3s;
     color: $light-text;
+    font-size: 0.7rem;
 
     &:hover {
       color: $dark-purple2;
@@ -37,7 +38,6 @@ footer {
   gap: 30px;
   padding: 30px 10%;
   transition: 0.3s ease;
-  animation: tobottom 0.3s ease forwards;
   width: 100%;
   .footer-cards {
     margin: 1rem 0;
@@ -55,14 +55,6 @@ footer {
     }
   }
 }
-@keyframes tobottom {
-  from {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .logo {
   color: $bg-white;
@@ -70,12 +62,24 @@ footer {
   font-weight: bolder;
   font-family: "Exo 2";
 }
-
+.contact-info {
+  h4 {
+    color: $medium-text;
+    margin: 6px;
+    padding-top: 1rem;
+  }
+  a {
+    margin: 3px 1.2rem;
+    text-decoration: underline;
+  }
+  i {
+    margin-right: 10px;
+  }
+}
 .footer-links {
   a {
     padding-left: 10px;
     text-decoration: underline;
-    font-size: 0.7rem;
   }
 }
 .footer-contacts a {
