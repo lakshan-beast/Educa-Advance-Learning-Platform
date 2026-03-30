@@ -1,36 +1,69 @@
 // preloader
 window.addEventListener("load", () => {
   const preLoader = document.getElementById("preLoader");
-  // setTimeout(() => {
   preLoader.style.opacity = "0";
   preLoader.style.transition = "opacity 0.5s ease-out";
   setTimeout(function () {
     preLoader.style.display = "none";
   }, 500);
-  // }, 3000);
+});
+
+// header sticky
+const header = document.getElementById("header");
+const navbar = document.getElementById("header-navbar");
+
+window.addEventListener("scroll", function () {
+  const scrolled = window.scrollY > 50;
+  header.classList.toggle("scrolled", scrolled);
+  navbar.classList.toggle("scrolled", scrolled);
+
+  header.classList.toggle("transparent", !scrolled);
+  navbar.classList.toggle("transparent", !scrolled);
 });
 
 // mobile menu
-let menuBtn = document.querySelector("#menu-btn");
+// let menuBtn = document.querySelector("#menu-btn");
 
-menuBtn.addEventListener("click", () => {
-  let navbar = document.getElementById("header-navbar");
+// menuBtn.addEventListener("click", () => {
+//   let navbar = document.getElementById("header-navbar");
 
-  if (navbar.style.display === "block") {
-    console.log("None");
-    navbar.style.display = "none";
+//   if (navbar.style.display === "block") {
+//     console.log("None");
+//     navbar.style.display = "none";
 
-    menuBtn.classList.remove("fa-xmark");
-    menuBtn.classList.add("fa-bars");
-  } else {
-    console.log("Display");
-    navbar.classList.add(".mob");
-    // navbar.style.display = "block";
+//     menuBtn.classList.remove("fa-xmark");
+//     menuBtn.classList.add("fa-bars");
+//   } else {
+//     console.log("Display");
+//     navbar.classList.add(".mob");
+//     navbar.style.display = "flex";
 
-    menuBtn.classList.add("fa-xmark");
-    menuBtn.classList.remove("fa-bars");
-  }
-});
+//     menuBtn.classList.add("fa-xmark");
+//     menuBtn.classList.remove("fa-bars");
+//   }
+// });
+
+// function headers() {
+//   const navbar = document.getElementById("navbar-links");
+//   const more_btns = document.getElementById("menu-btns");
+//   // const icon = more_btns.querySelector("i");
+
+//   // Toggle menu & icon
+//   more_btns.addEventListener("click", (e) => {
+//     e.stopPropagation(); // prevent immediate close
+//     navbar.classList.toggle("active");
+
+//     // icon toggle
+//     if (navbar.classList.contains("active")) {
+//       icon.classList.add("fa-xmark");
+//       icon.classList.remove("fa-bars-staggered");
+//     } else {
+//       icon.classList.add("fa-bars-staggered");
+//       icon.classList.remove("fa-xmark");
+//     }
+//   });
+// }
+// headers();
 
 // open form
 const formBtn = document.getElementById("formBtn");
@@ -91,32 +124,26 @@ profileBtn.addEventListener("click", () => {
 //   profileCard.style.display = "none";
 // });
 
-const YEAR = new Date().getFullYear();
-document.getElementById("year").innerHTML = YEAR;
+// welcome message
+const welcomeMessage = document.getElementById("welcome-msg");
+const hours = new Date().getHours();
 
-// let slideIndex = 0;
-// showSlides();
+const userName = "John Doe";
 
-// function showSlides() {
-//   let index;
-//   let slides = document.getElementsByClassName("image-content");
-//   for (let index = 0; index < slides.length; index++) {
-//     slides[index].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {
-//     slideIndex = 1;
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   setTimeout(showSlides, 2000);
-// }
+const morning = "Good Morning!";
+const afternoon = "Good Afternoon!";
+const evening = "Good Evening!";
+const night = "Good Night!";
 
-// student sign in store and login
-
-// profile card update
-// function profileUpdate() {
-//   const
-// }
+if (hours < 10) {
+  welcomeMessage.textContent += `${morning} ${userName}`;
+} else if (hours < 14) {
+  welcomeMessage.textContent += `${afternoon} ${userName}`;
+} else if (hours < 18) {
+  welcomeMessage.textContent += `${evening} ${userName}`;
+} else {
+  welcomeMessage.textContent += `${night} ${userName}`;
+}
 
 // result graph
 const ctx = document.getElementById("olResultChart").getContext("2d");
@@ -174,3 +201,7 @@ const olResultChart = new Chart(ctx, {
     },
   },
 });
+
+// copyright year
+const YEAR = new Date().getFullYear();
+document.getElementById("year").innerHTML = YEAR;

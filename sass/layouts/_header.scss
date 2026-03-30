@@ -11,6 +11,15 @@
   border-radius: 0 0 1rem 1rem;
 
   @include flex-custom(space-between, center, row);
+  &.transparent {
+    background-color: transparent;
+    color: $bg-white;
+  }
+  &.scrolled {
+    background-color: $bg-light;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
+    color: $dark-purple;
+  }
 
   .header-logo {
     color: $dark-purple;
@@ -66,9 +75,29 @@
   }
 }
 
-.header-navbar {
-  display: none;
-}
+// .header-navbar {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   position: absolute;
+//   right: 0;
+//   top: 70px;
+//   transition: all 0.3s ease;
+//   display: none;
+//   z-index: 99;
+//   width: 100%;
+//   height: auto;
+// }
+// .header-navbar.transparent {
+//   background-color: transparent;
+//   color: $bg-white;
+// }
+// .header-navbar.scrolled {
+//   background-color: $bg-white;
+//   color: $dark-purple;
+//   border-radius: 6px 0 0 6px;
+// }
 // @include respond(mobile) {
 //       display: none;
 //     }

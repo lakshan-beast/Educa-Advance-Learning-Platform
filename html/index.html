@@ -23,15 +23,18 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
 
-    <!-- animations style -->
+    <!-- animations style | unpkg.com -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
+    <!-- pre loader div start  -->
     <div id="preLoader">
       <div class="loader"></div>
       <p><i class="fa-solid fa-spinner fa-spin"></i> Educa Loading...</p>
     </div>
+    <!-- pre loader div end -->
 
+    <!-- header section start  -->
     <header id="header" class="header-section">
       <nav class="header">
         <div class="header-menu">
@@ -62,15 +65,16 @@
         </div>
       </nav>
     </header>
+    <!-- header section end -->
 
+    <!-- system container start  -->
     <div class="system-container">
+      <!-- main content start -->
       <main>
         <div id="home" class="home" data-aos="fade-up" data-aos-duration="1000">
           <div class="columns">
             <div class="column description">
-              <h1 class="welcome-msg" id="welcome-msg">
-                Good Morning, <span>User!</span>
-              </h1>
+              <h1 class="welcome-msg" id="welcome-msg"></h1>
               <h2>Learn Smart <span>&</span> Score High!</h2>
               <p>
                 Step into an exciting learning Adventure! Fun lessons, Daily
@@ -94,6 +98,7 @@
           </div>
         </div>
       </main>
+      <!-- main content end  -->
 
       <section class="features parts" id="features" data-aos-offset="300">
         <h2>Features</h2>
@@ -643,8 +648,10 @@
       });
     </script>
 
-    <!-- custom js file link -->
+    <!-- chart js cdn link  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- custom js file link -->
     <script src="../js/script.js"></script>
   </body>
 </html>
