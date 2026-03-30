@@ -1,14 +1,14 @@
 // import files
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
-@import "base/reset";
-@import "base/typography";
+@import "./base/reset";
+@import "./base/typography";
 
-@import "layout/header";
-@import "layout/footer";
+@import "./layouts/header";
+@import "./layouts/footer";
 
-@import "components/buttons";
+@import "./components/buttons";
 
 // preloader styles
 #preloader {

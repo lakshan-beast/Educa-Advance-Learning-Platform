@@ -2,7 +2,8 @@
 @import "../abstracts/mixins";
 @import "../base/reset";
 @import "../base/typography";
-@import "../base/buttons";
+@import "../components/cards";
+@import "../components/buttons";
 
 .auth-container {
   position: relative;
@@ -21,7 +22,7 @@
 
     opacity: $opacity-none;
     visibility: hidden;
-    transition: all $transition-slow;
+    // transition: all $transition-slow;
     transform: scale(1);
 
     &.active {

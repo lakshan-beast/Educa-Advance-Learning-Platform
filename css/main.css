@@ -1,18 +1,432 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 5 | @import "../base/buttons";
- *   |         ^^^^^^^^^^^^^^^^^
- *   '
- *   sass\pages\_login.scss 5:9  @import
- *   sass\main.scss 7:9          root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @import \"../base/buttons\";\d\a   \2502          ^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\pages\\_login.scss 5:9  @import\a   sass\\main.scss 7:9          root stylesheet";
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+@keyframes cardBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  transition: 0.5s linear;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+*::selection {
+  background-color: #484aee;
+  color: #fcfcfc;
+}
+
+::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5454d9;
+  border-bottom-left-radius: 2rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(155deg, #5454d9 0%, rgb(255, 255, 255) 5%, rgb(255, 255, 255) 85%, #5454d9 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+span {
+  font-family: "Exo 2", sans-serif;
+}
+
+.btn,
+button {
+  background-image: linear-gradient(to right, #f7786f 0%, #484aee 51%, #4e6ab9 100%);
+  color: #fcfcfc;
+  box-shadow: 0px 0px 6px rgb(208, 208, 228);
+}
+
+.btn,
+button {
+  text-align: center;
+  transition: all 0.5s ease;
+  background-size: 200% auto;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.btn:hover,
+button:hover {
+  background-position: right center;
+  box-shadow: 0px 0px 8px rgb(208, 208, 228);
+}
+
+.header {
+  margin: 0;
+  padding: 0 25px;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #e0e8ff;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.header.transparent {
+  background-color: transparent;
+  color: #fcfcfc;
+}
+.header.scrolled {
+  background-color: #e0e8ff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
+  color: #26136d;
+}
+.header .header-logo {
+  color: #26136d;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: "Exo 2";
+}
+
+.mob {
+  display: flex;
+  flex-direction: column;
+  place-content: stretch space-evenly;
+  position: absolute;
+  align-items: flex-start;
+  align-content: flex-end;
+  top: 7rem;
+  right: 0rem;
+  width: 60%;
+  padding: 6px;
+}
+
+.header-actions,
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+.header-actions i,
+.header-menu i {
+  color: #26136d;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+.header-actions a,
+.header-menu a {
+  padding: 5px 16px;
+  margin: 0 3px;
+  border-radius: 1.5rem;
+  background: #484aee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.header-actions #profile,
+.header-menu #profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid #f7786f;
+  cursor: pointer;
+}
+.header-actions #profile i,
+.header-menu #profile i {
+  font-size: 1rem;
+  color: #fcfcfc;
+  padding: 3px;
+}
+
+footer {
+  margin: 0;
+  margin-top: 2rem;
+  background-color: rgb(3, 3, 48);
+  color: #5454d9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+footer h3 {
+  color: #c6d4fa;
+  margin-bottom: 17px;
+  font-size: 1.3rem;
+}
+footer a {
+  display: block;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: 0.3s;
+  color: #f7f7f7;
+}
+footer a:hover {
+  color: #5454d9;
+  padding-left: 5px;
+}
+
+.footer-contents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 30px 10%;
+  transition: 0.3s ease;
+  animation: tobottom 0.3s ease forwards;
+  width: 100%;
+}
+.footer-contents .footer-cards {
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.footer-contents .footer-cards p {
+  font-size: 0.6rem;
+  color: rgb(123, 128, 143);
+  padding: 0;
+  margin: 0;
+}
+.footer-contents .footer-cards q {
+  margin-top: 12px;
+}
+
+@keyframes tobottom {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.logo {
+  color: #fcfcfc;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  font-family: "Exo 2";
+}
+
+.footer-links a {
+  padding-left: 10px;
+  text-decoration: underline;
+  font-size: 0.7rem;
+}
+
+.footer-contacts a {
+  padding-left: 12px;
+}
+
+#footer-bottom {
+  border-top: 2px solid #7f91ec;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: wrap;
+  flex-wrap: nowrap;
+}
+
+.footer-credits,
+.footer-copyrights {
+  color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-legels a {
+  text-decoration: underline;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.socail-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.socail-links a {
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.badge-levelup p i {
+  margin-right: 10px;
+}
+
+.footer-copyrights a {
+  color: #5454d9;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes cardBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  transition: 0.5s linear;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+*::selection {
+  background-color: #484aee;
+  color: #fcfcfc;
+}
+
+::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5454d9;
+  border-bottom-left-radius: 2rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(155deg, #5454d9 0%, rgb(255, 255, 255) 5%, rgb(255, 255, 255) 85%, #5454d9 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+span {
+  font-family: "Exo 2", sans-serif;
+}
+
+.btn,
+button {
+  background-image: linear-gradient(to right, #f7786f 0%, #484aee 51%, #4e6ab9 100%);
+  color: #fcfcfc;
+  box-shadow: 0px 0px 6px rgb(208, 208, 228);
+}
+
+.btn,
+button {
+  text-align: center;
+  transition: all 0.5s ease;
+  background-size: 200% auto;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.btn:hover,
+button:hover {
+  background-position: right center;
+  box-shadow: 0px 0px 8px rgb(208, 208, 228);
+}
+
+.auth-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #484aee;
+}
+.auth-container .auth-box {
+  position: absolute;
+  width: 100%;
+  max-width: 40rem;
+  padding: 4rem;
+  background-color: #fcfcfc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1);
+}
+.auth-container .auth-box.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 10;
+}
+
+/*# sourceMappingURL=main.css.map */
