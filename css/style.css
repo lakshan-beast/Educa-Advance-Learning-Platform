@@ -82,15 +82,6 @@ span {
   gap: 0;
   flex-wrap: nowrap;
 }
-.header.transparent {
-  background-color: transparent;
-  color: #fcfcfc;
-}
-.header.scrolled {
-  background-color: #e0e8ff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
-  color: #26136d;
-}
 .header .header-logo {
   color: #26136d;
   font-size: 2rem;
@@ -156,6 +147,10 @@ span {
   font-size: 1rem;
   color: #fcfcfc;
   padding: 3px;
+}
+
+#profile {
+  display: none;
 }
 
 footer {
@@ -783,10 +778,16 @@ section {
   color: #26136d;
 }
 .teachers .teachers-container .teacher-card .teacher-info .teacher-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
+  flex-wrap: nowrap;
   width: 100%;
 }
 .teachers .teachers-container .teacher-card .teacher-info .teacher-details p {
-  color: #26136d;
+  color: rgb(123, 128, 143);
   font-size: 0.6rem;
   display: flex;
   align-items: flex-start;
@@ -794,6 +795,7 @@ section {
 }
 .teachers .teachers-container .teacher-card .teacher-info .teacher-details p span {
   color: #190f8e;
+  margin-left: 1rem;
 }
 
 .info-column {
@@ -818,14 +820,64 @@ section {
 }
 .info-column p {
   font-size: 0.8rem;
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   text-wrap: auto;
   color: rgb(123, 128, 143);
+  background-color: rgba(127, 145, 236, 0.08);
+  border-radius: 0.5rem;
+}
+.info-column .about-status {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgba(127, 145, 236, 0.08);
+  border-radius: 0.5rem;
+}
+.info-column .about-status .box {
+  padding: 6px;
+  background-color: #fcfcfc;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 6px rgba(30, 80, 161, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.info-column .about-status .box i {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgb(78, 106, 185);
+  text-align: center;
+  margin: 0.4rem;
+  padding-top: 1rem;
+}
+.info-column .about-status .box h3 {
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.3rem;
+  color: rgb(253, 29, 29);
+  font-weight: 800;
+  text-align: center;
+}
+.info-column .about-status .box p {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.6rem;
+  color: rgba(30, 80, 161, 0.5);
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 2px solid #e0e8ff;
 }
 .info-column .about-content {
-  padding: 1rem 0rem;
-  margin-top: 6px;
   border-radius: 0.5rem;
 }
 .info-column .about-content .about-cards {
@@ -849,53 +901,15 @@ section {
   padding-left: 16px;
   font-size: 0.8rem;
 }
-.info-column .about-content .about-status {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  padding: 0 1rem;
-}
-.info-column .about-content .about-status .box {
-  padding: 6px;
-  background-color: #fcfcfc;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0px 6px rgba(30, 80, 161, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  gap: 0;
-  flex-wrap: nowrap;
-}
-.info-column .about-content .about-status .box i {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #26136d;
-  text-align: center;
-}
-.info-column .about-content .about-status .box h3 {
-  font-size: 1.4rem;
-  margin: 0.5rem;
-  color: #190f8e;
-  font-weight: 800;
-  text-align: center;
-}
-.info-column .about-content .about-status .box p {
-  font-size: 0.8rem;
-  color: #26136d;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border-top: 2px solid #26136d;
-}
 .info-column .about-content .result-container {
   background: transparent;
   margin-top: 12px;
+  background-color: rgba(127, 145, 236, 0.08);
+  border-radius: 0.5rem;
 }
 .info-column .about-content .result-container canvas {
   margin-top: 16px;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .info-column .about-content .result-container h3 {
   margin: 0.8rem 0;
@@ -949,15 +963,16 @@ section {
 }
 
 .contact-form {
-  padding: 0 0rem;
-  margin: 1rem 0;
   border-radius: 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+  background-color: rgba(127, 145, 236, 0.08);
+  padding-top: 2rem;
 }
 .contact-form form {
   padding: 0.5rem;
   margin: 0;
   width: 100%;
-  border-top: 2px solid #c6d4fa;
 }
 .contact-form form legend {
   color: #190f8e;
@@ -971,11 +986,11 @@ section {
 .contact-form form textarea {
   display: block;
   width: 95%;
-  color: #484aee;
+  color: #5454d9;
   padding: 3px 12px;
   margin: 0;
-  border-radius: 0.5rem;
   background-color: transparent;
+  margin-left: 12px;
 }
 .contact-form form label {
   color: #7f91ec;
@@ -984,20 +999,26 @@ section {
   margin-top: 8px;
 }
 .contact-form form input,
-.contact-form form textarea,
-.contact-form form select {
-  background-color: rgba(127, 145, 236, 0.08);
+.contact-form form textarea {
+  background-color: rgba(162, 173, 233, 0.08);
   /* margin: 0 6px; */
   margin-left: 12px;
   border-bottom: 2px solid #c3c3ff;
-  border-radius: 0.9rem;
 }
 .contact-form form input:focus,
-.contact-form form textarea:focus,
-.contact-form form select:focus {
+.contact-form form textarea:focus {
   border-bottom: none;
-  border-radius: 0.5rem;
-  background-color: #26136d;
+  background-color: #c3c3ff;
+}
+.contact-form form select {
+  background-color: rgba(162, 173, 233, 0.08);
+  /* margin: 0 6px; */
+  margin-left: 12px;
+  border-bottom: 2px solid #c3c3ff;
+  color: rgb(123, 128, 143);
+}
+.contact-form form select:focus {
+  background-color: #f7f7f7;
 }
 .contact-form textarea {
   resize: none;

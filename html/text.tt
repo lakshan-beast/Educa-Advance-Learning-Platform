@@ -1558,3 +1558,11 @@
   transform: rotateX(0deg) rotateY(20deg) rotateZ(355deg);
 }
     animation: cardBottom 0.6s ease-in forwards;
+
+
+     <!-- pre loader div start  -->
+    <div id="preLoader">
+      <div class="loader"></div>
+      <p><i class="fa-solid fa-spinner fa-spin"></i> Educa Loading...</p>
+    </div>
+    <!-- pre loader div end -->

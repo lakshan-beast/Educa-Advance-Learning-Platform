@@ -11,15 +11,6 @@
   border-radius: 0 0 1rem 1rem;
 
   @include flex-custom(space-between, center, row);
-  &.transparent {
-    background-color: transparent;
-    color: $bg-white;
-  }
-  &.scrolled {
-    background-color: $bg-light;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
-    color: $dark-purple;
-  }
 
   .header-logo {
     color: $dark-purple;
@@ -101,3 +92,7 @@
 // @include respond(mobile) {
 //       display: none;
 //     }
+
+#profile {
+  display: none;
+}
