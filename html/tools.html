@@ -53,8 +53,8 @@
     </header>
     <!-- header section end -->
 
-    <div class="system-container" style="margin-top: 10rem">
-      <section class="todo parts" id="todo">
+    <div class="system-container">
+      <!-- <section class="todo parts" id="todo">
         <div class="todo-container">
           <h1>Your To Do List</h1>
           <div class="todo-content">
@@ -75,8 +75,83 @@
             <ul id="taskList"></ul>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- todo container  -->
+
+      <section class="todo parts" id="todo">
+        <div class="card-container">
+          <h1>Your To Do List</h1>
+          <div class="card-content">
+            <input
+              type="text"
+              name="inputTask"
+              id="inputTask"
+              placeholder="Add new task here.."
+              required />
+
+            <a href="#" slass="addBtn" id="addBtn" title="Add new">
+              <i class="fa-regular fa-square-plus"></i>
+            </a>
+          </div>
+          <div class="error-msg" id="error-msg"></div>
+
+          <div class="task-output" id="task-output">
+            <ul id="taskList"></ul>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="task-header">
+            <h3>Daily Mission</h3>
+
+            <div class="task-timer">
+              <p>Time left for Day : <span id="countdown">00:00:00</span></p>
+            </div>
+          </div>
+
+          <div class="taks-list">
+            <div class="task-item">
+              <input
+                type="checkbox"
+                class="task-check"
+                id="task1"
+                placeholder="Task" />
+              <label for="task1">Finish Sass Mixins</label>
+            </div>
+            <!-- <div class="task-item">
+          <input
+            type="checkbox"
+            class="task-check"
+            id="task1"
+            placeholder="Task" />
+          <label for="task1">Finish Sass Mixins</label>
+        </div>
+        <div class="task-item">
+          <input
+            type="checkbox"
+            class="task-check"
+            id="task1"
+            placeholder="Task" />
+          <label for="task1">Finish Sass Mixins</label>
+        </div>
+        <div class="task-item">
+          <input
+            type="checkbox"
+            class="task-check"
+            id="task1"
+            placeholder="Task" />
+          <label for="task1">Finish Sass Mixins</label>
+        </div> -->
+            <span id="task-counter"></span>
+          </div>
+          <div class="toast-container" id="toast-container">
+            sthtrwhtrhwsrthwhwh
+          </div>
+          <div id="congrats-msg" class="hidden">
+            Day Completed! Get some rest
+          </div>
+        </div>
+      </section>
 
       <section class="calculator parts" id="calculator">
         <div class="cal-container">
@@ -226,6 +301,6 @@
 
     <!-- custom js file link -->
     <script src="../js/script.js"></script>
-    <script src="../js/tools.js"></script>
+    <script src="../js/tools scripts/tasks.js"></script>
   </body>
 </html>
