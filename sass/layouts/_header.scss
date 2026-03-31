@@ -20,18 +20,6 @@
   }
 }
 
-.mob {
-  display: flex;
-  flex-direction: column;
-  place-content: stretch space-evenly;
-  position: absolute;
-  align-items: flex-start;
-  align-content: flex-end;
-  top: 7rem;
-  right: 0rem;
-  width: 60%;
-  padding: 6px;
-}
 .header-actions,
 .header-menu {
   @include flex-custom(center, center, row, 0.5rem);
@@ -43,6 +31,8 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
+    width: 45px;
+    height: 30px;
   }
   a {
     padding: 5px 16px;
@@ -95,4 +85,23 @@
 
 #profile {
   display: none;
+}
+
+.header-navbar {
+  @include respond(phone) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: $bg-white;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+    display: none;
+
+    &.nav-active {
+      left: 0;
+      box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+    }
+  }
 }

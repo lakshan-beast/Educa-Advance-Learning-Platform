@@ -213,3 +213,13 @@ const olResultChart = new Chart(ctx, {
 // copyright year
 const YEAR = new Date().getFullYear();
 document.getElementById("year").innerHTML = YEAR;
+
+const barsIcon = document.querySelector(".header-menu i");
+const navContainer = document.querySelector(".header-navbar");
+
+barsIcon.addEventListener("click", () => {
+  navContainer.classList.toggle("nav-active");
+
+  barsIcon.classList.toggle("fa-bars-staggered");
+  barsIcon.classList.toggle("fa-xmark");
+});
