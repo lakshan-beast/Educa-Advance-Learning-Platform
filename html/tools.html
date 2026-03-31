@@ -20,10 +20,18 @@
       rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="header">
+    <!-- header section start  -->
+    <header id="header" class="header-section">
+      <nav class="header">
+        <div class="header-menu">
+          <i
+            class="fa-solid fa-bars-staggered"
+            title="Menu"
+            id="menu-btn"
+            class="menu-btn"></i>
+        </div>
         <a href="#home" class="header-logo"
-          ><i class="fa-solid fa-circle"></i> educa.</a
+          ><i class="fa-regular fa-circle"></i> educa.</a
         >
         <div class="header-navbar" id="header-navbar">
           <a href="#home">Home</a>
@@ -34,15 +42,16 @@
           <a href="#contacts">Contact us</a>
         </div>
         <div class="header-actions">
-          <button type="button" id="menu-btn" class="menu-btn">
-            <i class="fa-solid fa-bars-staggered" title="Menu"></i>
-          </button>
-          <a href="#" class="btn" id="formBtn">
-            Login <i class="fa-solid fa-user"></i>
+          <a href="login page/html/login.html" class="btn" id="formBtn"
+            >sign in</a
+          >
+          <a href="login page/html/login.html" class="btn" id="profile">
+            <i class="fa-solid fa-user"></i>
           </a>
         </div>
-      </div>
+      </nav>
     </header>
+    <!-- header section end -->
 
     <div class="system-container" style="margin-top: 10rem">
       <section class="todo parts" id="todo">
@@ -91,50 +100,60 @@
       <section></section>
     </div>
 
-    <footer>
-      <div class="footer-contents">
+    <!-- footer content start  -->
+    <footer data-aos-offset="300">
+      <div class="footer-contents" data-aos="fade-down">
         <div class="footer-logo footer-cards">
           <a href="#home" class="logo"
             ><i class="fa-solid fa-earth"></i> educa.</a
           >
-          <p>High-quality O/L tution for maths, science & english.</p>
+          <p>
+            Helping students learn better with simple lessons & smart study
+            tools.
+          </p>
+        </div>
+
+        <div class="contact-info footer-cards">
+          <h3>Contact us</h3>
+          <h4>Maths Class</h4>
+          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="mailto:educa@maths.com"
+            ><i class="fas fa-envelope"></i>educa@maths.com</a
+          >
+          <h4>Science Class</h4>
+          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="mailto:educa@maths.com"
+            ><i class="fas fa-envelope"></i>educa@science.com</a
+          >
+          <h4>English Class</h4>
+          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="mailto:educa@maths.com"
+            ><i class="fas fa-envelope"></i>educa@english.com</a
+          >
         </div>
 
         <div class="footer-links footer-cards">
           <h3>Quick Links</h3>
-          <a href="#courses">Courses</a>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#classes">Classes</a>
           <a href="#teachers">Teachers</a>
-          <a href="#results">Results</a>
-          <a href="#reviews">Reviews</a>
+          <a href="#about">About</a>
+          <a href="#contacts">Contact</a>
         </div>
 
-        <div class="footer-newsletter footer-cards">
-          <form action="#" method="post">
-            <input
-              type="email"
-              name="newsletter"
-              id="newsletter"
-              placeholder="Your Email"
-              required />
-            <input type="submit" value="Subscribe" class="btn" />
-          </form>
-          <div class="news">
-            <p>
-              Subscribe to our newsletter for the latest class updates, study
-              tips, and important O/L exam resources.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- end first footer-contents -->
-
-      <div class="footer-contents footer-bottom">
-        <div class="footer-legels footer-cards">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
+        <div class="footer-links footer-cards">
+          <h3>Resourves</h3>
+          <a href="#">Notes</a>
+          <a href="#">Papers</a>
+          <a href="#">Daily Qiuz</a>
+          <a href="#">Study Tools</a>
+          <a href="#">O/L Results</a>
+          <a href="#">Reviews</a>
         </div>
 
         <div class="socail-links footer-cards">
+          <h3>Follow us</h3>
           <a href="#" title="Facebook" target="_blank"
             ><i class="fa-brands fa-facebook"></i
           ></a>
@@ -149,6 +168,29 @@
           ></a>
         </div>
 
+        <div class="badge-levelup footer-cards">
+          <h3>for Sri Lanka | O/L Students</h3>
+          <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
+          <p><i class="fa-regular fa-square-check"></i>Verified Links</p>
+          <p>
+            <i class="fa-solid fa-laptop-code"></i>last updated
+            <span>2026 March</span>
+          </p>
+          <p><i class="fa-solid fa-users"></i>Comminuty reviewed</p>
+        </div>
+      </div>
+      <!-- end first footer-contents -->
+
+      <!-- footer bottom start  -->
+      <div
+        class="footer-contents footer-bottom"
+        id="footer-bottom"
+        data-aos="fade-right">
+        <div class="footer-legels footer-cards">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+
         <div class="footer-copyrights footer-cards">
           <p>
             <i class="fa-regular fa-copyright"></i> <span id="year"></span> All
@@ -157,7 +199,7 @@
           <p>
             This template is made with <i class="fa-solid fa-heart"></i> by
             <a
-              href="http://lakshansandeepa.dev"
+              href="http://github.com/lakshan-beast"
               target="_blank"
               rel="noopener noreferrer"
               >Lakshan</a
@@ -166,11 +208,23 @@
         </div>
       </div>
     </footer>
+    <!-- footer content end  -->
 
-    <!-- swiper js link -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- animations script link -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        mirror: false,
+      });
+    </script>
+
+    <!-- chart js cdn link  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- custom js file link -->
     <script src="../js/script.js"></script>
+    <script src="../js/tools.js"></script>
   </body>
 </html>
