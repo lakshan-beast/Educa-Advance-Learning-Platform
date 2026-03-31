@@ -41,8 +41,8 @@
     }
   }
   @if $breakpoint == desktop {
-    @media only screen and (min-width: $breakpoint-desktop) {
-      @content; // 120px
+    @media only screen and (min-width: $breakpoint-laptop) {
+      @content; // 1200px
     }
   }
   @if $breakpoint == large-desktop {
@@ -50,4 +50,9 @@
       @content; // 1400px
     }
   }
+}
+
+@mixin test-red {
+  background-color: red !important;
+  border: 2px solid yellow !important;
 }

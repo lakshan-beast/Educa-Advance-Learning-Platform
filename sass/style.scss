@@ -1,19 +1,19 @@
 // abstracts file
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@use "base/reset" as *;
+@import "base/reset";
 
-@use "components/buttons" as *;
-@use "components/cards" as *;
+@import "components/buttons";
+@import "components/cards";
 
-@use "layouts/header" as *;
-@use "layouts/footer" as *;
+@import "layouts/header";
+@import "layouts/footer";
 
-@use "pages/index" as *;
-@use "pages/login" as *;
-@use "pages/tools" as *;
-@use "pages/daily" as *;
-@use "pages/materials" as *;
-@use "pages/reviews" as *;
-@use "pages/legel" as *;
+@import "pages/index";
+@import "pages/login";
+@import "pages/tools";
+@import "pages/daily";
+@import "pages/materials";
+@import "pages/reviews";
+@import "pages/legel";

@@ -3,6 +3,7 @@
   @include flex-custom;
   margin: $margin-none;
   padding: $padding-none;
+  // @include test-red;
 }
 // main part div style
 main {
@@ -513,9 +514,12 @@ section {
   margin: 0;
   margin-bottom: 16px;
   height: 100%;
-
   gap: 0;
   padding: 0;
+
+  overflow: hidden;
+  width: 100%;
+  // background-color: red;
   @include flex-custom(space-around, center, column);
 
   h2 {
@@ -1193,3 +1197,17 @@ section {
 //   }
 // }
 // }
+
+.home,
+.teachers,
+.information {
+  padding: 5rem 2rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: yellow;
+
+  @include respond(laptop) {
+    padding: 10rem 2rem;
+    background-color: skyblue;
+  }
+}

@@ -13,13 +13,14 @@
   scroll-padding-top: 6rem;
 }
 
+// other styles
 *::selection {
-  background-color: $dark-purple1;
+  background-color: $dark-purple2;
   color: $bg-white;
 }
 ::-webkit-scrollbar {
   height: 0.3rem;
-  width: 0.3rem;
+  width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
@@ -31,10 +32,13 @@
 html {
   overflow-x: hidden;
 }
+
+// background color
 body {
   background: $background-linear;
 }
 
+// font-families
 h1,
 h2,
 h3,
