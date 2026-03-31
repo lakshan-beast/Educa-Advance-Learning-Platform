@@ -45,7 +45,7 @@ $dark-purple: #26136d;
 $link-shadow: #c3c3ff;
 
 // fonts
-$font-primary: "poppins";
+$font-primary: "Poppins", sans-serif;
 $font-secondary: "Exo 2", sans-serif;
 
 // font-sizes
@@ -74,11 +74,11 @@ $font-style-italic: italic;
 $transition-fast: 0.3s ease;
 
 // breakpoints
+$breakpoint-small-mobile: 350px;
 $breakpoint-mobile: 600px;
 $breakpoint-tablet: 900px;
-$breakpoint-desktop: 1200px;
-$breakpoint-large-desktop: 1800px;
-$breakpoint-small-mobile: 350px;
+$breakpoint-laptop: 1200px;
+$breakpoint-large-desktop: 1400px;
 
 // border-radius
 $border-radius-small: 0.5rem;
