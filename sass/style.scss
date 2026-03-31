@@ -1,18 +1,19 @@
-@import "./abstracts/variables";
-@import "./abstracts/mixins";
+// abstracts file
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@import "./base/reset";
+@import "base/reset";
 
-@import "./components/buttons";
-@import "./components/cards";
+@import "components/buttons";
+@import "components/cards";
 
-@import "./layouts/header";
-@import "./layouts/footer";
+@import "layouts/header";
+@import "layouts/footer";
 
-@import "./pages/daily";
-@import "./pages/index";
-@import "./pages/legel";
-@import "./pages/login";
-@import "./pages/materials";
-@import "./pages/reviews";
-@import "./pages/tools";
+@import "pages/daily";
+@import "pages/index";
+@import "pages/legel";
+@import "pages/login";
+@import "pages/materials";
+@import "pages/reviews";
+@import "pages/tools";
