@@ -1,12 +1,12 @@
 // preloader
-window.addEventListener("load", () => {
-  const preLoader = document.getElementById("preLoader");
-  preLoader.style.opacity = "0";
-  preLoader.style.transition = "opacity 0.5s ease-out";
-  setTimeout(function () {
-    // preLoader.style.display = "none";
-  }, 500);
-});
+// window.addEventListener("load", () => {
+//   const preLoader = document.getElementById("preLoader");
+//   preLoader.style.opacity = "0";
+//   preLoader.style.transition = "opacity 0.5s ease-out";
+//   setTimeout(function () {
+//     // preLoader.style.display = "none";
+//   }, 500);
+// });
 
 // mobile menu
 // const menuBtn = document.getElementById("menu-btn");
@@ -143,7 +143,7 @@ const afternoon = "Good Afternoon!";
 const evening = "Good Evening!";
 const night = "Good Night!";
 
-if (hours < 10) {
+if (hours < 11 && hours >= 0) {
   welcomeMessage.textContent += `${morning} ${userName}`;
 } else if (hours < 14) {
   welcomeMessage.textContent += `${afternoon} ${userName}`;

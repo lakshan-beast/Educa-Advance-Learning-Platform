@@ -1,15 +1,3 @@
-// import files
-// @import "abstracts/variables";
-// @import "abstracts/mixins";
-
-// @import "base/reset";
-// @import "base/typography";
-
-// @import "layouts/header";
-// @import "layouts/footer";
-
-// @import "components/buttons";
-
 // preloader styles
 #preloader {
   position: fixed !important;
@@ -51,6 +39,7 @@
   @include flex-custom;
   margin: $margin-none;
   padding: $padding-none;
+  background-color: aqua;
 }
 // main part div style
 main {
