@@ -1,6 +1,4 @@
 // Flexbox Mixins
-// @import "abstracts/variables";
-
 // A mixin to center content both horizontally and vertically
 @mixin center-everything {
   display: flex;
@@ -47,29 +45,5 @@
     @media only screen and (max-width: $breakpoint-small-mobile) {
       @content;
     }
-  }
-}
-
-// Animation Mixins
-// A mixin for fade-in animation
-@mixin fade-in($duration: 0.5s, $timing: ease) {
-  animation: fadeIn $duration $timing forwards;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes cardBottom {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

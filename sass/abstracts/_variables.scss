@@ -1,5 +1,4 @@
 // variables.scss
-
 // stores colors and other variables used in the project
 $background: #ffffff;
 $background-linear: linear-gradient(
@@ -46,7 +45,7 @@ $dark-purple: #26136d;
 $link-shadow: #c3c3ff;
 
 // fonts
-$font-primary: "Poppins", sans-serif;
+$font-primary: "poppins";
 $font-secondary: "Exo 2", sans-serif;
 
 // font-sizes
@@ -177,5 +176,3 @@ $animation-timing-linear: linear;
 $animation-timing-ease-in: ease-in;
 $animation-timing-ease-out: ease-out;
 $animation-timing-ease-in-out: ease-in-out;
-
-// other variables

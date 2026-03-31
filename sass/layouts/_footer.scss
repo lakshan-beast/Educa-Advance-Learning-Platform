@@ -7,17 +7,14 @@ footer {
 
   @include flex-custom(flex-start, flex-start, column);
 
-  @include respond(mobile) {
-    // // padding: 0 10px;
-    // background-color: $orange;
-  }
+  // @include respond(mobile) {
+  // }
 
   h3 {
     color: $blue-light;
     margin-bottom: 8px;
     font-size: 1.17rem;
   }
-
   a {
     display: block;
     text-decoration: none;
@@ -25,7 +22,6 @@ footer {
     transition: 0.3s;
     color: $light-text;
     font-size: 0.7rem;
-
     &:hover {
       color: $dark-purple2;
       padding-left: 5px;
