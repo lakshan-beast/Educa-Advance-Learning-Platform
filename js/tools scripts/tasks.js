@@ -1,4 +1,4 @@
-alert("helo ");
+// alert("helo ");
 
 const checkboxes = document.querySelectorAll(".task-check");
 const count = document.getElementById("task-counter");

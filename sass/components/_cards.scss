@@ -1,0 +1,44 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./base/reset";
+@import "./base/typography";
+
+// @import "./layouts/header";
+// @import "./layouts/footer";
+
+@import "./components/buttons";
+
+.card {
+  background-color: rgb(168, 152, 168);
+  border-radius: $border-radius-medium;
+  padding: 3rem;
+  box-shadow: $shadow-light;
+  transition: all $transtitio-slow;
+  position: relative;
+  overflow: hidden;
+  @include flex-custom(center, flex-start, column, 1.5rem);
+
+  &-icon {
+    font-size: 3.5rem;
+    color: $dark-purple;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    color: $dark-purple;
+  }
+  &-text {
+    font-size: 1.5rem;
+    color: $medium-text;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-dark;
+    border-bottom: 4px solid $dark-purple1;
+  }
+}
