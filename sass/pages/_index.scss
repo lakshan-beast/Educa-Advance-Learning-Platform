@@ -37,6 +37,7 @@ main {
   padding: 0 20px;
   padding-bottom: 4rem;
   z-index: 1;
+  overflow: hidden;
 
   @include flex-custom;
 
@@ -88,29 +89,28 @@ main {
 }
 
 section {
-  max-width: 1020px;
+  max-width: 114rem;
   min-width: 350px;
   width: 100%;
   border-radius: $border-radius-medium;
-
+  background-color: aqua;
   @include flex-custom;
 
-  @include respond(large-desktop) {
-    padding: 10rem 0;
-    background-color: aqua;
+  @include respond(mobile) {
+    padding: 3rem 1.5rem;
+    background-color: lightcoral;
+  }
+  @include respond(tablet) {
+    padding: 5rem 2rem;
+    background-color: aquamarine;
   }
   @include respond(desktop) {
     background-color: lightsalmon;
   }
 
-  @include respond(tablet) {
-    padding: 5rem 2rem;
-    background-color: aquamarine;
-  }
-
-  @include respond(mobile) {
-    padding: 3rem 1.5rem;
-    background-color: lightcoral;
+  @include respond(large-desktop) {
+    padding: 10rem 0;
+    background-color: aqua;
   }
 
   //   @include respond(large-desktop) {

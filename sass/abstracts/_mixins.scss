@@ -25,25 +25,29 @@
 // Media Query Mixins
 // A mixin for devices
 @mixin respond($breakpoint) {
+  @if $breakpoint == small-mobile {
+    @media only screen and (min-width: $breakpoint-small-mobile) {
+      @content; // 350px
+    }
+  }
+  @if $breakpoint == mobile {
+    @media only screen and (min-width: $breakpoint-mobile) {
+      @content; // 600px
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: $breakpoint-tablet) {
+      @content; // 900px
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      @content; // 120px
+    }
+  }
   @if $breakpoint == large-desktop {
-    @media only screen and (max-width: $breakpoint-large-desktop) {
-      @content;
-    }
-  } @else if $breakpoint == desktop {
-    @media only screen and (max-width: $breakpoint-desktop) {
-      @content;
-    }
-  } @else if $breakpoint == tablet {
-    @media only screen and (max-width: $breakpoint-tablet) {
-      @content;
-    }
-  } @else if $breakpoint == mobile {
-    @media only screen and (max-width: $breakpoint-mobile) {
-      @content;
-    }
-  } @else if $breakpoint == small-mobile {
-    @media only screen and (max-width: $breakpoint-small-mobile) {
-      @content;
+    @media only screen and (min-width: $breakpoint-large-desktop) {
+      @content; // 1400px
     }
   }
 }
