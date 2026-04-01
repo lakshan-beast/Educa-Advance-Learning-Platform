@@ -193,7 +193,7 @@ button:hover {
   margin: 0;
   padding: 2rem;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 900px) {
   .header-navbar {
     padding: 2rem 4rem;
   }
@@ -523,12 +523,14 @@ main {
   font-size: 0.8rem;
 }
 
-section {
-  max-width: 114rem;
-  min-width: 350px;
+.parts {
+  margin: 1rem auto 2rem auto;
+  padding: 5rem 1rem;
   width: 100%;
+  max-width: 114rem;
+  background: transparent;
   border-radius: 1rem;
-  background-color: aqua;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -536,61 +538,35 @@ section {
   gap: 0;
   flex-wrap: nowrap;
 }
-@media only screen and (min-width: 600px) {
-  section {
-    padding: 3rem 1.5rem;
-    background-color: lightcoral;
-  }
-}
-@media only screen and (max-width: 900px) {
-  section {
-    padding: 5rem 2rem;
-    background-color: aquamarine;
+@media only screen and (min-width: 900px) {
+  .parts {
+    padding: 7rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  section {
-    background-color: lightsalmon;
+  .parts {
+    padding: 9rem 2rem;
   }
-}
-@media only screen and (min-width: 1400px) {
-  section {
-    padding: 10rem 0;
-    background-color: aqua;
-  }
-}
-
-.parts {
-  padding: 0 1rem;
-  margin: 1rem 0;
-  margin-bottom: 1rem;
-  width: 100%;
-  max-width: 114rem;
-  min-width: 350px;
-  background: transparent;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 0;
-  flex-wrap: nowrap;
 }
 .parts h2 {
-  margin: 0.8rem 0;
+  margin: 1rem 0;
   font-size: 1.8rem;
   color: #190f8e;
   font-weight: 700;
   text-align: center;
+  letter-spacing: 1px;
 }
-
-.features,
-.teachers {
-  border-radius: 0rem;
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-  padding-bottom: 1rem;
+@media only screen and (min-width: 900px) {
+  .parts h2 {
+    font-size: 1.9rem;
+    text-decoration: underline;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .parts h2 {
+    font-size: 2rem;
+    text-decoration: line-through;
+  }
 }
 
 .features-container {
@@ -610,7 +586,7 @@ section {
     gap: 1rem;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 900px) {
   .features-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
