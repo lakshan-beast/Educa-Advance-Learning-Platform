@@ -40,9 +40,9 @@
 
 Check out how **Educa** adapts to different screen sizes:
 
-|               Desktop View               |               Tablet View               |               Mobile View               |
-| :--------------------------------------: | :-------------------------------------: | :-------------------------------------: |
-| ![Desktop](assets/images/hero-image.png) | ![Tablet](assets/images/hero-image.png) | ![Mobile](assets/images/hero-image.png) |
+|              Desktop View              |             Tablet View             |             Mobile View             |
+| :------------------------------------: | :---------------------------------: | :---------------------------------: |
+| ![Desktop](assets/images/comments.jpg) | ![Tablet](assets/images/tablet.png) | ![Mobile](assets/images/mobile.png) |
 
 ---
 
@@ -68,21 +68,11 @@ cd Educa-Platform
 
 Educa - Advanced Learning Platform/
 ├── assets/
-│ ├── images/
-│ └── pdf/
+│ └── images/
 ├── css/
-├── data/
-├── html/
-│ ├── login/
-│ │ └── login.html
-│ ├── class.html
-│ ├── daily.html
-│ ├── index.html
-│ ├── materials.html
-│ ├── reviews.html
-│ └── tools.html
 ├── js/
 ├── sass/
+├── index.html
 └── README.md
 
 ### 4. 🧠 **What I Learned**
@@ -99,7 +89,7 @@ Educa - Advanced Learning Platform/
 ```md
 ## 🔗 **Live Demo**
 
-👉 https://your-live-link.com
+👉 https://educa-advance-learning-platform.netlify.app/
 
 ---
 
@@ -107,15 +97,10 @@ Educa - Advanced Learning Platform/
 
 This project is licensed under the MIT License.
 
-### 🎓 **Course Categories**
-
-![English](./assets/english-class.jpg)
-![Maths](./assets/maths-class.jpg)
-![Science](./assets/science-class.jpg)
-
 ### 📌 **Future Improvements**
 
 - User authentication system
+- Pure Logics
 - Backend integration (Node.js / Firebase)
 - Course enrollment system
 ```
