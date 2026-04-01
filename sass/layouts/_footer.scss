@@ -4,60 +4,73 @@ footer {
   margin-top: 2rem;
   background-color: $dark-blue;
   color: $dark-purple2;
-
   @include flex-custom(flex-start, flex-start, column);
 
-  // @include respond(mobile) {
-  // }
-
   h3 {
-    color: $blue-light;
     margin-bottom: 8px;
+    color: $blue-light;
     font-size: 1.17rem;
   }
   a {
     display: block;
-    text-decoration: none;
     margin: 5px 0;
     transition: 0.3s;
     color: $light-text;
     font-size: 0.7rem;
+    text-decoration: none;
+
     &:hover {
       color: $dark-purple2;
       padding-left: 5px;
     }
   }
 }
+
+// footer contents
 .footer-contents {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
   padding: 30px 10%;
   transition: 0.3s ease;
   width: 100%;
+
+  @include respond(desktop) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+  }
+
+  // footer cards
   .footer-cards {
     margin: 1rem 0;
     width: 100%;
     padding: 0rem;
     @include flex-custom(flex-start, flex-start, column);
+
     p {
       font-size: 0.6rem;
       color: $medium-text;
       padding: 0;
       margin: 0;
     }
-    q {
-      margin-top: 12px;
-    }
   }
 }
 
+// footer logo
 .logo {
   color: $bg-white;
   font-size: 1.4rem;
   font-weight: bolder;
   font-family: "Exo 2";
 }
+
+// footer links
+.footer-links {
+  a {
+    padding-left: 10px;
+    text-decoration: underline;
+  }
+}
+
+// contact info
 .contact-info {
   h4 {
     color: $medium-text;
@@ -72,28 +85,36 @@ footer {
     margin-right: 10px;
   }
 }
-.footer-links {
+
+// socail media
+.socail-content {
+  @include flex-custom(flex-start, center, column);
+
+  .social-links {
+    @include flex-custom(center, center, row, nowrap);
+  }
   a {
-    padding-left: 10px;
-    text-decoration: underline;
+    font-size: 1.4rem;
+    margin: 0 1rem;
   }
 }
-.footer-contacts a {
-  padding-left: 12px;
-}
 
+// footer bottom
 #footer-bottom {
   border-top: 2px solid #7f91ec;
   margin-bottom: 6px;
 
   @include flex-custom(space-between, center, column, wrap);
 }
-.footer-credits,
+
+// .footer-credits,
 .footer-copyrights {
   color: $bg-white;
   display: flex;
   flex-direction: column;
 }
+
+// footer legel
 .footer-legels {
   a {
     text-decoration: underline;
@@ -101,21 +122,15 @@ footer {
     margin: 0;
   }
 }
-.socail-links {
-  @include flex-custom(flex-start, center, column);
 
-  a {
-    font-size: 1.4rem;
-    margin: 0 1rem;
-  }
-}
+// badge level up
 .badge-levelup {
-  p {
-    i {
-      margin-right: 10px;
-    }
+  i {
+    margin-right: 10px;
   }
 }
+
+// footer copyrights
 .footer-copyrights {
   a {
     color: $dark-purple2;
