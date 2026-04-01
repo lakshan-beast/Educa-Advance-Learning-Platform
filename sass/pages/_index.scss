@@ -628,10 +628,6 @@ main {
       max-width: 500px;
       margin: 0 auto;
 
-      @include respose(desktop) {
-        margin: 0;
-      }
-
       canvas {
         display: block;
         height: auto !important;
