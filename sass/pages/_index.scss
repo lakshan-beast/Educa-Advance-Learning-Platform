@@ -104,7 +104,7 @@ main {
   .description {
     p {
       color: $blue-medium;
-      font-size: $font-size-small;
+      font-size: $font-size-p;
     }
   }
 }
@@ -199,7 +199,7 @@ main {
       text-align: center;
       margin: 0 12px;
       padding: $padding-none;
-      font-size: $font-size-small;
+      font-size: $font-size-p;
     }
     a {
       padding: 10px 18px;
@@ -249,7 +249,7 @@ main {
         color: $blue-medium;
         margin: 0rem 0.3rem;
         text-align: left;
-        font-size: $font-size-small;
+        font-size: $font-size-p;
 
         span {
           background: transparent;
@@ -361,7 +361,7 @@ main {
         width: 100%;
         p {
           color: $medium-text;
-          font-size: $font-size-xsmall;
+          font-size: $font-size-p;
           display: flex;
           align-items: flex-start;
           margin: $margin-none;
@@ -482,7 +482,7 @@ main {
     }
   }
   p {
-    font-size: $font-size-small;
+    font-size: $font-size-p;
     padding: 0 1rem;
     color: $medium-text;
 
@@ -535,7 +535,7 @@ main {
         font-weight: 600;
         margin: 0;
         text-align: center;
-        font-size: 0.6rem;
+        font-size: $font-size-p;
         color: rgba(30, 80, 161, 0.5);
         font-weight: 600;
         margin: 0;
@@ -575,7 +575,7 @@ main {
         p {
           color: $medium-text;
           padding-left: 16px;
-          font-size: 0.9rem;
+          font-size: $font-size-p;
           line-height: 1.5;
         }
       }
@@ -641,7 +641,7 @@ main {
         a {
           color: $blue-medium;
           padding-left: 16px;
-          font-size: $font-size-small;
+          font-size: $font-size-p;
           background-color: $light-text;
           width: 100%;
         }
