@@ -2,11 +2,15 @@
 // full system conatiner div style
 .system-container {
   max-width: 114rem;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
 
-  @include respond(desktop) {
+  @include respond(tablet) {
     padding: 0 3rem;
+  }
+  @include respond(desktop) {
+    padding: 0 10rem;
   }
 }
 
@@ -16,46 +20,14 @@ main {
   margin-bottom: $margin-xlarge;
 }
 
-.welcome-msg {
-  transition: $transition-fast;
-  color: $h2-color;
-  font-weight: $font-weight-semi-bold;
-  margin-bottom: $margin-large;
-
-  color: $h2-color;
-  font-size: $font-size-h2;
-  font-weight: $font-weight-semi-bold;
-
-  span {
-    color: $dark-purple1;
-    font-size: $font-size-h2;
-    margin-left: $margin-small;
-  }
-}
-
-// .home,
-// .teachers,
-// .information {
-//   padding: 5rem 2rem;
-//   width: 100%;
-//   overflow: hidden;
-//   background-color: yellow;
-
-//   @include respond(laptop) {
-//     padding: 10rem 2rem;
-//     background-color: skyblue;
-//   }
-// }
-
 // home div style
 .home {
-  height: 100vh;
+  min-height: 100svh;
+  height: auto;
   max-width: 1020px;
   min-width: 350px;
   width: 100%;
-  padding-top: $padding-large;
-  padding: 0 20px;
-  padding-bottom: 4rem;
+  // padding: 2rem 1rem 4rem 1rem;
   z-index: 1;
   overflow: hidden;
 
@@ -63,20 +35,32 @@ main {
 
   .columns {
     @include flex-custom(center, center, column-reverse);
-    // @include response(desktop) {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-direction: row;
-    // gap: 0rem;
-    // flex-wrap: nowrap;
-    // padding: 0 10rem;
-    /* padding-top: 2rem; */
-    // min-width: 1140px;
-    // width: 100%;
-    // }
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    @include respond(desktop) {
+      flex-direction: row;
+    }
   }
   .column {
+    h1 {
+      transition: $transition-fast;
+      color: $h2-color;
+      font-weight: $font-weight-semi-bold;
+      margin-bottom: $margin-small;
+
+      span {
+        color: $dark-purple1;
+        font-size: $font-size-h2;
+        margin-left: $margin-small;
+        display: block;
+
+        @include respond(mobile) {
+          display: inline-block;
+        }
+      }
+    }
     h2 {
       margin-bottom: $margin-small;
       color: $h2-color;
@@ -89,24 +73,22 @@ main {
     }
     .home-links {
       padding: $padding-none;
-      @include flex-custom(center, center, row);
+      // @include flex-custom(center, center, row);
+      display: block;
+      margin-top: 0.5rem;
 
-      // @include response(desktop) {
-      //   padding: 0;
-      //   display: flex;
-      //   justify-content: flex-start;
-      //   align-items: center;
-      //   flex-direction: row;
-      //   gap: 0;
-      //   flex-wrap: nowrap;
-      // }
+      @include respond(tablet) {
+        display: flex;
+        flex-direction: row;
+      }
 
       a {
-        width: 180px;
+        width: 100%;
+        max-width: 180px;
         border-radius: $border-radius-xlarge;
         // margin: 0 auto;
         padding: 8px 10px;
-        margin-top: 36px;
+        margin-top: $margin-small;
         margin-right: 6px;
         i {
           margin-left: 0.5rem;
@@ -114,10 +96,11 @@ main {
       }
     }
     img {
-      width: 100%;
+      margin: 2rem auto;
+      max-width: 100%;
       height: auto;
-      margin: 5rem auto;
       @include center-everything;
+      object-fit: cover;
     }
   }
   .description {
@@ -128,45 +111,10 @@ main {
   }
 }
 
-// section {
-// max-width: 114rem;
-// min-width: 350px;
-// width: 100%;
-// border-radius: $border-radius-medium;
-// background-color: aqua;
-// @include flex-custom;
-
-// @include respond(mobile) {
-//   padding: 3rem 1.5rem;
-//   background-color: lightcoral;
-// }
-// @include respond(tablet) {
-//   padding: 5rem 2rem;
-//   background-color: aquamarine;
-// }
-// @include respond(desktop) {
-//   background-color: lightsalmon;
-// }
-
-// @include respond(large-desktop) {
-//   padding: 10rem 0;
-//   background-color: aqua;
-// }
-
-//   @include respond(large-desktop) {
-// }
-// @include respond(desktop) {
-// }
-// @include respond(tablet) {
-// }
-// @include respond(mobile) {
-// }
-// }
-
 // parts
 .parts {
   margin: 1rem auto 2rem auto;
-  padding: 5rem 1rem;
+  padding: 1rem 0rem;
   width: 100%;
   max-width: 114rem;
   background: transparent;
@@ -175,14 +123,15 @@ main {
   @include flex-custom;
 
   @include respond(tablet) {
-    padding: 7rem;
+    padding: 4rem;
   }
   @include respond(desktop) {
-    padding: 9rem 2rem;
+    padding: 3rem 0rem;
   }
 
   h2 {
     margin: 1rem 0;
+    margin-bottom: 2rem;
     font-size: $font-size-h2;
     color: $h2-color;
     font-weight: $font-weight-bold;
@@ -191,45 +140,32 @@ main {
 
     @include respond(tablet) {
       font-size: 1.9rem;
-      text-decoration: underline;
     }
     @include respond(desktop) {
       font-size: 2rem;
-      text-decoration: line-through;
     }
   }
 }
 
-// .features,
-// .teachers {
-//   // background-color: $label-color;
-//   // border-radius: $border-radius-none;
-//   // margin: $margin-none;
-//   // margin-bottom: 1rem;
-//   // padding: $padding-none;
-//   // padding-bottom: 1rem;
-// }
-
+// featuers
 .features-container {
   padding: $padding-none;
   margin: 0 1rem;
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
 
-  @include respond(large-desktop) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+  @include respond(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
   }
   @include respond(desktop) {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
-  @include respond(tablet) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-  }
-  @include respond(mobile) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
+  @include respond(large-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
 
   .features-card {
@@ -258,6 +194,7 @@ main {
       border-radius: $border-radius-xxlarge;
       margin: $margin-none;
       margin-bottom: 0.5rem;
+      object-fit: cover;
     }
 
     h3 {
@@ -288,72 +225,62 @@ main {
 }
 
 // cources container
-.classes-container {
-  .classes-content {
-    width: 100%;
-    // padding: 0 1rem;
+.classes-content {
+  .classes-card {
+    background: $bg-white;
+    padding: $padding-none;
+    margin: $margin-none;
+    // margin-bottom: 2rem;
+    border-radius: $border-radius-medium;
+    @include flex-custom(space-between, center, column);
+    box-shadow: 0px 0px 20px $blue-light;
+    gap: 6px;
 
-    .classes-card {
-      background: $bg-white;
-      padding: $padding-none;
-      margin: $margin-none;
-      margin-bottom: 2rem;
-      border-radius: $border-radius-medium;
-      @include flex-custom(space-between, center, column);
-      // animation: cardBottom 1.6s ease-in forwards;
-      box-shadow: 0px 0px 20px $blue-light;
-      gap: 6px;
+    .classes-column img {
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius-styles2;
+      object-fit: cover;
+    }
+    .classes-info {
+      @include flex-custom(flex-start, stretch, column, 2px, nowrap);
+      padding: 0 2rem;
 
-      .classes-column img {
-        max-width: 100%;
-        // width: 250px;
-        height: auto;
-        border-radius: $border-radius-styles2;
-        // box-shadow: 0px 3px 6px $blue-light;
+      h3 {
+        color: $h2-color;
+        font-size: $font-size-xhuge;
+        text-align: center;
+        text-shadow: 0px 1px 3px $link-shadow;
       }
-      .classes-info {
-        @include flex-custom(flex-start, center, column, nowrap);
-        padding: 0 2rem;
+      h4 {
+        color: $dark-purple1;
+        font-size: $font-size-p;
+        text-align: left;
+        margin: 0.8rem 0.3rem;
+      }
+      p {
+        color: $blue-medium;
+        margin: 0rem 0.3rem;
+        text-align: left;
+        font-size: $font-size-small;
 
-        h3 {
-          color: $h2-color;
-          font-size: $font-size-xhuge;
-          text-align: center;
-          // text-decoration: underline;
-          text-shadow: 0px 1px 3px $link-shadow;
-        }
-        h4 {
-          color: $dark-purple1;
-          font-size: $font-size-p;
-          text-align: left;
-          margin: 0.8rem 0.3rem;
-        }
-        p {
-          color: $blue-medium;
-          margin: 0rem 0.3rem;
-          text-align: left;
-          font-size: $font-size-small;
-
-          span {
-            background: transparent;
-            color: $dark-purple;
-            text-decoration: underline;
-            margin: 3px;
-            // padding: $padding-none;
-            // margin: $margin-none;
-            border: none;
-            box-shadow: none;
-          }
-        }
         span {
-          background-color: $dark-purple1;
-          color: $bg-white;
-          padding: 6px 16px;
-          margin: 12px 0;
-          border-radius: $border-radius-medium;
-          text-align: center;
-          box-shadow: 0px 3px 6px $blue-light;
+          background: transparent;
+          color: $dark-purple;
+          text-decoration: underline;
+          margin: 3px;
+          border: none;
+          box-shadow: none;
         }
+      }
+      span {
+        background-color: $dark-purple1;
+        color: $bg-white;
+        padding: 8px 16px;
+        margin: 12px 0;
+        border-radius: $border-radius-medium;
+        text-align: center;
+        box-shadow: 0px 3px 6px $blue-light;
       }
     }
   }
@@ -363,16 +290,12 @@ main {
   @include flex-custom(flex-end, flex-end, row);
   margin-top: 0;
   margin-bottom: 1rem;
-
   a {
     border-radius: $border-radius-xlarge;
-    padding: 6px 16px;
+    padding: 12px 25px;
     width: auto;
-    margin: 0 auto;
+    margin: 1rem auto;
   }
-}
-.today-class {
-  display: none;
 }
 
 // teacher style
@@ -382,127 +305,94 @@ main {
     padding: 0 1rem;
     margin: 1rem 0;
   }
+}
 
-  .teachers-container {
-    padding: 0 1rem;
+// teacher contaiener card
+.teachers-container {
+  .teacher-card {
+    border: 2px solid $blue-light;
+    @include flex-custom(space-between, flex-start, column);
+    margin-bottom: 1rem;
+    border-radius: $border-radius-medium;
+    box-shadow: 0px 4px 15px $blue-light;
 
-    .teacher-card {
-      border: 2px solid $blue-light;
-      @include flex-custom(space-between, flex-start, column);
-      margin-bottom: 1rem;
-      border-radius: $border-radius-medium;
-      box-shadow: 0px 4px 15px $blue-light;
+    img {
+      width: 100%;
+      min-width: 100%;
+      height: 100%;
+      background-origin: border-box;
+      background-attachment: fixed;
+      background-clip: border-box;
+      background-size: auto;
+      background-position: center;
+      object-fit: cover;
+    }
 
-      // .card-column {
-      //   display: grid;
-      //   grid-template-columns: repeat(2, 1fr);
-      //   gap: 0rem;
-      //   justify-items: end;
-      //   padding: 0 3rem;
-
-      img {
-        width: 100%;
-        min-width: 100%;
-        height: 100%;
-        background-origin: border-box;
-        background-attachment: fixed;
-        background-clip: border-box;
-        background-size: auto;
-        background-position: center;
-        // border-radius: $border-radius-circle;
-        // margin: 12px 0;
-
-        // &:hover {
-        // box-shadow: 0px 3px 6px $dark-purple;
-        // }
-      }
-
-      .share {
-        @include flex-custom(space-between, center, column, nowrap);
-        margin: $margin-medium;
-        padding: 0 1rem;
-        width: 100%;
-        a {
-          border-radius: $border-radius-medium;
-          background-color: transparent;
-          color: $dark-purple2;
-          padding: 0.5rem;
-          &:hover {
-            scale: 1.05;
-            transition: $transition-fast;
-          }
+    .share {
+      @include flex-custom(space-between, center, column, nowrap);
+      margin: $margin-medium;
+      padding: 0 1rem;
+      width: 100%;
+      a {
+        border-radius: $border-radius-medium;
+        background-color: transparent;
+        color: $dark-purple2;
+        padding: 0.5rem;
+        &:hover {
+          scale: 1.05;
+          transition: $transition-fast;
         }
-        i {
-          font-size: $font-size-xxhuge;
-          padding-left: $padding-xlarge;
-        }
-        // a {
-        //   display: inline-block;
-        //   width: 80%;
-        //   margin: 0.5rem 0;
-        //   border-radius: 0.6rem;
-        //   font-size: 1.3rem;
-        //   transition: border 0.1s ease;
-        // }
       }
-      // }
+      i {
+        font-size: $font-size-xxhuge;
+        padding-left: $padding-xlarge;
+      }
+    }
 
-      .teacher-info {
-        background-color: $blue-light;
-        @include flex-custom(center, column);
-        margin: $margin-none;
-        padding: 1rem 0.5rem;
-        // margin-bottom: 2px;
-        border-radius: $border-radius-styles;
+    .teacher-info {
+      @include flex-custom(center, center, column, nowrap, 0);
+      margin: $margin-none;
+      padding: 1rem 0.5rem;
+      padding: 0.8rem 0.5rem;
+      border-radius: $border-radius-styles;
+      width: 100%;
+
+      h3 {
+        text-align: center;
+        color: $h2-color;
+        font-size: $font-size-xhuge;
+        margin-bottom: 0.5rem;
+
+        span {
+          color: $dark-purple;
+        }
+      }
+      .teacher-details {
+        @include flex-custom(flex-start, flex-start, column);
+        border-bottom: 2px solid #c6d4fa;
+        padding-bottom: 0.5rem;
         width: 100%;
-
-        h3 {
-          text-align: center;
-          color: $h2-color;
-          font-size: $font-size-xhuge;
-          margin-bottom: 0.5rem;
+        p {
+          color: $medium-text;
+          font-size: $font-size-xsmall;
+          display: flex;
+          align-items: flex-start;
+          margin: $margin-none;
+          flex-direction: column;
 
           span {
-            color: $dark-purple;
+            padding: 6px 15px;
+            color: #4e6ab9;
+            margin-left: 0.4rem;
+            background: rgb(245 245 245);
+            border-radius: 6px;
           }
-        }
-        .teacher-details {
-          @include flex-custom(flex-start, flex-start, column);
-          width: 100%;
-          p {
-            color: $medium-text;
-            font-size: $font-size-xsmall;
-            display: flex;
-            // justify-content: space-between;
-            align-items: flex-start;
-            margin: $margin-none;
-            // border-bottom: 2px solid $dark-purple;
-
-            span {
-              color: $h2-color;
-              margin-left: 1rem;
-            }
-          }
-          // .notes {
-          //   display: block;
-          //   text-align: center;
-          //   margin: 3px 0;
-          // }
-          // p:nth-last-child() {
-          //   border: none;
-          // }
         }
       }
     }
   }
 }
 
-.teachers-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 3rem;
-  padding: 5rem 0;
-}
 .teacher-card {
   background-color: $bg-white;
   border-radius: 1rem;
@@ -523,33 +413,25 @@ main {
     }
   }
   &__socails {
-    /* position: absolute; */
-    /* bottom: -5rem; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    /* background-color: aquamarine; */
-    /* padding: 1rem 0rem; */
-    /* border-radius: 5rem; */
     display: flex;
     gap: 0.5rem;
     transition: all 0.4s ease;
-    /* opacity: 0; */
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
-    /* margin: 0; */
     padding-top: 1rem;
-    margin-right: 1rem;
+    padding: 0.7rem 0.5rem 0 0.5rem;
+    width: 100%;
     i {
       color: #f7f7f7;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
     a {
-      padding: 5px 8px;
+      padding: 6px 8px;
       border-radius: 8px;
-      /* width: 33px; */
-      // /* height: 45px;
+      width: 33px;
+      height: 33px;
     }
   }
   &:hover {
@@ -559,10 +441,24 @@ main {
     .teacher-card_img-box img {
       transform: scale(1.1);
     }
-    .teacher-card_socails {
-      // bottom: 2rem;
+    &__socails {
       opacity: 1;
     }
+  }
+}
+
+.teachers-container,
+.classes-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  // @include respond(tablet) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+  @include respond(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -570,13 +466,22 @@ main {
   margin: 0;
   margin-bottom: 16px;
   height: 100%;
-  gap: 0;
-  padding: 0;
-
+  gap: 1.5rem;
+  padding: 1rem;
   overflow: hidden;
   width: 100%;
-  // background-color: red;
+
   @include flex-custom(space-around, center, column);
+
+  @include respond(desktop) {
+    flex-direction: column;
+    gap: 3rem;
+
+    .info-content-left {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
   h2 {
     color: $h2-color;
@@ -588,110 +493,106 @@ main {
   }
   p {
     font-size: $font-size-small;
-    // margin: 0 1rem;
     padding: 0 1rem;
-    // text-wrap: auto;
     color: $medium-text;
 
-    background-color: rgba(127, 145, 236, 0.08);
+    background-color: $bg-soft-blue;
     border-radius: 0.5rem;
   }
-
+  .result-container,
+  .about-status,
+  .info-column p {
+    background-color: $bg-soft;
+  }
   .about-status {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    padding: 1rem;
-    margin: 1rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    // margin: 1rem 0;
+    background-color: $bg-soft-blue;
+    // width: 100%;
 
-    background-color: rgba(127, 145, 236, 0.08);
+    margin: 1rem;
+    @include respond(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    background-color: $bg-soft-blue;
     border-radius: 0.5rem;
     .box {
-      padding: 6px;
+      padding: 6px 1rem;
+      padding-top: 1rem;
       background-color: #fcfcfc;
       border-radius: 0.5rem;
-      box-shadow: 0px 0px 6px rgb(30 80 161 / 50%);
+      box-shadow: 0px 0px 6px rgba(30, 80, 161, 0.5);
 
       @include flex-custom(space-between, center, column);
 
       i {
-        // font-size: $font-size-huge;
-        // font-weight: $font-weight-extra-bold;
-        // animation: iconLeft 1s ease-in forwards;
-        // color: $dark-purple;
-        // text-align: center;
-        font-size: 1.6rem;
         font-weight: 800;
         color: rgb(78, 106, 185);
         text-align: center;
-        margin: 0.4rem;
-        padding-top: 1rem;
+        font-size: 1.8rem;
       }
       h3 {
-        // font-size: $font-size-h3;
-        // margin: 0.5rem;
-        // color: $h2-color;
         font-weight: $font-weight-extra-bold;
-        // animation: numPop 1s ease-in forwards;
         text-align: center;
         font-size: 1.5rem;
         margin: 0.3rem;
-        color: rgb(253, 29, 29);
+        color: $orange;
         font-weight: 800;
         text-align: center;
       }
 
       p {
-        // font-size: $font-size-small;
-        // color: $dark-purple;
         font-weight: 600;
-        margin: $margin-none;
-        padding: $padding-none;
+        margin: 0;
+        /* padding: 0; */
         text-align: center;
-        // animation: bottomText 1s ease-in forwards;
-        // border-top: 2px solid $dark-purple;
-
         font-size: 0.6rem;
         color: rgba(30, 80, 161, 0.5);
         font-weight: 600;
         margin: 0;
-        padding: 0;
+        /* padding: 0; */
         text-align: center;
         border-top: 2px solid #e0e8ff;
+        /* padding: 6px 2rem; */
+        width: 100%;
       }
     }
   }
 
-  .about-content {
-    // padding: 1rem 0rem;
-    // margin-top: 6px;
-    border-radius: $border-radius-small;
+  .information-conatiner {
+    display: grid;
+    grid-template-columns: repeat(1);
 
-    // background-color: rgba(127, 145, 236, 0.08);
-    // border-radius: 1rem;
+    @include respond(desktop) {
+      grid-auto-flow: column;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  }
+
+  .about-content {
+    border-radius: $border-radius-small;
   }
   .about-content {
     .about-cards {
       margin-bottom: 6px;
       .about-card,
       .contact-card {
-        background-color: rgba(127, 145, 236, 0.08);
-        // margin: 6px 0;
-        // padding: 6px;
-        // border-radius: 6px;
-        /* text-align: left; */
-        // color: #190f8e;
+        background-color: $bg-soft-blue;
 
         h3 {
-          color: $extra-blue;
-          /* text-align: center; */
-          /* margin-bottom: 5px; */
+          color: $blue-medium;
           margin-left: $margin-xlarge;
         }
         p {
           color: $medium-text;
           padding-left: 16px;
-          font-size: $font-size-small;
+          font-size: 0.9rem;
+          line-height: 1.5;
         }
       }
     }
@@ -699,29 +600,28 @@ main {
     .result-container {
       background: transparent;
       margin-top: 12px;
-
-      background-color: rgba(127, 145, 236, 0.08);
+      background-color: $bg-soft-blue;
       border-radius: 0.5rem;
+      width: 100%;
+
+      max-width: 500px;
+      margin: 0 auto;
 
       canvas {
-        margin-top: 16px;
-        padding: 1rem;
+        display: block;
+        height: auto !important;
+        width: 100% !important;
       }
 
       h3 {
         margin: 0.8rem 0;
         font-size: $font-size-h3;
-        // color: $skyblue1;
         font-weight: $font-weight-bold;
         text-align: center;
         border: none;
       }
 
       .year-results {
-        // display: grid;
-        // grid-template-columns: repeat(2, 1fr);
-        // gap: 0.8rem;
-        // margin: 0.5rem 1rem;
         padding: 0.5rem;
         border-radius: $border-radius-medium;
         margin: 30px 0;
@@ -735,10 +635,10 @@ main {
   }
 
   .contact-content {
-    // padding: 0.5rem 0rem;
     margin-top: 6px;
     border-radius: $border-radius-small;
   }
+
   .contact-content {
     .contact-cards {
       margin-bottom: 6px;
@@ -748,7 +648,6 @@ main {
         @include flex-custom(flex-start, flex-start, column);
 
         h3 {
-          /* background-color: white; */
           margin: 0px auto;
           padding: 9px;
           border-radius: $border-radius-small;
@@ -813,96 +712,32 @@ main {
   }
 }
 
-// .contact-content {
-//   padding: $padding-none;
-//   margin: $margin-none;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-
-//   .contact-info {
-//     padding: $padding-none;
-
-//     .class-contact {
-//       padding: $padding-none;
-//       padding-top: 6px;
-//       margin: 1rem 0;
-//       background: $bg-white;
-//       box-shadow: 0px 1px 6px $dark-purple;
-//       border-radius: $border-radius-medium;
-//       display: none;
-
-//       h3 {
-//         color: $dark-purple2;
-//         margin-bottom: 5px;
-//         font-size: $font-size-xhuge;
-//         text-align: center;
-//       }
-//       iframe {
-//         padding: 0 1%;
-//         margin: 0.5rem 0;
-//         border-radius: $border-radius-medium;
-//         height: auto;
-//         width: 50%;
-//       }
-//     }
-//   }
-//   .contact-numbers {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: center;
-//     margin: $margin-none;
-//     gap: 0.5rem;
-
-//     p {
-//       color: $h2-color;
-//       border-radius: 3px;
-//       margin: 0.5rem;
-//       box-shadow: 0px 1px 6px $dark-purple;
-//       background-color: $bg-white;
-//       padding: 6px 16px;
-//       text-align: center;
-//       font-weight: 600;
-//     }
-//     a {
-//       padding: 6px 12px;
-//       margin: 6px 0;
-//       color: $bg-white;
-//       background-color: $dark-purple;
-//       text-decoration: underline;
-//       text-align: center;
-//       display: block;
-//       border-radius: 3px;
-
-//       &:hover {
-//         background-color: $dark-purple1;
-//         color: $bg-white;
-//         text-decoration: underline;
-//       }
-//     }
-//   }
+// contact form in about section
 .contact-form {
-  border-radius: $border-radius-small;
-  margin: 1rem 0;
+  border-radius: $border-radius-medium;
   width: 100%;
-  // border-top: 2px solid #c6d4fa;
-  background-color: rgba(127, 145, 236, 0.08);
-  // padding: 1rem;
-  padding-top: 2rem;
+  background-color: $bg-soft-blue;
+  border: 2px solid #c2cbfc;
+  margin-top: 2rem;
+  box-shadow: $shadow-medium;
+
+  @include respond(desktop) {
+    margin: 0;
+  }
 
   form {
-    padding: 0.5rem;
+    padding: 0.6rem 1rem;
     margin: $margin-none;
     width: 100%;
-    // border-top: 2px solid $blue-light;
+    background: white;
+    border-radius: 1rem;
 
     legend {
       color: $h2-color;
       font-size: $font-size-huge;
       text-align: center;
       font-weight: $font-weight-semi-bold;
+      margin-bottom: 1rem;
     }
     label,
     input,
@@ -913,10 +748,8 @@ main {
       color: $dark-purple2;
       padding: 3px 12px;
       margin: $margin-none;
-      // border-radius: $border-radius-small;
       background-color: transparent;
       margin-left: 12px;
-      // border-bottom: 2px solid #c3c3ff;
     }
     label {
       color: $label-color;
@@ -927,23 +760,18 @@ main {
     input,
     textarea {
       background-color: rgba(162, 173, 233, 0.08);
-      /* margin: 0 6px; */
       margin-left: 12px;
       border-bottom: 2px solid $link-shadow;
-      // border-radius: 3 * $border-radius-xsmall;
 
       &:focus {
         border-bottom: none;
-        // border-radius: $border-radius-small;
         background-color: $link-shadow;
       }
     }
     select {
       background-color: rgba(162, 173, 233, 0.08);
-      /* margin: 0 6px; */
       margin-left: 12px;
       border-bottom: 2px solid $link-shadow;
-      // border-radius: 3 * $border-radius-xsmall;
       color: $medium-text;
 
       &:focus {
@@ -962,79 +790,8 @@ main {
     border-radius: $border-radius-small;
   }
 }
-// }
-.contact-msg {
-  background-color: $bg-white;
-  padding: 6px 26px;
-  margin: $margin-none;
-  border-radius: $border-radius-medium;
-  position: relative;
-  top: 0;
-  right: 0;
 
-  @include flex-custom;
-  display: none;
-
-  h3 {
-    color: $h2-color;
-  }
-  p {
-    color: $dark-purple2;
-  }
-}
-
-#sidenavLinks {
-  @include flex-custom;
-  overflow: hidden;
-  // background-color: #40d1db;
-  align-content: center;
-  height: 100%;
-}
-
-// Facebook: Primarily uses white or light grey for feeds, with a signature blue (
-
-// ) for accents.
-// Instagram: Backgrounds often feature white, light grey, or dark mode black, frequently with colorful gradients (
-
-// ,
-
-// ,
-
-// ) in creative content.
-// WhatsApp: Known for its light green/white theme for chats, or dark green/black for dark mode.
-// Facebook: Primary color is Azure Radiance (#1877F2), often paired with white for text/logos and Athens Gray (#F0F2F5) for backgrounds.
-// WhatsApp: Primary brand color is Teal Green Dark (#075E54).
-// Instagram: The gradient logo consists of shades of purple, dark pink, red, orange, and yellow. Key colors include Royal Blue (#405DE6) and varying shades from #ffdf9e to #c1558b.
-#sidenavLinks a {
-  position: relative;
-  // right: -45px;
-  transition: 0.3s ease;
-  /* padding: 10px 10px; */
-  /* width: 194px; */
-  padding: 0.8rem;
-  text-decoration: none;
-  font-size: 1.4rem;
-  color: #f7f7f7;
-  border-radius: 50%;
-  @include flex-custom(center);
-}
-#sidenavLlinks a::after {
-  content: ">>";
-  position: absolute;
-  right: -22px;
-  opacity: 0;
-  transition: $transition-fast;
-}
-#sidenavLinks a:hover {
-  width: 100px;
-  border-radius: $border-radius-medium;
-  right: 0;
-  transition: 0.3s ease;
-}
-#sidenavLinks a:hover::after {
-  right: -30px;
-  opacity: 1;
-}
+//  socail media icons color
 #facebook {
   top: 0px;
   background: $facebook-color;
@@ -1042,12 +799,7 @@ main {
 #instagram {
   top: 3px;
   background: $insta-primary-color;
-  background: linear-gradient(
-    150deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background: $insta-original-color;
 }
 #whatsapp {
   top: 6px;
@@ -1057,199 +809,3 @@ main {
   top: 9px;
   background: $call-color;
 }
-
-// // @mixin flex-sb-center {
-// //   display: flex;
-// //   justify-content: space-between;
-// //   align-items: center;
-// // }
-
-// //  i {
-// //       font-size: 1rem;
-// //     }
-// @mixin flex-center {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// // .header {
-// //   @include flex-center;
-// //   height: 60px;
-// //   background-color: $background;
-// // }
-
-// }
-// }
-// media queries styles
-
-// @media screen and (min-width: 450px) {
-//   section {
-//     padding: $padding-medium;
-//     margin: $margin-medium;
-//   }
-// }
-
-// @media screen and (min-width: 900px) {
-//   body {
-//     background: $desktop-background;
-//   }
-//   .home {
-//     .columns {
-//       @include flex-custom(space-between, center, row);
-//       width: 100%;
-//     }
-//   }
-//   .home-links {
-//     margin: 30px 0;
-//   }
-//   .home .column .home-links a {
-//     margin-right: 16px;
-//   }
-//   .welcome-msg {
-//     margin-left: 0;
-//   }
-//   .home .column img {
-//     width: auto;
-//   }
-
-//   .header-navbar {
-//     display: flex;
-//     a {
-//       color: $blue-medium;
-//       margin-left: $margin-xlarge;
-//       font-size: 1.1rem;
-//       font-weight: $font-weight-medium;
-//       display: flex;
-//       text-decoration: none;
-
-//       &:hover {
-//         color: $dark-purple;
-//         transition: $transition-fast;
-//         text-decoration: underline;
-//       }
-//     }
-//   }
-//   .header-menu {
-//     display: none;
-//   }
-//   .system-container {
-//     display: grid;
-//   }
-//   .teachers-container {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     gap: 0.3rem;
-
-//     .teacher-card {
-//       gap: 0.3rem;
-//     }
-//   }
-//   .features {
-//     background-color: transparent;
-//   }
-
-//   // .features-container {
-//   //   display: grid;
-//   //   grid-template-columns: repeat(4, 1fr);
-//   //   gap: 1rem;
-//   // }
-//   .weekly-schedule,
-//   .today-cards {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     gap: 1rem;
-//     display: none;
-
-//     .class-schedule {
-//       padding: $padding-none;
-//       margin: 1rem 0;
-//     }
-//     .class-info span {
-//       display: block;
-//     }
-//   }
-//   .classes-content {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     gap: 1rem;
-
-//     .classes-card {
-//       @include flex-custom(center, center, column);
-//     }
-//   }
-//   .teachers .teachers-container .teacher-card .card-column img {
-//     width: 185px;
-//     height: 185px;
-//   }
-//   #sidenavLinks a {
-//     position: relative;
-//     right: -80px;
-//     transition: $transition-fast;
-//     padding: 12px 12px;
-//     width: 120px;
-//     text-decoration: none;
-//     /* font-size: 13px; */
-//     color: $light-text;
-//     border-radius: $border-radius-xxlarge;
-//     display: flex;
-//     align-items: center;
-//     /* z-index: 9999; */
-//     font-size: $font-size-small;
-
-//     i {
-//       margin-right: 8px;
-//     }
-//   }
-//   footer {
-//     width: 100%;
-//     @include flex-custom(space-between, center, column);
-//     margin: $margin-none;
-//     padding: $padding-none;
-//   }
-//   .footer-contents {
-//     display: grid;
-//     grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
-//     gap: 30px;
-//     padding: 40px 10%;
-//   }
-//   .socail-links {
-//     @include flex-custom(center, flex-start, row);
-//   }
-//   .footer-credits,
-//   .footer-copyright {
-//     text-align: right;
-
-//     @include flex-custom(center, center, column);
-//   }
-//   .information {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     align-items: start;
-//     gap: 1rem;
-//   }
-//   .about-status {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 6px;
-//   }
-
-//   .contact-container {
-//     @include flex-custom;
-//     gap: 0.3rem;
-
-//     .contact-numbers {
-//       @include flex-custom(center, center, row);
-//     }
-//   }
-//   .today-cards {
-//     .today-card {
-//       p {
-//         // span {
-//         display: inline;
-//         // }
-//       }
-//     }
-//   }
-// }
-// }

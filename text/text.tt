@@ -1599,4 +1599,261 @@
       transform: rotate(360deg);
     }
   }
+}// }
+.contact-msg {
+  background-color: $bg-white;
+  padding: 6px 26px;
+  margin: $margin-none;
+  border-radius: $border-radius-medium;
+  position: relative;
+  top: 0;
+  right: 0;
+
+  @include flex-custom;
+  display: none;
+
+  h3 {
+    color: $h2-color;
+  }
+  p {
+    color: $dark-purple2;
+  }
 }
+
+
+
+// @media screen and (min-width: 900px) {
+//   body {
+//     background: $desktop-background;
+//   }
+//   .home {
+//     .columns {
+//       @include flex-custom(space-between, center, row);
+//       width: 100%;
+//     }
+//   }
+//   .home-links {
+//     margin: 30px 0;
+//   }
+//   .home .column .home-links a {
+//     margin-right: 16px;
+//   }
+//   .welcome-msg {
+//     margin-left: 0;
+//   }
+//   .home .column img {
+//     width: auto;
+//   }
+
+//   .header-navbar {
+//     display: flex;
+//     a {
+//       color: $blue-medium;
+//       margin-left: $margin-xlarge;
+//       font-size: 1.1rem;
+//       font-weight: $font-weight-medium;
+//       display: flex;
+//       text-decoration: none;
+
+//       &:hover {
+//         color: $dark-purple;
+//         transition: $transition-fast;
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+//   .header-menu {
+//     display: none;
+//   }
+//   .system-container {
+//     display: grid;
+//   }
+//   .teachers-container {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 0.3rem;
+
+//     .teacher-card {
+//       gap: 0.3rem;
+//     }
+//   }
+//   .features {
+//     background-color: transparent;
+//   }
+
+//   // .features-container {
+//   //   display: grid;
+//   //   grid-template-columns: repeat(4, 1fr);
+//   //   gap: 1rem;
+//   // }
+//   .weekly-schedule,
+//   .today-cards {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 1rem;
+//     display: none;
+
+//     .class-schedule {
+//       padding: $padding-none;
+//       margin: 1rem 0;
+//     }
+//     .class-info span {
+//       display: block;
+//     }
+//   }
+//   .classes-content {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 1rem;
+
+//     .classes-card {
+//       @include flex-custom(center, center, column);
+//     }
+//   }
+//   .teachers .teachers-container .teacher-card .card-column img {
+//     width: 185px;
+//     height: 185px;
+//   }
+//   #sidenavLinks a {
+//     position: relative;
+//     right: -80px;
+//     transition: $transition-fast;
+//     padding: 12px 12px;
+//     width: 120px;
+//     text-decoration: none;
+//     /* font-size: 13px; */
+//     color: $light-text;
+//     border-radius: $border-radius-xxlarge;
+//     display: flex;
+//     align-items: center;
+//     /* z-index: 9999; */
+//     font-size: $font-size-small;
+
+//     i {
+//       margin-right: 8px;
+//     }
+//   }
+//   footer {
+//     width: 100%;
+//     @include flex-custom(space-between, center, column);
+//     margin: $margin-none;
+//     padding: $padding-none;
+//   }
+//   .footer-contents {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
+//     gap: 30px;
+//     padding: 40px 10%;
+//   }
+//   .socail-links {
+//     @include flex-custom(center, flex-start, row);
+//   }
+//   .footer-credits,
+//   .footer-copyright {
+//     text-align: right;
+
+//     @include flex-custom(center, center, column);
+//   }
+//   .information {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     align-items: start;
+//     gap: 1rem;
+//   }
+//   .about-status {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     gap: 6px;
+//   }
+
+//   .contact-container {
+//     @include flex-custom;
+//     gap: 0.3rem;
+
+//     .contact-numbers {
+//       @include flex-custom(center, center, row);
+//     }
+//   }
+//   .today-cards {
+//     .today-card {
+//       p {
+//         // span {
+//         display: inline;
+//         // }
+//       }
+//     }
+//   }
+// }
+// }
+
+
+// .contact-content {
+//   padding: $padding-none;
+//   margin: $margin-none;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+
+//   .contact-info {
+//     padding: $padding-none;
+
+//     .class-contact {
+//       padding: $padding-none;
+//       padding-top: 6px;
+//       margin: 1rem 0;
+//       background: $bg-white;
+//       box-shadow: 0px 1px 6px $dark-purple;
+//       border-radius: $border-radius-medium;
+//       display: none;
+
+//       h3 {
+//         color: $dark-purple2;
+//         margin-bottom: 5px;
+//         font-size: $font-size-xhuge;
+//         text-align: center;
+//       }
+//       iframe {
+//         padding: 0 1%;
+//         margin: 0.5rem 0;
+//         border-radius: $border-radius-medium;
+//         height: auto;
+//         width: 50%;
+//       }
+//     }
+//   }
+//   .contact-numbers {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin: $margin-none;
+//     gap: 0.5rem;
+
+//     p {
+//       color: $h2-color;
+//       border-radius: 3px;
+//       margin: 0.5rem;
+//       box-shadow: 0px 1px 6px $dark-purple;
+//       background-color: $bg-white;
+//       padding: 6px 16px;
+//       text-align: center;
+//       font-weight: 600;
+//     }
+//     a {
+//       padding: 6px 12px;
+//       margin: 6px 0;
+//       color: $bg-white;
+//       background-color: $dark-purple;
+//       text-decoration: underline;
+//       text-align: center;
+//       display: block;
+//       border-radius: 3px;
+
+//       &:hover {
+//         background-color: $dark-purple1;
+//         color: $bg-white;
+//         text-decoration: underline;
+//       }
+//     }
+//   }

@@ -144,13 +144,13 @@ const evening = "Good Evening!";
 const night = "Good Night!";
 
 if (hours < 11 && hours >= 0) {
-  welcomeMessage.textContent += `${morning} ${userName}`;
+  welcomeMessage.innerHTML += `${morning} <span> ${userName}</span>`;
 } else if (hours < 14) {
-  welcomeMessage.textContent += `${afternoon} ${userName}`;
+  welcomeMessage.innerHTML += `${afternoon} <span> ${userName}</span>`;
 } else if (hours < 18) {
-  welcomeMessage.textContent += `${evening} ${userName}`;
+  welcomeMessage.innerHTML += `${evening} <span>  ${userName}</span>`;
 } else {
-  welcomeMessage.textContent += `${night} ${userName}`;
+  welcomeMessage.innerHTML += `${night} <span> ${userName}</span>`;
 }
 
 // result graph
@@ -181,6 +181,7 @@ const olResultChart = new Chart(ctx, {
 
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,

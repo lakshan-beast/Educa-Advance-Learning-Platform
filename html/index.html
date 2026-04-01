@@ -30,10 +30,9 @@
     <header id="header" class="header-section">
       <nav class="header">
         <i
-          class="fa-solid fa-bars-staggered"
+          class="fa-solid fa-bars-staggered menu-btn"
           title="Menu"
-          id="menu-btn"
-          class="menu-btn"></i>
+          id="menu-btn"></i>
         <a href="#home" class="header-logo"
           ><i class="fa-regular fa-circle"></i> educa.</a
         >
@@ -43,7 +42,7 @@
           <a href="#classes">Classes</a>
           <a href="#teachers">Teachers</a>
           <a href="#about">About us</a>
-          <a href="#contacts">Contact us</a>
+          <a href="#contact-form">Contact us</a>
         </div>
         <div class="header-actions">
           <a href="#" class="sign-btn" id="formBtn">sign in</a>
@@ -58,7 +57,7 @@
     <div class="system-container">
       <!-- main content start -->
       <main>
-        <div id="home" class="home" data-aos="fade-up" data-aos-duration="1000">
+        <div id="home" class="home" data-aos="fade-up" data-aos-delay="100">
           <div class="columns">
             <div class="column description">
               <h1 class="welcome-msg" id="welcome-msg"></h1>
@@ -69,12 +68,17 @@
                 day.
               </p>
 
-              <div class="home-links">
+              <div
+                class="home-links"
+                data-aos="fade-right"
+                data-aos-delay="500">
                 <a href="#features" class="btn">
-                  start learning <i class="fa-solid fa-rocket"></i
+                  start learning
+                  <i class="fa-solid fa-rocket"></i
                 ></a>
                 <a href="#classes" class="btn">
-                  View classes <i class="fa-solid fa-book"></i
+                  View classes
+                  <i class="fa-solid fa-book"></i
                 ></a>
               </div>
             </div>
@@ -90,14 +94,11 @@
       <!-- main content end  -->
 
       <!-- features section start -->
-      <section class="features parts" id="features" data-aos-offset="300">
-        <h2>Features</h2>
+      <section class="features parts" id="features">
+        <h2 data-aos="fade-up">Features</h2>
 
-        <div
-          class="features-container"
-          data-aos="fade-up"
-          data-aos-duration="1000">
-          <div class="features-card">
+        <div class="features-container">
+          <div class="features-card" data-aos="fade-up">
             <img src="../assets/images/questions.jpg" alt="Daily Questions" />
             <h3><i class="fa-solid fa-calendar-check"></i> Daily Questions</h3>
             <p>
@@ -108,23 +109,17 @@
               >Today's Quesation</a
             >
           </div>
-          <div
-            class="features-card"
-            data-aos="fade-up"
-            data-aos-duration="2000">
+          <div class="features-card" data-aos="fade-up">
             <img src="../assets/images/quizs.jpg" alt="Daily Quiz" />
             <h3><i class="fa-solid fa-circle-question"></i> Daily Quiz</h3>
             <p>
-              Tets your kownledge with quick quizzes designed for O/L students.
+              Test your knowledge with quick quizzes designed for O/L students.
             </p>
             <a href="#" class="btn" target="_blank" rel="noopener noreferrer"
               >Start Quiz</a
             >
           </div>
-          <div
-            class="features-card"
-            data-aos="fade-up"
-            data-aos-duration="3000">
+          <div class="features-card" data-aos="fade-up">
             <img src="../assets/images/resources.png" alt="Study Materials" />
             <h3><i class="fa-solid fa-book-open"></i> Study Materials</h3>
             <p>
@@ -138,8 +133,7 @@
           <div
             class="features-card result-check"
             id="result-check"
-            data-aos="fade-up"
-            data-aos-duration="4000">
+            data-aos="fade-up">
             <img src="../assets/images/results.jpg" alt="O/L Results" />
             <h3><i class="fa-solid fa-chart-column"></i> O/L Results Check</h3>
             <p>Quick check the official O/L examination results.</p>
@@ -151,21 +145,15 @@
               >Check Results</a
             >
           </div>
-          <div
-            class="features-card"
-            data-aos="fade-up"
-            data-aos-duration="5000">
+          <div class="features-card" data-aos="fade-up">
             <img src="../assets/images/comments.jpg" alt="Student Reviews" />
             <h3><i class="fa-solid fa-comments"></i> Student Reviews</h3>
             <p>See what students say about classes & learning experience.</p>
-            <a href="#" class="btn" target="_parent" rel="noopener noreferrer"
+            <a href="#" class="btn" target="_blank" rel="noopener noreferrer"
               >Read Reviews</a
             >
           </div>
-          <div
-            class="features-card"
-            data-aos="fade-up"
-            data-aos-duration="6000">
+          <div class="features-card" data-aos="fade-up">
             <img src="../assets/images/study.jpg" alt="Study Tools" />
             <h3><i class="fa-solid fa-toolbox"></i> Study Tools</h3>
             <p>
@@ -181,8 +169,8 @@
       <!-- features section end  -->
 
       <!-- class section start -->
-      <section class="classes parts" id="classes" data-aos-offset="300">
-        <h2 class="heading">our <span>classes</span></h2>
+      <section class="classes parts" id="classes">
+        <h2 data-aos="fade-up">our <span>classes</span></h2>
 
         <div class="classes-container">
           <div class="classes-content">
@@ -190,10 +178,10 @@
               <div class="classes-column">
                 <img
                   src="../assets/images/maths-class.jpg"
-                  alt="Maths Class Image" />
+                  alt="O/L Mathematics class for grade 6 to 11" />
               </div>
               <div class="classes-info">
-                <h3>O/L Methamatics</h3>
+                <h3>O/L Mathamatics</h3>
                 <h4>strong foundation for O/L success</h4>
                 <p>
                   Build a strong foundation in O/L Mathematics with concept
@@ -201,7 +189,7 @@
                 </p>
                 <p>Grade : <span>06 - 11</span></p>
                 <p>Meduim : <span>Sinhala</span></p>
-                <span>Physicals only</span>
+                <span data-aos="fade-up">Physicals only</span>
               </div>
             </div>
 
@@ -209,7 +197,7 @@
               <div class="classes-column">
                 <img
                   src="../assets/images/science-class.jpg"
-                  alt="Science Class Image" />
+                  alt="O/L Science class for grade 6 to 11" />
               </div>
               <div class="classes-info">
                 <h3>O/L Science</h3>
@@ -220,7 +208,7 @@
                 </p>
                 <p>Grade : <span>06 - 11</span></p>
                 <p>Meduim : <span>English / Sinhala</span></p>
-                <span>Physicals only</span>
+                <span data-aos="fade-up">Physicals only</span>
               </div>
             </div>
 
@@ -228,23 +216,23 @@
               <div class="classes-column">
                 <img
                   src="../assets/images/english-class.jpg"
-                  alt="English Class Image" />
+                  alt="O/L English class for grade 6 to 11" />
               </div>
               <div class="classes-info">
                 <h3>O/L English</h3>
-                <h4>Grammer & spoken Improvement</h4>
+                <h4>Grammar & spoken Improvement</h4>
                 <p>
-                  Improve grammer, writing & speaking skills for O/L exams and
+                  Improve Grammar, writing & speaking skills for O/L exams and
                   daily communications.
                 </p>
                 <p>Grade : <span>06 - 11</span></p>
                 <p>Meduim : <span>English / Sinhala</span></p>
-                <span>Physicals only</span>
+                <span data-aos="fade-up">Physicals only</span>
               </div>
             </div>
           </div>
 
-          <div class="more-btn">
+          <div class="more-btn" data-aos="fade-up">
             <a href="#" class="btn">More Class Details</a>
           </div>
         </div>
@@ -252,22 +240,19 @@
       <!-- classes section end  -->
 
       <!-- teachers section start  -->
-      <section class="teachers parts" id="teachers" data-aos-offset="300">
-        <h2 class="heading">our expert <span>tutors</span></h2>
+      <section class="teachers parts" id="teachers">
+        <h2 data-aos="fade-up">our expert <span>tutors</span></h2>
         <p>
           Our experienced teachers are deticated to helping students achieve
-          excelleny results in the O/L examiantion.
+          excellence results in the O/L examiantion.
         </p>
 
         <div class="teachers-container">
           <div class="teacher-card" data-aos="fade-up">
             <div class="teacher-card__img box">
-              <img
-                data-aos="zoom-in"
-                src="../assets/images/maths-new.jpg"
-                alt="Maths Teacher" />
+              <img src="../assets/images/maths-new.jpg" alt="Maths Teacher" />
             </div>
-            <div class="card-column teacher-info">
+            <div class="card-column teacher-info" data-aos="fade-right">
               <h3>Sir 01 - <span>Maths Teacher</span></h3>
               <div class="teacher-details">
                 <p>Qualifications : <span>BSc Mathematics</span></p>
@@ -283,7 +268,7 @@
               <div
                 class="teacher-card__socails"
                 id="sidenavLinkss"
-                data-aos-placement="left">
+                data-aos="fade-left">
                 <a href="#" title="Maths Teacher - facebook" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
@@ -303,11 +288,10 @@
           <div class="teacher-card" data-aos="fade-up">
             <div class="teacher-card__img box">
               <img
-                data-aos="zoom-in"
                 src="../assets/images/science-teacher.jpg"
                 alt="Maths Teacher" />
             </div>
-            <div class="card-column teacher-info">
+            <div class="card-column teacher-info" data-aos="fade-right">
               <h3>Sir 02 - <span>Science Teacher</span></h3>
               <div class="teacher-details">
                 <p>Qualifications : <span>B.Sc in Biology</span></p>
@@ -322,7 +306,7 @@
               <div
                 class="teacher-card__socails"
                 id="sidenavLinkss"
-                data-aos-placement="left">
+                data-aos="fade-left">
                 <a href="#" title="Maths Teacher - facebook" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
@@ -342,16 +326,17 @@
           <div class="teacher-card" data-aos="fade-up">
             <div class="teacher-card__img box">
               <img
-                data-aos="zoom-in"
                 src="../assets/images/english-teacher.jpg"
                 alt="Maths Teacher" />
             </div>
-            <div class="card-column teacher-info">
+            <div class="card-column teacher-info" data-aos="fade-right">
               <h3>Sir 03 - <span>English Teacher</span></h3>
               <div class="teacher-details">
                 <p>Qualifications : <span>B.A. English</span></p>
                 <p>Experience : <span>10+ Years Experience</span></p>
-                <p>Teaching Method : <span>Grammer, Speking & writing</span></p>
+                <p>
+                  Teaching Method : <span>Grammar, Speaking & writing</span>
+                </p>
                 <p class="notes">
                   Notes : <span>Focuses on fluency & exam skills.</span>
                 </p>
@@ -360,7 +345,7 @@
               <div
                 class="teacher-card__socails"
                 id="sidenavLinkss"
-                data-aos-placement="left">
+                data-aos="fade-left">
                 <a href="#" title="Maths Teacher - facebook" id="facebook"
                   ><i class="fa-brands fa-facebook"></i
                 ></a>
@@ -381,112 +366,107 @@
       <!-- teachers section end  -->
 
       <!-- information section start  -->
-      <section class="information parts" id="information" data-aos-offset="300">
+      <section class="information parts" id="information">
+        <h2 data-aos="fade-up">Why <span>Choose Us</span></h2>
         <div class="about-container info-column" id="about">
-          <h2>Why <span>Choose Us</span></h2>
+          <div class="information-conatiner">
+            <div class="info-content-left">
+              <p data-aos="fade-up">
+                We help students learn iin simple & effective way through clear
+                lessons, regular practice, & continuous support. Our goal is to
+                build confidence & guide every student towards success.
+              </p>
+              <div class="about-status" data-aos="fade-up">
+                <div class="cources-box box" data-aos="fade-right">
+                  <i class="fas fa-chalkboard"></i>
+                  <h3 id="classesCount" data-aos="zoom-in">3+</h3>
+                  <p>classes</p>
+                </div>
+                <div class="teachers-box box" data-aos="fade-up">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                  <h3 id="tteacherCount" data-aos="zoom-in">3+</h3>
+                  <p>teachers</p>
+                </div>
+                <div class="students-box box" data-aos="fade-letf">
+                  <i class="fas fa-user-graduate"> </i>
+                  <h3 id="stuentCount" data-aos="zoom-in">2500+</h3>
+                  <p>students</p>
+                </div>
+                <div class="satisfaction-box box" data-aos="fade-down">
+                  <i class="fas fa-face-smile"> </i>
+                  <h3 id="satisfaction" data-aos="zoom-in">100%</h3>
+                  <p>satisfaction</p>
+                </div>
+              </div>
 
-          <div
-            class="about-status"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-duration="1500">
-            <div class="cources-box box">
-              <i class="fas fa-chalkboard"></i>
-              <h3 id="classesCount" data-aos="zoom-in">3+</h3>
-              <p>classes</p>
-            </div>
-            <div class="teachers-box box">
-              <i class="fas fa-chalkboard-teacher"></i>
-              <h3 id="classesCount" data-aos="zoom-in">3+</h3>
-              <p>teachers</p>
-            </div>
-            <div class="students-box box">
-              <i class="fas fa-user-graduate"> </i>
-              <h3 id="classesCount" data-aos="zoom-in">2500+</h3>
-              <p>students</p>
-            </div>
-            <div class="satisfaction-box box">
-              <i class="fas fa-face-smile"> </i>
-              <h3 id="classesCount" data-aos="zoom-in">100%</h3>
-              <p>satisfaction</p>
-            </div>
-          </div>
-
-          <p data-aos="fade-up">
-            We help students learn iin simple & effective way through clear
-            lessons, regular practce, & continuous support. Our goal is to build
-            confidence & guide every student towards succesd.
-          </p>
-
-          <div class="about-content" data-aos="fade-up" data-aos-offset="300">
-            <div class="result-container">
-              <canvas
-                id="olResultChart"
-                width="400"
-                height="250"
-                data-aos="fade-up"
-                data-aos-offset="200"></canvas>
+              <div class="about-content" data-aos="fade-up">
+                <div class="result-container">
+                  <canvas
+                    id="olResultChart"
+                    width="400"
+                    height="250"
+                    data-aos="fade-up"></canvas>
+                </div>
+              </div>
             </div>
 
-            <div
-              class="contact-form"
-              id="contact-form"
-              data-aos="fade-up"
-              data-aos-offset="200">
-              <form action="#" method="post">
-                <fieldset>
-                  <legend>Contact Form</legend>
-                  <label for="name">Your Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Your name"
-                    required />
+            <div class="info-content-right">
+              <div class="contact-form" id="contact-form" data-aos="fade-up">
+                <form action="#" method="post">
+                  <fieldset>
+                    <legend>Contact Form</legend>
+                    <label for="name">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Your name"
+                      required />
 
-                  <label for="mail">Email Address </label>
-                  <input
-                    type="email"
-                    name="mail"
-                    id="mail"
-                    placeholder="Your Email"
-                    required />
+                    <label for="mail">Email Address </label>
+                    <input
+                      type="email"
+                      name="mail"
+                      id="mail"
+                      placeholder="Your Email"
+                      required />
 
-                  <label for="mobile">Phone Number</label>
-                  <input
-                    type="text"
-                    name="mobile"
-                    id="mobile"
-                    placeholder="Enter your number..." />
+                    <label for="mobile">Phone Number</label>
+                    <input
+                      type="text"
+                      name="mobile"
+                      id="mobile"
+                      placeholder="Enter your number..." />
 
-                  <label for="subject">Subject</label>
-                  <select name="subject" id="subject" required>
-                    <option value="">Select Subject</option>
-                    <option value="Maths">Maths</option>
-                    <option value="Science">Science</option>
-                    <option value="English">English</option>
-                  </select>
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject" required>
+                      <option value="">Select Subject</option>
+                      <option value="Maths">Maths</option>
+                      <option value="Science">Science</option>
+                      <option value="English">English</option>
+                    </select>
 
-                  <label for="content">Content</label>
-                  <select name="content" id="content" required>
-                    <option value="">Select Content</option>
-                    <option value="general">General Question</option>
-                    <option value="class">Class Information</option>
-                    <option value="documents">Papers / Notes</option>
-                    <option value="issues">Technical Issues</option>
-                  </select>
+                    <label for="content">Content</label>
+                    <select name="content" id="content" required>
+                      <option value="">Select Content</option>
+                      <option value="general">General Question</option>
+                      <option value="class">Class Information</option>
+                      <option value="documents">Papers / Notes</option>
+                      <option value="issues">Technical Issues</option>
+                    </select>
 
-                  <label for="message">Message</label>
-                  <textarea
-                    rows="5"
-                    cols="60"
-                    name="message"
-                    id="message"
-                    placeholder="Message "
-                    required></textarea>
-                  <input type="submit" class="btn" value="Submit Form" />
-                </fieldset>
-              </form>
+                    <label for="message">Message</label>
+                    <textarea
+                      rows="5"
+                      cols="60"
+                      name="message"
+                      id="message"
+                      placeholder="Message "
+                      required></textarea>
+                    <input type="submit" class="btn" value="Submit Form" />
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -496,7 +476,7 @@
     <!-- system container end -->
 
     <!-- footer content start  -->
-    <footer data-aos-offset="300">
+    <footer>
       <div class="footer-contents" data-aos="fade-down">
         <!-- footer logo -->
         <div class="footer-logo footer-cards">
@@ -522,10 +502,10 @@
 
         <!-- footer resources  -->
         <div class="footer-links footer-cards">
-          <h3>Resourves</h3>
+          <h3>Resources</h3>
           <a href="#">Notes</a>
           <a href="#">Papers</a>
-          <a href="#">Daily Qiuz</a>
+          <a href="#">Daily Quiz</a>
           <a href="#">Study Tools</a>
           <a href="#">O/L Results</a>
           <a href="#">Reviews</a>
@@ -576,7 +556,8 @@
       <div
         class="footer-contents footer-bottom"
         id="footer-bottom"
-        data-aos="fade-right">
+        data-aos="fade-right"
+        data-aos-delay="300">
         <!-- footer legel options  -->
         <div class="footer-legels footer-cards">
           <a href="#">Privacy Policy</a>
@@ -592,7 +573,7 @@
             <i class="fa-solid fa-laptop-code"></i>last updated
             <span>2026 March</span>
           </p>
-          <p><i class="fa-solid fa-users"></i>Comminuty reviewed</p>
+          <p><i class="fa-solid fa-users"></i>Community reviewed</p>
         </div>
 
         <!-- footer copy rights  -->
@@ -620,7 +601,7 @@
 
     <script>
       AOS.init({
-        duration: 1000,
+        duration: 800,
         once: true,
         mirror: false,
       });

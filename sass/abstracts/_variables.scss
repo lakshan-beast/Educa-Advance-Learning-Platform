@@ -22,18 +22,26 @@ $h2-color: #190f8e;
 $blue-light: #c6d4fa;
 $blue-medium: rgb(78, 106, 185);
 $dark-blue: rgb(3, 3, 48);
-$extra-blue: rgb(78, 106, 185);
 
 $label-color: #7f91ec;
 
 $facebook-color: #1877f2;
 $insta-primary-color: #833ab4;
+$insta-original-color: linear-gradient(
+  150deg,
+  rgba(131, 58, 180, 1) 0%,
+  rgba(253, 29, 29, 1) 50%,
+  rgba(252, 176, 69, 1) 100%
+);
 $whatsapp-color: #5bf099;
 $call-color: #2596be;
 
 $bg-white: #fcfcfc;
 $bg-light: #e0e8ff;
 $navbar-white: rgb(235, 235, 235);
+
+$bg-soft-blue: rgba(127, 145, 236, 0.08);
+$bg-soft: rgba(127, 145, 236, 0.08);
 
 $light-text: #f7f7f7;
 $medium-text: rgb(123, 128, 143);
