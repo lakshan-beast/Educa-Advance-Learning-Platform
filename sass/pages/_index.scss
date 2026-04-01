@@ -73,7 +73,6 @@ main {
     }
     .home-links {
       padding: $padding-none;
-      // @include flex-custom(center, center, row);
       display: block;
       margin-top: 0.5rem;
 
@@ -86,7 +85,6 @@ main {
         width: 100%;
         max-width: 180px;
         border-radius: $border-radius-xlarge;
-        // margin: 0 auto;
         padding: 8px 10px;
         margin-top: $margin-small;
         margin-right: 6px;
@@ -174,20 +172,9 @@ main {
     @include flex-custom(space-between, center, column);
     box-shadow: 0px 1px 8px $blue-light;
 
-    @include respond(large-desktop) {
-      // padding: 1rem;
-    }
-    @include respond(desktop) {
-      // padding: 1rem;
-    }
-    @include respond(tablet) {
-      // padding: 0.5rem;
-    }
     @include respond(mobile) {
-      // padding: 0.5rem;
       text-align: center;
     }
-
     img {
       width: 225px;
       height: 200px;
@@ -438,20 +425,6 @@ main {
         height: 45px;
       }
     }
-    //  socail media icons color
-    // .fa-facebook {
-    //   background: $facebook-color;
-    // }
-    // .fa-instagram {
-    //   background: $insta-primary-color;
-    //   background: $insta-original-color;
-    // }
-    // .fa-whatsapp {
-    //   background-color: $whatsapp-color;
-    // }
-    // .fa-phone {
-    //   background: $call-color;
-    // }
   }
   &:hover {
     transform: translateY(-1rem);
@@ -471,10 +444,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-
-  // @include respond(tablet) {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
   @include respond(desktop) {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -529,10 +498,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
-    // margin: 1rem 0;
     background-color: $bg-soft-blue;
-    // width: 100%;
-
     margin: 1rem 0;
     @include respond(desktop) {
       grid-template-columns: repeat(4, 1fr);
@@ -568,16 +534,13 @@ main {
       p {
         font-weight: 600;
         margin: 0;
-        /* padding: 0; */
         text-align: center;
         font-size: 0.6rem;
         color: rgba(30, 80, 161, 0.5);
         font-weight: 600;
         margin: 0;
-        /* padding: 0; */
         text-align: center;
         border-top: 2px solid #e0e8ff;
-        /* padding: 6px 2rem; */
         width: 100%;
       }
     }
@@ -687,49 +650,6 @@ main {
         }
       }
     }
-    // .about-status {
-    //   display: grid;
-    //   grid-template-columns: repeat(2, 1fr);
-    //   gap: 6px;
-    //   margin-top: 12px;
-    //   .box {
-    //     padding: 6px;
-    //     background-color: $bg-white;
-    //     border-radius: $border-radius-small;
-    //     box-shadow: 0px 3px 6px $dark-purple;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     align-items: center;
-
-    //     i {
-    //       font-size: 1.2rem;
-    //       font-weight: bolder;
-    //       animation: iconLeft 1s ease-in forwards;
-    //       color: $dark-purple;
-    //       text-align: center;
-    //     }
-    //     h3 {
-    //       font-size: 1.4rem;
-    //       margin: 0.5rem;
-    //       color: $h2-color;
-    //       font-weight: bolder;
-    //       animation: numPop 1s ease-in forwards;
-    //       text-align: center;
-    //     }
-
-    //     p {
-    //       font-size: 0.8rem;
-    //       color: $dark-purple;
-    //       font-weight: 600;
-    //       margin: $margin-none;
-    //       padding: $padding-none;
-    //       text-align: center;
-    //       animation: bottomText 1s ease-in forwards;
-    //       border-top: 2px solid $dark-purple;
-    //     }
-    //   }
   }
 }
 
