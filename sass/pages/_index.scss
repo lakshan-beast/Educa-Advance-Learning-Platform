@@ -128,70 +128,87 @@ main {
   }
 }
 
-section {
-  max-width: 114rem;
-  min-width: 350px;
+// section {
+// max-width: 114rem;
+// min-width: 350px;
+// width: 100%;
+// border-radius: $border-radius-medium;
+// background-color: aqua;
+// @include flex-custom;
+
+// @include respond(mobile) {
+//   padding: 3rem 1.5rem;
+//   background-color: lightcoral;
+// }
+// @include respond(tablet) {
+//   padding: 5rem 2rem;
+//   background-color: aquamarine;
+// }
+// @include respond(desktop) {
+//   background-color: lightsalmon;
+// }
+
+// @include respond(large-desktop) {
+//   padding: 10rem 0;
+//   background-color: aqua;
+// }
+
+//   @include respond(large-desktop) {
+// }
+// @include respond(desktop) {
+// }
+// @include respond(tablet) {
+// }
+// @include respond(mobile) {
+// }
+// }
+
+// parts
+.parts {
+  margin: 1rem auto 2rem auto;
+  padding: 5rem 1rem;
   width: 100%;
-  border-radius: $border-radius-medium;
-  background-color: aqua;
+  max-width: 114rem;
+  background: transparent;
+  border-radius: 1rem;
+  position: relative;
   @include flex-custom;
 
-  @include respond(mobile) {
-    padding: 3rem 1.5rem;
-    background-color: lightcoral;
-  }
   @include respond(tablet) {
-    padding: 5rem 2rem;
-    background-color: aquamarine;
+    padding: 7rem;
   }
   @include respond(desktop) {
-    background-color: lightsalmon;
+    padding: 9rem 2rem;
   }
-
-  @include respond(large-desktop) {
-    padding: 10rem 0;
-    background-color: aqua;
-  }
-
-  //   @include respond(large-desktop) {
-  // }
-  // @include respond(desktop) {
-  // }
-  // @include respond(tablet) {
-  // }
-  // @include respond(mobile) {
-  // }
-}
-.parts {
-  padding: 0 1rem;
-  margin: 1rem 0;
-  margin-bottom: 1rem;
-  width: 100%;
-  max-width: 114rem;
-  min-width: 350px;
-  background: transparent;
-  border-radius: $border-radius-medium;
-
-  @include flex-custom;
 
   h2 {
-    margin: 0.8rem 0;
+    margin: 1rem 0;
     font-size: $font-size-h2;
     color: $h2-color;
     font-weight: $font-weight-bold;
     text-align: center;
+    letter-spacing: 1px;
+
+    @include respond(tablet) {
+      font-size: 1.9rem;
+      text-decoration: underline;
+    }
+    @include respond(desktop) {
+      font-size: 2rem;
+      text-decoration: line-through;
+    }
   }
 }
 
-.features,
-.teachers {
-  // background-color: $label-color;
-  border-radius: $border-radius-none;
-  margin: $margin-none;
-  margin-bottom: 1rem;
-  padding: $padding-none;
-  padding-bottom: 1rem;
-}
+// .features,
+// .teachers {
+//   // background-color: $label-color;
+//   // border-radius: $border-radius-none;
+//   // margin: $margin-none;
+//   // margin-bottom: 1rem;
+//   // padding: $padding-none;
+//   // padding-bottom: 1rem;
+// }
 
 .features-container {
   padding: $padding-none;
