@@ -36,7 +36,7 @@
     }
   }
   @if $breakpoint == tablet {
-    @media only screen and (min-width: $breakpoint-tablet) {
+    @media only screen and (max-width: $breakpoint-tablet) {
       @content; // 900px
     }
   }
@@ -52,7 +52,7 @@
   }
 }
 
-@mixin test-red {
-  background-color: red !important;
-  border: 2px solid yellow !important;
-}
+// @mixin test-red {
+//   background-color: red !important;
+//   border: 2px solid yellow !important;
+// }

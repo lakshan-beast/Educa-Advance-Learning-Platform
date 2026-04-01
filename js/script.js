@@ -121,11 +121,11 @@ function signForm() {
 //   profileCard.style.display = "block";
 // });
 
-profileBtn.addEventListener("click", () => {
-  profileCard.style.display = "block";
-  signupForm.style.display = "none";
-  logForm.style.display = "none";
-});
+// profileBtn.addEventListener("click", () => {
+//   profileCard.style.display = "block";
+//   signupForm.style.display = "none";
+//   logForm.style.display = "none";
+// });
 
 // const xMark = document.querySelector(".profile-card .fa-xmark");
 // xMark.addEventListener("click", () => {
@@ -214,12 +214,31 @@ const olResultChart = new Chart(ctx, {
 const YEAR = new Date().getFullYear();
 document.getElementById("year").innerHTML = YEAR;
 
-const barsIcon = document.querySelector(".header-menu i");
+// menu toggle script
+const barsIcon = document.getElementById("menu-btn");
 const navContainer = document.querySelector(".header-navbar");
+const overlay = document.querySelector(".overlay");
 
-barsIcon.addEventListener("click", () => {
+// barsIcon.addEventListener("click", () => {
+//   navContainer.classList.toggle("nav-active");
+//   console.log("click");
+
+//   barsIcon.classList.toggle("fa-bars-staggered");
+//   barsIcon.classList.toggle("fa-xmark");
+// });
+
+barsIcon.onclick = () => {
   navContainer.classList.toggle("nav-active");
+  overlay.classList.toggle("active");
 
   barsIcon.classList.toggle("fa-bars-staggered");
   barsIcon.classList.toggle("fa-xmark");
-});
+};
+
+// overlay click → close menu
+overlay.onclick = () => {
+  navContainer.classList.remove("nav-active");
+  overlay.classList.remove("active");
+  barsIcon.classList.toggle("fa-bars-staggered");
+  barsIcon.classList.toggle("fa-xmark");
+};

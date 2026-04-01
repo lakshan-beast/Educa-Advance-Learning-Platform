@@ -1,9 +1,12 @@
 // full system conatiner div style
 .system-container {
-  @include flex-custom;
-  margin: $margin-none;
-  padding: $padding-none;
+  // @include flex-custom;
+  // margin: $margin-none;
+  // padding: $padding-none;
   // @include test-red;
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3rem;
 }
 // main part div style
 main {
@@ -28,6 +31,20 @@ main {
   }
 }
 
+// .home,
+// .teachers,
+// .information {
+//   padding: 5rem 2rem;
+//   width: 100%;
+//   overflow: hidden;
+//   background-color: yellow;
+
+//   @include respond(laptop) {
+//     padding: 10rem 2rem;
+//     background-color: skyblue;
+//   }
+// }
+
 // home div style
 .home {
   height: 100vh;
@@ -44,8 +61,18 @@ main {
 
   .columns {
     @include flex-custom(center, center, column-reverse);
-    padding: 0 0.3rem;
-    padding-top: 5rem;
+    // @include response(desktop) {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: row;
+    // gap: 0rem;
+    // flex-wrap: nowrap;
+    // padding: 0 10rem;
+    /* padding-top: 2rem; */
+    // min-width: 1140px;
+    // width: 100%;
+    // }
   }
   .column {
     h2 {
@@ -61,6 +88,16 @@ main {
     .home-links {
       padding: $padding-none;
       @include flex-custom(center, center, row);
+
+      // @include response(desktop) {
+      //   padding: 0;
+      //   display: flex;
+      //   justify-content: flex-start;
+      //   align-items: center;
+      //   flex-direction: row;
+      //   gap: 0;
+      //   flex-wrap: nowrap;
+      // }
 
       a {
         width: 180px;
@@ -1197,17 +1234,3 @@ section {
 //   }
 // }
 // }
-
-.home,
-.teachers,
-.information {
-  padding: 5rem 2rem;
-  width: 100%;
-  overflow: hidden;
-  background-color: yellow;
-
-  @include respond(laptop) {
-    padding: 10rem 2rem;
-    background-color: skyblue;
-  }
-}
