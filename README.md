@@ -46,24 +46,6 @@ Check out how **Educa** adapts to different screen sizes:
 
 ---
 
-## ⚙️ Installation & Usage
-
-### 1. 🚀 **Clone the Project:**
-
-```bash
-git clone https://github.com/your-username/your-repo.git
-```
-
----
-
-### 2. **Navigate to the folder**
-
-```bash
-cd Educa-Platform
-```
-
----
-
 ### 3. 📂 **Project Structure**
 
 Educa - Advanced Learning Platform/
