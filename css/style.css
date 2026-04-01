@@ -423,7 +423,12 @@ footer a:hover {
 .system-container {
   max-width: 114rem;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 1200px) {
+  .system-container {
+    padding: 0 3rem;
+  }
 }
 
 main {
