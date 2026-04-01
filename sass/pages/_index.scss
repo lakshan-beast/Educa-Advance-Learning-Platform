@@ -1,13 +1,15 @@
+// index html for style
 // full system conatiner div style
 .system-container {
-  // @include flex-custom;
-  // margin: $margin-none;
-  // padding: $padding-none;
-  // @include test-red;
   max-width: 114rem;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 1rem;
+
+  @include respond(desktop) {
+    padding: 0 3rem;
+  }
 }
+
 // main part div style
 main {
   @include flex-custom;
