@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Educa - Study Reviews</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/content.css" /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <!-- animations style | unpkg.com -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- header section start  -->
+    <header id="header" class="header-section">
+      <nav class="header">
+        <i
+          class="fa-solid fa-bars-staggered menu-btn"
+          title="Menu"
+          id="menu-btn"></i>
+        <a href="#home" class="header-logo"
+          ><i class="fa-regular fa-circle"></i> educa.</a
+        >
+        <div class="header-navbar" id="header-navbar">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#classes">Classes</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#about">About us</a>
+          <a href="#contact-form">Contact us</a>
+        </div>
+        <div class="header-actions">
+          <a href="#" class="sign-btn" id="formBtn">sign in</a>
+        </div>
+      </nav>
+    </header>
+    <!-- header section end -->
+
+    <div class="system-container">
+      <section class="reviews review-container" id="reviews">
+        <h1>Student <span>Reviews</span></h1>
+        <div class="addCommentBtn" id="addCommentBtn" data-aos="fade-up">
+          <button type="button">
+            <i class="fa-solid fa-square-plus"></i> Add Comment
+          </button>
+        </div>
+        <p id="status"></p>
+
+        <div class="review-content" data-aos="fade-right">
+          <div class="reviews-part" id="reviews-part"></div>
+        </div>
+      </section>
+
+      <section class="addcomments-section" id="addcomments-section">
+        <div class="comment-container">
+          <div class="comment-forms">
+            <form action="#" method="post" id="comment-form">
+              <fieldset>
+                <legend>Submit Your Review</legend>
+
+                <label for="reviewerName">Your Name</label>
+                <input
+                  type="text"
+                  name="reviewerName"
+                  id="reviewerName"
+                  placeholder="Enter your name..."
+                  required />
+
+                <label for="reviewerBatch">Your O/L Batch</label>
+                <input
+                  type="text"
+                  name="reviewerBatch"
+                  id="reviewerBatch"
+                  placeholder="eg. 2020"
+                  required />
+
+                <label for="reviewTeacher">Subject</label>
+                <select name="reviewTeacher" id="reviewTeacher" required>
+                  <option value="">Select Teacher</option>
+                  <option value="maths-teacher">Maths Teacher</option>
+                  <option value="science-teacher">Science Teacher</option>
+                  <option value="english-teacher">English Teacher</option>
+                </select>
+
+                <label for="reviewComment">Write your comment</label>
+                <textarea
+                  rows="10"
+                  cols="50%"
+                  name="reviewComment"
+                  id="reviewComment"
+                  placeholder="Write your review..."
+                  required></textarea>
+                <button type="submit">Send Comment</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer content start  -->
+    <footer>
+      <div class="footer-contents" data-aos="fade-down">
+        <!-- footer logo -->
+        <div class="footer-logo footer-cards">
+          <a href="#home" class="logo"
+            ><i class="fa-regular fa-circle"></i> educa.</a
+          >
+          <p>
+            Helping students learn better with simple lessons & smart study
+            tools.
+          </p>
+        </div>
+
+        <!-- footer quick link  -->
+        <div class="footer-links footer-cards">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#classes">Classes</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#about">About</a>
+          <a href="#contacts">Contact</a>
+        </div>
+
+        <!-- footer resources  -->
+        <div class="footer-links footer-cards">
+          <h3>Resources</h3>
+          <a href="#">Notes</a>
+          <a href="#">Papers</a>
+          <a href="#">Daily Quiz</a>
+          <a href="#">Study Tools</a>
+          <a href="#">O/L Results</a>
+          <a href="#">Reviews</a>
+        </div>
+
+        <!-- footer contact us -->
+        <div class="contact-info footer-cards">
+          <h3>Contact us</h3>
+          <h4>Maths Class</h4>
+          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="mailto:educa@maths.com"
+            ><i class="fas fa-envelope"></i>educa@maths.com</a
+          >
+          <h4>Science Class</h4>
+          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="mailto:educa@maths.com"
+            ><i class="fas fa-envelope"></i>educa@science.com</a
+          >
+          <h4>English Class</h4>
+          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="mailto:educa@maths.com"
+            ><i class="fas fa-envelope"></i>educa@english.com</a
+          >
+        </div>
+
+        <!-- footer socail links  -->
+        <div class="socail-content footer-cards">
+          <h3>Follow us</h3>
+          <div class="socail-links">
+            <a href="#" title="Facebook" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" title="Instagram" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" title="Whatsapp" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="#" title="Email" target="_blank"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- end first footer-contents -->
+
+      <!-- footer bottom start  -->
+      <div
+        class="footer-contents footer-bottom"
+        id="footer-bottom"
+        data-aos="fade-right"
+        data-aos-delay="300">
+        <!-- footer legel options  -->
+        <div class="footer-legels footer-cards">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+
+        <!-- footer level up  -->
+        <div class="badge-levelup footer-cards">
+          <h3>for Sri Lanka | O/L Students</h3>
+          <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
+          <p><i class="fa-regular fa-square-check"></i>Verified Links</p>
+          <p>
+            <i class="fa-solid fa-laptop-code"></i>last updated
+            <span>2026 March</span>
+          </p>
+          <p><i class="fa-solid fa-users"></i>Community reviewed</p>
+        </div>
+
+        <!-- footer copy rights  -->
+        <div class="footer-copyrights footer-cards">
+          <p>
+            <i class="fa-regular fa-copyright"></i> <span id="year"></span> All
+            rights reserved.
+          </p>
+          <p>
+            This template is made with <i class="fa-solid fa-heart"></i> by
+            <a
+              href="http://github.com/lakshan-beast"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lakshan</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer content end  -->
+
+    <!-- animations script link -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        mirror: false,
+      });
+    </script>
+
+    <!-- custom js file link -->
+    <script src="./js/script.js"></script>
+    <script src="./js/reviews.js"></script>
+  </body>
+</html>
