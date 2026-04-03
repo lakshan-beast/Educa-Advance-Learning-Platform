@@ -72,7 +72,7 @@
   }
 
   button {
-    width: 170px;
+    width: 180px;
     padding: 6px 12px;
     margin: 6px 1%;
     color: $bg-white;
@@ -95,28 +95,33 @@
   }
 }
 .comment-content {
-  @include flex-custom(space-between, center, row, 0);
+  @include flex-custom(space-between, flex-start, row, 0);
 
   margin: 6px 0;
   padding: 6px;
   background-color: $bg-white;
 
-  p {
-    color: $blue-medium;
+  .comment-counts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-    span {
-      color: $dark-purple2;
-      font-weight: $font-weight-semi-bold;
+    p {
+      color: $blue-medium;
+
+      span {
+        color: $dark-purple2;
+        font-weight: $font-weight-extra-bold;
+      }
     }
   }
 }
 
 // comment loading content
-.comments-load {
+.comments-load-ani {
   background-color: $bg-white;
   color: $dark-purple2;
-  // background-color: #c6d4fa;
-  // color: #5454d9;
   padding: 6px;
   margin: 6px auto;
   border-radius: 6px;
@@ -128,7 +133,6 @@
   width: 250px;
 
   .loader {
-    // border: 3px solid #6f48ff;
     margin-right: 0.5rem;
     width: 30px;
     height: 30px;
@@ -138,9 +142,6 @@
 }
 
 @keyframes spin {
-  // 0% {
-  //   display: none;
-  // }
   0% {
     transform: rotateZ(-360deg);
     border: 3px solid #ffffff;
@@ -185,7 +186,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem 1rem;
-  height: 1000px;
+  // height: 1000px;
   overflow: scroll;
   padding: 0rem 0.2rem;
 
@@ -228,7 +229,7 @@
     margin: 3px 0;
   }
   .comment-bottom {
-    @include flex-custom(space-around, center, row, 0);
+    @include flex-custom(space-between, center, row, 0);
 
     margin-top: 6px;
     border-top: 2px solid $blue-light;
@@ -236,16 +237,17 @@
     color: $dark-text;
 
     .comment-like {
-      font-size: 1.5rem;
       margin: 0 6px;
       border-radius: 6px;
       cursor: pointer;
       span {
+        font-size: 1.3rem;
         color: $h2-color;
         margin-right: 6px;
       }
       i {
         color: $dark-text;
+        font-size: 1.5rem;
         padding: 8px 8px;
         background-color: $bg-soft;
         box-shadow: 0px 0px 16px $blue-medium;
