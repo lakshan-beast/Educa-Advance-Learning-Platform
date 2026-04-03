@@ -130,60 +130,55 @@
   .loader {
     // border: 3px solid #6f48ff;
     margin-right: 0.5rem;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     animation: spin 2s linear infinite backwards;
     border-radius: 50%;
   }
 }
 
 @keyframes spin {
+  // 0% {
+  //   display: none;
+  // }
   0% {
     transform: rotateZ(-360deg);
-    border: 3px solid #26136d;
-  }
-  20% {
-    border: 3px solid #5729ff;
-    border-bottom: 3px solid #ffffff44;
-    // border-left: 3px solid #fcfcfc00;
-  }
-  40% {
-    border: 3px solid #bba8ff;
-    // transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg);
-    // border-radius: 1rem;
-    // border-top: 3px solid #ffffff00;
-    border-left: 3px solid #ffffff75;
-    border-bottom: 3px solid #ffffff70;
-  }
-  60% {
-    // transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     border: 3px solid #ffffff;
-    // border-radius: 50%;
+  }
+  30% {
+    border: 3px solid #5729ff;
+    border-bottom: 3px solid #ffffff00;
+  }
+  50% {
+    border: 3px solid #bba8ff;
+    border-left: 3px solid #ffffff00;
+    border-bottom: 3px solid #ffffff00;
+  }
+  70% {
+    border: 3px solid #ffffff;
     border-top: 3px solid #ffffff00;
-    border-left: 3px solid #ff000000;
-    border-bottom: 3px solid #ff000000;
+    border-left: 3px solid #ffffff00;
+    border-bottom: 3px solid #ffffff00;
   }
-  // 90% {
-  // border-radius: 50%;
-  // }
-  // 100% {
-  //   // transform: rotateX(0deg) rotateY(0deg) rotateZ(-360deg);
-  //   // transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  //   // border: none;
-  //   // border-radius: 50%;
-  // }
+  85% {
+    transform: rotateZ(720deg);
+    border: 3px solid #ffffff;
+    border-top: 3px solid #ffffff00;
+    border-left: 3px solid #ffffff00;
+    border-bottom: 3px solid #ffffff00;
+  }
+  90% {
+    border: 3px solid #bba8ff;
+    border-left: 3px solid #ffffff00;
+    border-bottom: 3px solid #ffffff00;
+  }
+  95% {
+    border: 3px solid #5729ff;
+    border-bottom: 3px solid #ffffff00;
+  }
   100% {
-    // border: none;
-    display: none;
+    border: 3px solid #ffffff;
   }
-  // 100% {
-  // border-bottom: 3px solid #ff000000;
-  // border-top: 3px solid #fcfcfc00;
-  // transform: rotateX(-360deg) rotateY(0deg) rotateZ(0deg);
-  // transform: rotateZ(-360deg);
-  // border-radius: 0px;
-  // border: 3px solid #26136d;
-  // }
 }
 
 .reviews-part {
