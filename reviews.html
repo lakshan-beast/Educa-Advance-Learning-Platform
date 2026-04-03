@@ -66,7 +66,7 @@
 
       <section class="addcomments-section" id="addcomments-section">
         <div class="comment-container">
-          <div class="comment-forms">
+          <div class="form-container" id="comment-forms">
             <form action="#" method="post" id="comment-form">
               <fieldset>
                 <legend>Submit Your Review</legend>
@@ -110,6 +110,10 @@
         </div>
       </section>
     </div>
+
+    <button type="button" title="Back Button" onclick="goBack()">
+      <i class="fa-solid fa-arrow-turn-up fa-rotate-270"></i>
+    </button>
 
     <!-- footer content start  -->
     <footer>
@@ -243,6 +247,13 @@
       });
     </script>
 
+    <script>
+      // back funtion
+      function goBack() {
+        history.back();
+        console.log("click");
+      }
+    </script>
     <!-- custom js file link -->
     <script src="./js/script.js"></script>
     <script src="./js/reviews.js"></script>
