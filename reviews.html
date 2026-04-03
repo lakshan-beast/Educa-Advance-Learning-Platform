@@ -69,109 +69,86 @@
         </p>
 
         <div class="comment-content" data-aos="fade-up">
-          <p id="counts">
-            All Comments:
-            <span data-aos="zoom-in" data-aos-delay="800">20</span>
-          </p>
-          <button type="button" id="addBtn">
+          <div class="comments-counts">
+            <p id="counts">
+              All Comments:
+              <span
+                data-aos="zoom-in"
+                data-aos-delay="800"
+                id="allCommentsCount"></span>
+            </p>
+            <p>APi Comments : <span id="apiCommentsCount"></span></p>
+            <p>Users Comments : <span id="usersCommentsCount"></span></p>
+          </div>
+          <button type="button" id="commentAddBtn">
             <i class="fa-regular fa-square-plus"></i> Add Comment
           </button>
         </div>
       </section>
 
       <!-- comment form  -->
-      <div class="form-container" id="comment-form" data-aos="fade-up">
+      <div class="form-container" id="commentContainer" data-aos="fade-up">
         <form action="#" method="post" id="comment-form">
-          <i class="fa-solid fa-xmark" id="closeForm"></i>
+          <i class="fa-solid fa-xmark" id="CloseIcon"></i>
           <fieldset>
             <legend>Share Your Exprience</legend>
 
-            <label for="reviewerName">Your Name</label>
+            <label for="userName">Your Name</label>
             <input
               type="text"
-              name="reviewerName"
-              id="reviewerName"
+              name="userName"
+              id="userName"
               placeholder="Enter your name..."
               required />
 
-            <label for="reviewerBatch">O/L Batch</label>
+            <label for="userBatch">O/L Batch</label>
             <input
-              type="text"
-              name="reviewerBatch"
-              id="reviewerBatch"
-              placeholder="eg. 2020"
+              type="number"
+              name="userBatch"
+              id="userBatch"
+              placeholder="E.g. : 2020"
+              pattern="[0-9]{2, 4}"
+              min="2015"
+              maxlength="4"
+              inputmode="numeric"
               required />
 
-            <label for="reviewTeacher">Subject</label>
-            <select name="reviewTeacher" id="reviewTeacher" required>
+            <label for="chooseTeacher">Subject</label>
+            <select name="chooseTeacher" id="chooseTeacher" required>
               <option value="">Choose Your Teacher</option>
               <option value="maths-teacher">Maths Teacher</option>
               <option value="science-teacher">Science Teacher</option>
               <option value="english-teacher">English Teacher</option>
             </select>
 
-            <label for="reviewComment">Your Review</label>
+            <label for="userComment">Your Review</label>
             <textarea
               rows="10"
               cols="10"
-              name="reviewComment"
-              id="reviewComment"
+              name="userComment"
+              id="userComment"
               placeholder="Write your exprience here..."
               required></textarea>
             <button type="submit">
-              <i class="fa-solid fa-paper-plane"></i> Send Review
+              <i class="fa-solid fa-paper-plane"></i> Send Comment
             </button>
           </fieldset>
+          <span id="errorMsg"></span>
         </form>
       </div>
 
       <!-- comments loading animation  -->
-      <div id="commentsLoad" class="comments-load">
+      <div id="commentsLoadAni" class="comments-load-ani">
         <div class="loader"></div>
         <p>Loading...</p>
       </div>
 
       <!-- all commnets container -->
       <section id="allComments" class="all-commments">
-        <div class="reviews-part" id="reviews-part">
-          <div class="comment-box" id="comment-box" data-aos="fade-up">
-            <div class="comment-top">
-              <h2>User name</h2>
-              <span>2020 O/L batch</span>
-            </div>
-            <div class="comment-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum facilis eos inventore nobis adipisci voluptate ut!
-                Dicta officia officiis quaerat praesentium nam accusantium
-                labore fuga deserunt molestias? At, rerum dolorem!
-              </p>
-            </div>
-            <div class="comment-bottom">
-              <div class="posted-date">
-                <p>
-                  <i class="fa-solid fa-calendar-days"></i> :
-                  <span id="posted-date"></span>
-                </p>
-              </div>
-              <h4>Maths Teacher</h4>
-              <div class="comment-like">
-                <span id="likeCount">0</span>
-                <i
-                  id="likeBtn"
-                  class="fa-regular fa-gem"
-                  data-aos="flip-left"
-                  data-aos-delay="500"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="reviews-part" id="reviews-part"></div>
+        <div class="reviews-part" id="apiCommentPart"></div>
       </section>
     </div>
-
-    <!-- <button type="button" title="Back Button" onclick="goBack()">
-      <i class="fa-solid fa-arrow-turn-up fa-rotate-270"></i>
-    </button> -->
 
     <!-- footer content start  -->
     <footer>
