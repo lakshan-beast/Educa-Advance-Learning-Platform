@@ -74,26 +74,26 @@ window.addEventListener("scroll", function () {
 // headers();
 
 // open form
-const formBtn = document.getElementById("formBtn");
-const logForm = document.getElementById("log-wrapper");
-const signupForm = document.getElementById("signup-wrapper");
-const profileBtn = document.getElementById("profile");
-const profileCard = document.getElementById("profile-card");
+// const formBtn = document.getElementById("formBtn");
+// const logForm = document.getElementById("log-wrapper");
+// const signupForm = document.getElementById("signup-wrapper");
+// const profileBtn = document.getElementById("profile");
+// const profileCard = document.getElementById("profile-card");
 
-formBtn.addEventListener("click", () => {
-  signupForm.style.display = " block";
-  logForm.style.display = "none";
-  profileCard.style.display = "none";
-});
+// formBtn.addEventListener("click", () => {
+//   signupForm.style.display = " block";
+//   logForm.style.display = "none";
+//   profileCard.style.display = "none";
+// });
 
-function loginForm() {
-  logForm.style.display = "block";
-  signupForm.style.display = "none";
-}
-function signForm() {
-  signupForm.style.display = "block";
-  logForm.style.display = "none";
-}
+// function loginForm() {
+//   logForm.style.display = "block";
+//   signupForm.style.display = "none";
+// }
+// function signForm() {
+//   signupForm.style.display = "block";
+//   logForm.style.display = "none";
+// }
 
 // signupForm.addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -134,16 +134,16 @@ function signForm() {
 
 // welcome message
 const welcomeMessage = document.getElementById("welcome-msg");
-const hours = new Date().getHours();
 
-const userName = "John Doe";
+const hours = new Date().getHours();
+const userName = "User";
 
 const morning = "Good Morning!";
 const afternoon = "Good Afternoon!";
 const evening = "Good Evening!";
 const night = "Good Night!";
 
-if (hours < 11 && hours >= 0) {
+if (hours < 11) {
   welcomeMessage.innerHTML += `${morning} <span> ${userName}</span>`;
 } else if (hours < 14) {
   welcomeMessage.innerHTML += `${afternoon} <span> ${userName}</span>`;
@@ -216,7 +216,7 @@ const YEAR = new Date().getFullYear();
 document.getElementById("year").innerHTML = YEAR;
 
 // menu toggle script
-const barsIcon = document.getElementById("menu-btn");
+const barsIcon = document.querySelector(".menu-btn");
 const navContainer = document.querySelector(".header-navbar");
 const overlay = document.querySelector(".overlay");
 
