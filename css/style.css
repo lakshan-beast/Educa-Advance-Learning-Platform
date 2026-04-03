@@ -106,6 +106,81 @@ button:hover {
   border-bottom: 4px solid #484aee;
 }
 
+.form-container {
+  border-radius: 1rem;
+  width: 100%;
+  background-color: rgba(127, 145, 236, 0.08);
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 1200px) {
+  .form-container {
+    margin: 0;
+  }
+}
+.form-container form {
+  padding: 0.6rem 1rem;
+  margin: 0;
+  width: 100%;
+  background: white;
+  border-radius: 1rem;
+}
+.form-container form legend {
+  color: #190f8e;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.form-container form label,
+.form-container form input,
+.form-container form select,
+.form-container form textarea {
+  display: block;
+  width: 95%;
+  color: #5454d9;
+  padding: 3px 12px;
+  margin: 0;
+  background-color: transparent;
+  margin-left: 12px;
+}
+.form-container form label {
+  color: #7f91ec;
+  margin: 0 10px;
+  padding: 0;
+  margin-top: 8px;
+}
+.form-container form input,
+.form-container form textarea {
+  background-color: rgba(162, 173, 233, 0.08);
+  margin-left: 12px;
+  border-bottom: 2px solid #c3c3ff;
+}
+.form-container form input:focus,
+.form-container form textarea:focus {
+  border-bottom: none;
+  background-color: #c3c3ff;
+}
+.form-container form select {
+  background-color: rgba(162, 173, 233, 0.08);
+  margin-left: 12px;
+  border-bottom: 2px solid #c3c3ff;
+  color: rgb(123, 128, 143);
+}
+.form-container form select:focus {
+  background-color: #f7f7f7;
+}
+.form-container textarea {
+  resize: none;
+}
+.form-container input[type=submit] {
+  width: 200px;
+  padding: 6px 16px;
+  margin: 6px 3%;
+  color: #fcfcfc;
+  border-radius: 0.5rem;
+}
+
 .header {
   width: 100%;
   height: 80px;
@@ -537,7 +612,7 @@ main {
 }
 .home .description p {
   color: rgb(78, 106, 185);
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .parts {
@@ -648,7 +723,7 @@ main {
   text-align: center;
   margin: 0 12px;
   padding: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .features-container .features-card a {
   padding: 10px 18px;
@@ -703,7 +778,7 @@ main {
   color: rgb(78, 106, 185);
   margin: 0rem 0.3rem;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .classes-content .classes-card .classes-info p span {
   background: transparent;
@@ -829,7 +904,7 @@ main {
 }
 .teachers-container .teacher-card .teacher-info .teacher-details p {
   color: rgb(123, 128, 143);
-  font-size: 0.6rem;
+  font-size: 1rem;
   display: flex;
   align-items: flex-start;
   margin: 0;
@@ -947,7 +1022,7 @@ main {
   color: #484aee;
 }
 .info-column p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0 1rem;
   color: rgb(123, 128, 143);
   background-color: rgba(127, 145, 236, 0.08);
@@ -1006,7 +1081,7 @@ main {
   font-weight: 600;
   margin: 0;
   text-align: center;
-  font-size: 0.6rem;
+  font-size: 1rem;
   color: rgba(30, 80, 161, 0.5);
   font-weight: 600;
   margin: 0;
@@ -1045,7 +1120,7 @@ main {
 .info-column .about-content .about-cards .contact-card p {
   color: rgb(123, 128, 143);
   padding-left: 16px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 .info-column .about-content .result-container {
@@ -1104,7 +1179,7 @@ main {
 .info-column .contact-content .contact-cards .contact-card a {
   color: rgb(78, 106, 185);
   padding-left: 16px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: #f7f7f7;
   width: 100%;
 }
@@ -1112,79 +1187,25 @@ main {
   margin-right: 12px;
 }
 
-.contact-form {
-  border-radius: 1rem;
+.system-container {
+  max-width: 114rem;
   width: 100%;
-  background-color: rgba(127, 145, 236, 0.08);
-  margin-top: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
-@media only screen and (min-width: 1200px) {
-  .contact-form {
-    margin: 0;
+@media only screen and (min-width: 900px) {
+  .system-container {
+    padding: 0 3rem;
   }
 }
-.contact-form form {
-  padding: 0.6rem 1rem;
-  margin: 0;
-  width: 100%;
-  background: white;
-  border-radius: 1rem;
+@media only screen and (min-width: 1200px) {
+  .system-container {
+    padding: 0 10rem;
+  }
 }
-.contact-form form legend {
-  color: #190f8e;
-  font-size: 1.2rem;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.contact-form form label,
-.contact-form form input,
-.contact-form form select,
-.contact-form form textarea {
-  display: block;
-  width: 95%;
-  color: #5454d9;
-  padding: 3px 12px;
-  margin: 0;
-  background-color: transparent;
-  margin-left: 12px;
-}
-.contact-form form label {
-  color: #7f91ec;
-  margin: 0 10px;
-  padding: 0;
-  margin-top: 8px;
-}
-.contact-form form input,
-.contact-form form textarea {
-  background-color: rgba(162, 173, 233, 0.08);
-  margin-left: 12px;
-  border-bottom: 2px solid #c3c3ff;
-}
-.contact-form form input:focus,
-.contact-form form textarea:focus {
-  border-bottom: none;
-  background-color: #c3c3ff;
-}
-.contact-form form select {
-  background-color: rgba(162, 173, 233, 0.08);
-  margin-left: 12px;
-  border-bottom: 2px solid #c3c3ff;
-  color: rgb(123, 128, 143);
-}
-.contact-form form select:focus {
-  background-color: #f7f7f7;
-}
-.contact-form textarea {
-  resize: none;
-}
-.contact-form input[type=submit] {
-  width: 200px;
-  padding: 6px 16px;
-  margin: 6px 3%;
-  color: #fcfcfc;
-  border-radius: 0.5rem;
+
+section {
+  background-color: rebeccapurple;
 }
 
 /*# sourceMappingURL=style.css.map */
