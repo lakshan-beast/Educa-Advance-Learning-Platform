@@ -1,0 +1,77 @@
+// contact form in about section
+.form-container {
+  border-radius: $border-radius-medium;
+  width: 100%;
+  background-color: $bg-soft-blue;
+  margin-top: 2rem;
+  box-shadow: $shadow-medium;
+
+  @include respond(desktop) {
+    margin: 0;
+  }
+
+  form {
+    padding: 0.6rem 1rem;
+    margin: $margin-none;
+    width: 100%;
+    background: white;
+    border-radius: 1rem;
+
+    legend {
+      color: $h2-color;
+      font-size: $font-size-huge;
+      text-align: center;
+      font-weight: $font-weight-semi-bold;
+      margin-bottom: 1rem;
+    }
+    label,
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 95%;
+      color: $dark-purple2;
+      padding: 3px 12px;
+      margin: $margin-none;
+      background-color: transparent;
+      margin-left: 12px;
+    }
+    label {
+      color: $label-color;
+      margin: 0 10px;
+      padding: $padding-none;
+      margin-top: 8px;
+    }
+    input,
+    textarea {
+      background-color: rgba(162, 173, 233, 0.08);
+      margin-left: 12px;
+      border-bottom: 2px solid $link-shadow;
+
+      &:focus {
+        border-bottom: none;
+        background-color: $link-shadow;
+      }
+    }
+    select {
+      background-color: rgba(162, 173, 233, 0.08);
+      margin-left: 12px;
+      border-bottom: 2px solid $link-shadow;
+      color: $medium-text;
+
+      &:focus {
+        background-color: $light-text;
+      }
+    }
+  }
+  textarea {
+    resize: none;
+  }
+  input[type="submit"] {
+    width: 200px;
+    padding: 6px 16px;
+    margin: 6px 3%;
+    color: $bg-white;
+    border-radius: $border-radius-small;
+  }
+}

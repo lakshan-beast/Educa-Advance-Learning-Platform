@@ -1,0 +1,19 @@
+// index html for style
+// full system conatiner div style
+.system-container {
+  max-width: 114rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include respond(tablet) {
+    padding: 0 3rem;
+  }
+  @include respond(desktop) {
+    padding: 0 10rem;
+  }
+}
+
+section {
+  background-color: rebeccapurple;
+}
