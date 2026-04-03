@@ -1,27 +1,31 @@
 // reviews fetch in jsonplaceholder
+const commentForm = document.getElementById("comment-form");
+const addBtn = document.getElementById("addBtn");
+addBtn.addEventListener("click", () => {
+  commentForm.style.display = "block";
+  console.log("click add");
+});
 
-// fetch data
-// alert("hi");
+// close form
+const closeForm = document
+  .getElementById("closeForm")
+  .addEventListener("click", () => {
+    commentForm.style.display = "none";
+  });
 
-function loadingFunction() {
-  console.log("Loading");
-  const status = document.getElementById("status");
-  status.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin-pulse fa-2xs" style="color: rgb(177, 151, 252);"></i>  Loading, please wait`;
-}
+const commentsLoad = document.getElementById("commentsLoad");
+// loadingFunction();
 async function getCommentsData() {
   try {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/comments?_limit=10",
+      "https://jsonplaceholder.typicode.com/comments?_limit=20",
     );
-    loadingFunction();
+    commentsLoad.style.display = "block";
     if (!response.ok) {
       throw new Error("Comments not loading...");
     }
     const data = await response.json();
     console.log(data);
-    // console.log(data.name);
-    // console.log(data.email);
-    // console.log(data.body);
 
     data.forEach((dataone) => {
       console.log(dataone.name);
@@ -29,20 +33,21 @@ async function getCommentsData() {
       console.log(dataone.body);
 
       const reviewsDiv = document.createElement("div");
-      reviewsDiv.textContent = "Some Text";
-      reviewsDiv.style.backgroundColor = "red";
-      // reviewsDiv.className = "review-card";
-      reviewsDiv.classList = "review-card";
+      reviewsDiv.className = "comment-box";
+      reviewsDiv.classList = "comment-box";
+
       reviewsDiv.innerHTML = `
-    <h4>${dataone.name} | <span> ${dataone.id} O/L Batch</span></h4>
-    <p>
-    <q>${dataone.body} <span>@Maths teacher</span></q>
-    </p>
-    <div class="count">
-      <span><i class="fa-regular fa-heart"></i></span>
-      <p>50</p>
-    </div>
-    `;
+        <div class="comment-top">
+          <h2>${dataone.name}</h2>
+          <span>${dataone.email}</span>
+        </div>
+        <div class="comment-content">
+          <p>
+            ${dataone.body}
+          </p>
+        </div>
+      `;
+
       const reviewPart = document.getElementById("reviews-part");
       reviewPart.appendChild(reviewsDiv);
     });
@@ -50,46 +55,12 @@ async function getCommentsData() {
     console.log("has problem : " + error.message);
   } finally {
     console.log("Loaded Completed");
+    // commentsLoad.style.display = "none";
   }
 }
 getCommentsData();
 
-// async function getCommentsData() {
-//   try {
-//     const response = await fetch(
-//       "https://jsonplaceholder.typicode.com/comments",
-//     );
-//     if (!response.ok) {
-//       throw new Error("Comments not loading...");
-//     }
-//     const data = await response.json();
-//     const userName = data.name;
-//     const userEmail = data.email;
-//     const userComment = data.body;
-//     // const userName = data.name;
-
-//     for (let index = 0; index <= 5; index++) {
-//       // console.log(userName);
-//       // console.log(userEmail);
-//       // console.log(userComment);
-//       // console.log(data);
-
-//       // console.log(data.name);
-//       // console.log(data.email);
-//       // console.log(data.body);
-
-//       data.forEach((dataone) => {
-//         console.log("Comments : " + data);
-//       });
-//     }
-//   } catch (error) {
-//     console.log("has problem : " + error.message);
-//   } finally {
-//     console.log("Loaded Completed");
-//   }
-// }
-// getCommentsData();
-
+// user comments
 const form = document.getElementById("comment-form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -103,9 +74,73 @@ form.addEventListener("submit", (e) => {
 
   const text = ` <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quae tempore veritatis assumenda in fugit iste mollitia impedit at laborum, maiores ad. Accusantium possimus dolore molestias, enim in iure consectetur?  <mark>${selectTeacher}</mark></p>`;
 
+  if (reviewComment === "") {
+    console.log("No reviews yet. Be the first to share your expreince.");
+  }
+
   console.log(reviewerName);
   console.log(reviewerBatch);
-  // console.log(selectTeacher);
+  console.log(selectTeacher);
   console.log(text);
   console.log(reviewComment);
+
+  const reviewsDiv = document.createElement("div");
+  reviewsDiv.className = "comment-box";
+  reviewsDiv.classList = "comment-box";
+
+  reviewsDiv.innerHTML = `
+    <div class="comment-box" id="comment-box" data-aos="fade-up">
+      <div class="comment-top">
+        <h2>${reviewerName}</h2>
+        <span>${reviewerBatch} O/L batch</span>
+      </div>
+      <div class="comment-content">
+      <h4>${selectTeacher}</h4>
+        <p>
+          ${reviewComment}
+        </p>
+      </div>
+      <div class="comment-bottom">
+        <div class="posted-date">
+          <p>
+            <i class="fa-solid fa-calendar-days"></i> :
+            <span id="posted-date"></span>
+          </p>
+        </div>
+        
+        <div class="comment-like">
+          <span id="likeCount">0</span>
+          <i
+            id="likeBtn"
+            class="fa-regular fa-gem"
+            data-aos="flip-left"
+            data-aos-delay="500"></i>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const reviewPart = document.getElementById("reviews-part");
+  reviewPart.appendChild(reviewsDiv);
+});
+
+// like count
+const likeBtn = document.querySelector("#likeBtn");
+const likeCount = document.querySelector("#likeCount");
+let count = localStorage.getItem("likes");
+
+if (count === null) {
+  count = 0;
+} else {
+  count = parseInt(count);
+}
+
+likeCount.textContent = count + " likes";
+likeBtn.addEventListener("click", () => {
+  likeBtn.classList.add("liked");
+  likeCount.style.color = "#f7786f";
+  count++;
+
+  likeCount.textContent = count + " likes";
+  localStorage.setItem("likes", count);
 });
