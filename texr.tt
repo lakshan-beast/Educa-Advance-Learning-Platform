@@ -184,3 +184,118 @@
   //   border-bottom: 3px solid #ff000000;
   //   border-radius: 50%;
   // }
+
+    const text = ` <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quae tempore veritatis assumenda in fugit iste mollitia impedit at laborum, maiores ad. Accusantium possimus dolore molestias, enim in iure consectetur?  <mark>${selectTeacher}</mark></p>`;
+
+
+
+
+   <!-- <div class="comment-box" id="comment-box" data-aos="fade-up">
+            <div class="comment-top">
+              <h2>User name</h2>
+              <span>2020 O/L batch</span>
+            </div>
+            <div class="comment-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum facilis eos inventore nobis adipisci voluptate ut!
+                Dicta officia officiis quaerat praesentium nam accusantium
+                labore fuga deserunt molestias? At, rerum dolorem!
+              </p>
+            </div>
+            <div class="comment-bottom">
+              <h4>Maths Teacher</h4>
+              <div class="posted-date">
+                <p>
+                  <i class="fa-solid fa-calendar-days"></i> :
+                  <span id="posted-date"></span>
+                </p>
+              </div>
+              <div class="comment-like">
+                <span id="likeCount">0</span>
+                <i
+                  id="likeBtn"
+                  class="fa-regular fa-gem"
+                  data-aos="flip-left"></i>
+              </div>
+            </div>
+          </div> -->
+
+ <!-- <button type="button" title="Back Button" onclick="goBack()">
+      <i class="fa-solid fa-arrow-turn-up fa-rotate-270"></i>
+    </button> -->
+          
+
+
+// const reviewsDiv = document.createElement("div");
+  // reviewsDiv.className = "comment-box";
+  // reviewsDiv.classList = "comment-box";
+
+  // reviewsDiv.innerHTML = `
+  // <div class="comment-box" id="comment-box" data-aos="fade-up">
+  // <div class="comment-top">
+  // <h2>${data.name}</h2>
+  // <span>${data.bacth} O/L batch</span>
+  // </div>
+  // <div class="comment-content">
+  // <p>
+  // ${data.body}
+  // </p>
+  // </div>
+  // <div class="comment-bottom">
+  // <div class="posted-date">
+  // <p>
+  // <i class="fa-solid fa-calendar-days"></i> :
+  // <span id="posted-date">${data.data}</span>
+  // </p>
+  // </div>
+
+  //         <h4>${data.teacher}</h4>
+  //       <div class="comment-like">
+  //       <span id="likeCount">0</span>
+  //       <i
+  //       id="likeBtn"
+  //       class="fa-regular fa-gem"
+  //       data-aos="flip-left"></i>
+  //       </div>
+  //       </div>
+  //   </div>
+  //   `;
+
+  // const reviewPart = document.getElementById("reviews-part");
+  // reviewPart.appendChild(reviewsDiv);
+
+  // const reviewsDiv = document.createElement("div");
+  // reviewsDiv.className = "comment-box";
+  // reviewsDiv.classList = "comment-box";
+
+  // reviewsDiv.innerHTML = `
+  //   <div class="comment-box" id="comment-box" data-aos="fade-up">
+  //     <div class="comment-top">
+  //       <h2>${reviewerName}</h2>
+  //       <span>${reviewerBatch} O/L batch</span>
+  //     </div>
+  //     <div class="comment-content">
+  //     <p>
+  //     ${reviewComment}
+  //       </p>
+  //       </div>
+  //       <div class="comment-bottom">
+  //       <div class="posted-date">
+  //       <p>
+  //           <i class="fa-solid fa-calendar-days"></i> :
+  //           <span id="posted-date">${postedDate}</span>
+  //         </p>
+  //         </div>
+
+  //         <h4>${selectTeacher}</h4>
+  //       <div class="comment-like">
+  //         <span id="likeCount">0</span>
+  //         <i
+  //           id="likeBtn"
+  //           class="fa-regular fa-gem"
+  //           data-aos="flip-left"></i>
+  //       </div>
+  //     </div>
+  //   </div>
+  // `;
