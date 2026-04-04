@@ -1,3 +1,15 @@
+// page reload
+window.addEventListener("load", () => {
+  let comments = localStorage.getItem("userComments");
+  if (comments) {
+    comments = JSON.parse(comments);
+
+    comments.forEach((comment) => {
+      displayUserComment(comment);
+    });
+  }
+});
+
 // reviews fetch in jsonplaceholder
 const commentForm = document.getElementById("commentContainer");
 const commentAddBtn = document.getElementById("commentAddBtn");
@@ -14,16 +26,16 @@ const closeForm = document
 
 // loading animation
 const commentsLoadAni = document.getElementById("commentsLoadAni");
-const apiCommentsCount = document.getElementById("apiCommentsCount");
 
 // fetch API comments
 async function getApiComments() {
   try {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/comments?_limit=50",
-    );
     // loading
     commentsLoadAni.style.display = "block";
+
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/comments?_limit=57",
+    );
 
     // error catching start
     if (!response.ok) {
@@ -42,36 +54,35 @@ async function getApiComments() {
       // create new div for the comments
       const apiCommentBox = document.createElement("div");
       apiCommentBox.className = "comment-box";
-      apiCommentBox.classList = "comment-box";
+      // apiCommentBox.classList = "comment-box";
 
       apiCommentBox.innerHTML = `
-        <div class="comment-top">
-          <h2>${loadData.id} | ${loadData.name}</h2>
-          <span>${loadData.email}</span>
-        </div>
-        <div class="comment-content">
-          <p>
-            ${loadData.body}
-          </p>
-        </div>
+      <div class="comment-top">
+      <h2>${loadData.id} | ${loadData.name}</h2>
+      <span>${loadData.email}</span>
+      </div>
+      <div class="comment-content">
+      <p>
+      ${loadData.body}
+      </p>
+      </div>
       `;
-
-      // const apissCommentsCount = data.length;
-      // apiCommentsCount.innerText = apissCommentsCount;
-      // console.log(data.length);
-
-      // const usersCommentsCount = 20;
-      // const all = apissCommentsCount + usersCommentsCount;
-      // console.log(all);
 
       const apiCommentPart = document.getElementById("apiCommentPart");
       apiCommentPart.appendChild(apiCommentBox);
+
+      const apiCommentsOut = document.getElementById("apiCommentsCount");
+      // apiCommentsOut.innerHTML = data.length;
+
+      data.forEach(() => {
+        apiCommentsOut.innerHTML = data.length + " comments";
+      });
     });
   } catch (error) {
     console.log("problem : " + error.message);
   } finally {
     console.log("Loaded Completed");
-    commentsLoadAni.style.display = "none";
+    // commentsLoadAni.style.display = "none";
   }
 }
 getApiComments();
@@ -91,7 +102,7 @@ form.addEventListener("submit", (e) => {
 
   if (userComment === "") {
     const errorMsg = (document.getElementById("errorMsg").innerHTML =
-      "No reviews yet. Be the first to share your expreince.");
+      "Please enter your comment");
     return;
   }
 
@@ -104,8 +115,8 @@ form.addEventListener("submit", (e) => {
     id: id, // unique id number
     name: userName,
     body: userComment,
-    bacth: userBatch,
-    teacher: chooseTeacher,
+    batch: userBatch,
+    teacher: selectTeacher,
     date: postedDate,
   };
 
@@ -119,55 +130,25 @@ form.addEventListener("submit", (e) => {
   console.log(userBatch);
   console.log(selectTeacher);
   console.log(userComment);
+
+  const usersCommentsOut = document.getElementById("usersCommentsCount");
+  usersCommentsOut.innerHTML = comments.length + "comments";
+  console.log(comments.length);
 });
 
 function displayUserComment(data) {
-  const reviewPart = document.getElementById("reviews-part");
+  const usersCommentPart = document.getElementById("usersCommentPart");
   // const id = Date.now();
 
-  // const likeBtn = document.querySelector("#likeBtn");
-  // // const likeCount = document.querySelector("#likeCount");
+  const userCommentBox = document.createElement("div");
+  userCommentBox.className = "comment-box";
+  // userCommentBox.classList = "comment-box";
 
-  // // const
-  // const storageKey = "likes_" + id;
-  // const likedKey = "liked_" + id;
-
-  // let counts = localStorage.getItem(storageKey);
-  // counts = counts ? parseInt(counts) : 0;
-
-  // let liked = localStorage.getItem(likedKey);
-
-  // // ui set
-  // likeCount.textContent = counts;
-
-  // // already liked
-  // if (liked === "true") {
-  //   likeBtn.classList.add("liked");
-  //   likeCount.style.color = "#f7786f";
-  //   likeBtn.style.pointerEvents = "none";
-  // }
-
-  // likeBtn.addEventListener("click", () => {
-  //   if (liked === "return") return; // for safety
-  //   counts++;
-  //   likeCount.textContent = counts;
-
-  //   localStorage.setItem(storageKey, counts);
-  //   localStorage.setItem(likedKey, "true");
-
-  //   likeBtn.classList.add("liked");
-  //   likeBtn.style.pointerEvents = "none";
-  // });
-
-  const reviewsDiv = document.createElement("div");
-  reviewsDiv.className = "comment-box";
-  reviewsDiv.classList = "comment-box";
-
-  reviewsDiv.innerHTML = `
+  userCommentBox.innerHTML = `
     <div class="comment-box" id="comment-box" data-aos="fade-up">
       <div class="comment-top">
         <h2>${data.name}</h2>
-        <span>${data.bacth} O/L batch</span>
+        <span>${data.batch} O/L batch</span>
       </div>
       <div class="comment-content">
       <p>
@@ -178,59 +159,112 @@ function displayUserComment(data) {
         <div class="posted-date">
         <p>
             <i class="fa-solid fa-calendar-days"></i> :
-            <span id="posted-date">${data.data}</span>
+            <span id="posted-date">${data.date}</span>
           </p>
           </div>
 
           <h4>${data.teacher}</h4>
         <div class="comment-like">
-          <span id="likeCount">0</span>
+          <span id="likeCount-${data.id}">0</span>
           <i
-            id="likeBtn"
-            class="fa-regular fa-gem"
+            id="likeBtn-${data.id}"
+            class="far fa-snowflake"
             data-aos="flip-left"></i>
         </div>
       </div>
     </div>
   `;
 
-  reviewPart.appendChild(reviewsDiv);
-}
+  const likeBtn = userCommentBox.querySelector(`#likeBtn-${data.id}`);
+  const likeCount = userCommentBox.querySelector(`#likeCount-${data.id}`);
 
-// page reload
-window.addEventListener("load", () => {
-  let comments = localStorage.getItem("userComments");
+  // // const
+  const storageKey = "likes_" + data.id;
+  const likedKey = "liked_" + data.id;
 
-  if (comments) {
-    comments = JSON.parse(comments);
+  let counts = localStorage.getItem(storageKey);
+  counts = counts ? parseInt(counts) : 0;
 
-    comments.forEach((comment) => {
-      displayUserComment(comment);
-    });
+  let liked = localStorage.getItem(likedKey);
+
+  // ui set
+  likeCount.textContent = counts;
+
+  // already liked
+  if (liked === "true") {
+    likeBtn.classList.add("liked");
+    likeCount.style.color = "#f7786f";
+    likeBtn.style.color = "rgb(255, 255, 255)";
+    likeBtn.style.backgroundColor = "#f7786f";
+    // likeBtn.style.boxShadow = "0px 0px 16px #f7786f;";
+    likeBtn.classList.add("fas");
+    // likeBtn.style.pointerEvents = "none";
   }
-});
+
+  // click event
+  likeBtn.addEventListener("click", () => {
+    if (liked === "true") return; // for safety
+
+    counts++;
+    likeCount.textContent = counts;
+
+    localStorage.setItem(storageKey, counts);
+    localStorage.setItem(likedKey, "true");
+
+    liked = "true";
+    likeBtn.classList.add("liked");
+    likeCount.style.color = "#f7786f";
+    likeBtn.style.color = "rgb(255, 255, 255)";
+    likeBtn.style.backgroundColor = "#f7786f";
+    // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
+    likeBtn.classList.add("fas");
+    // likeBtn.style.pointerEvents = "none";
+  });
+
+  usersCommentPart.appendChild(userCommentBox);
+  form.reset();
+
+  setTimeout(() => {
+    commentForm.style.display = "none";
+  }, 500);
+}
 
 // like count
-const likeBtn = document.querySelector("#likeBtn");
-const likeCount = document.querySelector("#likeCount");
-let count = localStorage.getItem("likes");
+// const likeBtn = document.querySelector("#likeBtn");
+// const likeCount = document.querySelector("#likeCount");
+// let count = localStorage.getItem("likes");
 
-if (count === null) {
-  count = 0;
-} else {
-  count = parseInt(count);
-  likeCount.style.color = "#ff493c";
-  likeBtn.classList.add("liked");
-  likeBtn.style.pointerEvents = "none"; // already click check after button disable
-}
+// if (count === null) {
+//   count = 0;
+// } else {
+//   count = parseInt(count);
+//   likeCount.style.color = "#ff493c";
+//   likeBtn.classList.add("liked");
+//   likeBtn.style.pointerEvents = "none"; // already click check after button disable
+// }
 
-likeCount.textContent = count;
-likeBtn.addEventListener("click", () => {
-  likeBtn.classList.add("liked");
-  likeCount.style.color = "#f7786f";
-  likeBtn.style.pointerEvents = "none"; // already click check after button disable
-  count++;
+// likeCount.textContent = count;
+// likeBtn.addEventListener("click", () => {
+//   likeBtn.classList.add("liked");
+//   likeCount.style.color = "#f7786f";
+//   likeBtn.style.pointerEvents = "none"; // already click check after button disable
+//   count++;
 
-  likeCount.textContent = count;
-  localStorage.setItem("likes", count);
-});
+//   likeCount.textContent = count;
+//   localStorage.setItem("likes", count);
+// });
+
+// ("Please enter your comment");
+// const totalComments = data.length + comments.length;
+// console.log(totalComments);
+
+// // notification
+// Notification.requestPermission().then((permission) => {
+//   if (permission === "granted") {
+//     new Notification("To-Do Reminder", {
+//       body: "Now your Study Time.",
+//       icon: "./assets/",
+//     });
+//     alert("hi");
+//   }
+// });
