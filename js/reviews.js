@@ -123,41 +123,41 @@ form.addEventListener("submit", (e) => {
 
 function displayUserComment(data) {
   const reviewPart = document.getElementById("reviews-part");
-  const id = Date.now();
+  // const id = Date.now();
 
-  const likeBtn = document.querySelector("#likeBtn");
-  // const likeCount = document.querySelector("#likeCount");
+  // const likeBtn = document.querySelector("#likeBtn");
+  // // const likeCount = document.querySelector("#likeCount");
 
-  // const
-  const storageKey = "likes_" + id;
-  const likedKey = "liked_" + id;
+  // // const
+  // const storageKey = "likes_" + id;
+  // const likedKey = "liked_" + id;
 
-  let counts = localStorage.getItem(storageKey);
-  counts = counts ? parseInt(counts) : 0;
+  // let counts = localStorage.getItem(storageKey);
+  // counts = counts ? parseInt(counts) : 0;
 
-  let liked = localStorage.getItem(likedKey);
+  // let liked = localStorage.getItem(likedKey);
 
-  // ui set
-  likeCount.textContent = counts;
+  // // ui set
+  // likeCount.textContent = counts;
 
-  // already liked
-  if (liked === "true") {
-    likeBtn.classList.add("liked");
-    likeCount.style.color = "#f7786f";
-    likeBtn.style.pointerEvents = "none";
-  }
+  // // already liked
+  // if (liked === "true") {
+  //   likeBtn.classList.add("liked");
+  //   likeCount.style.color = "#f7786f";
+  //   likeBtn.style.pointerEvents = "none";
+  // }
 
-  likeBtn.addEventListener("click", () => {
-    if (liked === "return") return; // for safety
-    counts++;
-    likeCount.textContent = counts;
+  // likeBtn.addEventListener("click", () => {
+  //   if (liked === "return") return; // for safety
+  //   counts++;
+  //   likeCount.textContent = counts;
 
-    localStorage.setItem(storageKey, counts);
-    localStorage.setItem(likedKey, "true");
+  //   localStorage.setItem(storageKey, counts);
+  //   localStorage.setItem(likedKey, "true");
 
-    likeBtn.classList.add("liked");
-    likeBtn.style.pointerEvents = "none";
-  });
+  //   likeBtn.classList.add("liked");
+  //   likeBtn.style.pointerEvents = "none";
+  // });
 
   const reviewsDiv = document.createElement("div");
   reviewsDiv.className = "comment-box";
@@ -211,26 +211,26 @@ window.addEventListener("load", () => {
 });
 
 // like count
-// const likeBtn = document.querySelector("#likeBtn");
-// const likeCount = document.querySelector("#likeCount");
-// let count = localStorage.getItem("likes");
+const likeBtn = document.querySelector("#likeBtn");
+const likeCount = document.querySelector("#likeCount");
+let count = localStorage.getItem("likes");
 
-// if (count === null) {
-//   count = 0;
-// } else {
-//   count = parseInt(count);
-//   likeCount.style.color = "#ff493c";
-//   likeBtn.classList.add("liked");
-//   // likeBtn.style.pointerEvents = "none"; // already click check after button disable
-// }
+if (count === null) {
+  count = 0;
+} else {
+  count = parseInt(count);
+  likeCount.style.color = "#ff493c";
+  likeBtn.classList.add("liked");
+  likeBtn.style.pointerEvents = "none"; // already click check after button disable
+}
 
-// likeCount.textContent = count;
-// likeBtn.addEventListener("click", () => {
-//   likeBtn.classList.add("liked");
-//   likeCount.style.color = "#f7786f";
-//   likeBtn.style.pointerEvents = "none"; // already click check after button disable
-//   count++;
+likeCount.textContent = count;
+likeBtn.addEventListener("click", () => {
+  likeBtn.classList.add("liked");
+  likeCount.style.color = "#f7786f";
+  likeBtn.style.pointerEvents = "none"; // already click check after button disable
+  count++;
 
-//   likeCount.textContent = count;
-//   localStorage.setItem("likes", count);
-// });
+  likeCount.textContent = count;
+  localStorage.setItem("likes", count);
+});
