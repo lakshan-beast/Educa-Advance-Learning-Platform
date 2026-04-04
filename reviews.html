@@ -27,23 +27,23 @@
     <!-- header section start  -->
     <header id="header" class="header-section">
       <nav class="header">
-        <i
+        <!-- <i
           class="fa-solid fa-bars-staggered menu-btn"
           title="Menu"
-          id="menu-btn"></i>
+          id="menu-btn"></i> -->
         <a href="#home" class="header-logo"
           ><i class="fa-regular fa-circle"></i> educa.</a
         >
-        <div class="header-navbar" id="header-navbar">
+        <!-- <div class="header-navbar" id="header-navbar">
           <a href="index.html#home">Home</a>
           <a href="#features"
             ><i class="fa-solid fa-comment-medical"></i> Add
           </a>
           <a href="#classes"><i class="fa-solid fa-comment-dots"></i> Read</a>
-          <!-- <a href="#teachers">Teachers</a>
+          <a href="#teachers">Teachers</a>
           <a href="#about">About us</a>
-          <a href="#contact-form">Contact us</a> -->
-        </div>
+          <a href="#contact-form">Contact us</a>
+        </div> -->
 
         <div class="header-actions">
           <a href="#" class="sign-btn" id="formBtn">sign in</a>
@@ -53,6 +53,7 @@
             title="Back Button"
             onclick="goBack()">
             <i class="fa-solid fa-arrow-turn-up fa-rotate-270"></i>
+            <!-- <i class="fa-solid fa-trophy"></i> -->
           </button>
         </div>
       </nav>
@@ -70,15 +71,15 @@
 
         <div class="comment-content" data-aos="fade-up">
           <div class="comments-counts">
-            <p id="counts">
+            <!-- <p id="counts">
               All Comments:
               <span
                 data-aos="zoom-in"
                 data-aos-delay="800"
                 id="allCommentsCount"></span>
-            </p>
-            <p>APi Comments : <span id="apiCommentsCount"></span></p>
-            <p>Users Comments : <span id="usersCommentsCount"></span></p>
+            </p> -->
+            <!-- <p>APi Comments : <span id="apiCommentsCount"></span></p> -->
+            <!-- <p>Users Comments : <span id="usersCommentsCount"></span></p> -->
           </div>
           <button type="button" id="commentAddBtn">
             <i class="fa-regular fa-square-plus"></i> Add Comment
@@ -136,16 +137,17 @@
           <span id="errorMsg"></span>
         </form>
       </div>
-
       <!-- comments loading animation  -->
       <div id="commentsLoadAni" class="comments-load-ani">
         <div class="loader"></div>
         <p>Loading...</p>
       </div>
+      <!-- all comments container -->
+      <section id="allComments" class="all-comments">
+        <h2>User Comments</h2>
+        <div class="reviews-part" id="usersCommentPart"></div>
 
-      <!-- all commnets container -->
-      <section id="allComments" class="all-commments">
-        <div class="reviews-part" id="reviews-part"></div>
+        <h2>APi Comments | <span id="apiCommentsCount"></span></h2>
         <div class="reviews-part" id="apiCommentPart"></div>
       </section>
     </div>
