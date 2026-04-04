@@ -1242,6 +1242,7 @@ main {
   margin: 6px 1%;
   color: #fcfcfc;
   border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 .review-container button i {
   margin-right: 12px;
@@ -1261,9 +1262,15 @@ main {
 }
 @media only screen and (min-width: 800px) {
   .form-container {
-    width: 35%;
-    height: 60%;
-    padding: 1rem;
+    width: 50%;
+    height: 50%;
+    padding: 1rem 0.5rem;
+    margin: 0 1rem 2rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .form-container {
+    width: 30%;
   }
 }
 .form-container button {
@@ -1276,7 +1283,7 @@ main {
 .form-container button i {
   margin-right: 12px;
 }
-.form-container #closeForm {
+.form-container #CloseIcon {
   background-color: #190f8e;
   width: 40px;
   height: 40px;
@@ -1292,8 +1299,8 @@ main {
 .comment-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   gap: 0;
   flex-wrap: nowrap;
   margin: 6px 0;
@@ -1315,17 +1322,18 @@ main {
 }
 
 .comments-load-ani {
-  background-color: #fcfcfc;
+  background-color: #c6d4fa;
   color: #5454d9;
-  padding: 6px;
+  padding: 12px 6px;
   margin: 6px auto;
   border-radius: 6px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100px;
   align-content: center;
-  width: 250px;
+  gap: 6px;
 }
 .comments-load-ani .loader {
   margin-right: 0.5rem;
@@ -1363,24 +1371,36 @@ main {
     border-bottom: 3px solid rgba(255, 255, 255, 0);
   }
   90% {
-    border: 3px solid #bba8ff;
+    border: 3px solid #c6c7ff;
     border-left: 3px solid rgba(255, 255, 255, 0);
     border-bottom: 3px solid rgba(255, 255, 255, 0);
   }
   95% {
-    border: 3px solid #5729ff;
+    border: 3px solid #a0a1ff;
     border-bottom: 3px solid rgba(255, 255, 255, 0);
   }
   100% {
     border: 3px solid #ffffff;
   }
 }
+.all-comments {
+  width: 100%;
+}
+.all-comments h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgb(78, 106, 185);
+  margin-bottom: 6px;
+}
+.all-comments h2 span {
+  font-size: 1rem;
+  color: #20405a;
+}
+
 .reviews-part {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 0.5rem 1rem;
-  overflow: scroll;
-  padding: 0rem 0.2rem;
+  overflow-x: scroll;
+  height: 500px;
+  margin: 2rem 0;
 }
 @media only screen and (min-width: 800px) {
   .reviews-part {
