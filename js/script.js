@@ -1,10 +1,11 @@
-// preloader
+// commentsLoadAni
 // window.addEventListener("load", () => {
-//   const preLoader = document.getElementById("preLoader");
-//   preLoader.style.opacity = "0";
-//   preLoader.style.transition = "opacity 0.5s ease-out";
+// const commentsLoadAni = document.getElementById("commentsLoadAni");
+//   const commentsLoadAni = document.getElementById("commentsLoadAni");
+// commentsLoadAni.style.opacity = "0";
+// commentsLoadAni.style.transition = "opacity 0.5s ease-out";
 //   setTimeout(function () {
-//     // preLoader.style.display = "none";
+//     commentsLoadAni.style.display = "none";
 //   }, 500);
 // });
 
