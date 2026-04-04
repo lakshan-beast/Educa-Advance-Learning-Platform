@@ -89,12 +89,7 @@ form.addEventListener("submit", (e) => {
   const postedDate = new Date().toLocaleDateString();
   const id = Date.now();
 
-  if (
-    userComment === "" ||
-    userBatch == "" ||
-    userName === "" ||
-    chooseTeacher === ""
-  ) {
+  if (userComment === "") {
     const errorMsg = (document.getElementById("errorMsg").innerHTML =
       "No reviews yet. Be the first to share your expreince.");
     return;
