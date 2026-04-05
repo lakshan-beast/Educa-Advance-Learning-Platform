@@ -4,11 +4,19 @@ window.addEventListener("load", () => {
   if (comments) {
     comments = JSON.parse(comments);
 
+    const userCommentPart = document.getElementById("userCommentPart");
+    // userCommentPart.innerHTML = ""; // clear old
+
     comments.forEach((comment) => {
       displayUserComment(comment);
     });
   }
 });
+
+function resetData() {
+  localStorage.clear();
+  location.reload();
+}
 
 // reviews fetch in jsonplaceholder
 const commentForm = document.getElementById("commentContainer");
@@ -74,9 +82,9 @@ async function getApiComments() {
       const apiCommentsOut = document.getElementById("apiCommentsCount");
       // apiCommentsOut.innerHTML = data.length;
 
-      data.forEach(() => {
-        apiCommentsOut.innerHTML = data.length + " comments";
-      });
+      // data.forEach(() => {
+      apiCommentsOut.innerHTML = data.length + " comments";
+      // });
     });
   } catch (error) {
     console.log("problem : " + error.message);
@@ -132,7 +140,7 @@ form.addEventListener("submit", (e) => {
   const selectTeacher = chooseTeacher.options[chooseTeacher.selectedIndex].text;
   const userComment = document.getElementById("userComment").value.trim();
   const postedDate = new Date().toLocaleDateString();
-  const id = Date.now();
+  const id = Date.now() + Math.floor(Math.random() * 1000);
 
   if (userComment === "") {
     const errorMsg = (document.getElementById("errorMsg").innerHTML =
@@ -165,18 +173,18 @@ form.addEventListener("submit", (e) => {
 
   setTimeout(() => {
     thanksMessage.classList.remove("show");
-  }, 2000);
+  }, 5000);
 
   console.log(userName);
   console.log(userBatch);
   console.log(selectTeacher);
   console.log(userComment);
 
-  const usersCommentsOut = document.getElementById("usersCommentsCount");
-  const commentsCount = comments.length;
+  // const usersCommentsOut = document.getElementById("usersCommentsCount");
+  // const commentsCount = comments.length;
   // usersCommentsOut.innerHTML = comments.length + "comments";
-  console.log(comments.length);
-  console.log(commentsCount);
+  // console.log(comments.length);
+  // console.log(commentsCount);
 });
 
 function displayUserComment(data) {
@@ -184,11 +192,11 @@ function displayUserComment(data) {
   // const id = Date.now();
 
   const userCommentBox = document.createElement("div");
-  // userCommentBox.className = "comment-box";
+  userCommentBox.className = "comment-box";
   // userCommentBox.classList = "comment-box";
 
   userCommentBox.innerHTML = `
-    <div class="comment-box" id="comment-box" data-aos="fade-up">
+    <div data-aos="fade-up">
       <div class="comment-top">
         <h2>${data.name}</h2>
         <span><i class="fa-solid fa-graduation-cap"></i> | ${data.batch} O/L batch</span>
@@ -236,55 +244,68 @@ function displayUserComment(data) {
   // ui set
   likeCount.textContent = counts;
 
-  // already liked
-  if (liked === "true") {
-    // likeBtn.classList.add("liked");
-    likeCount.style.color = "#ff5549";
-    likeBtn.style.color = "rgb(255, 255, 255)";
-    likeBtn.style.backgroundColor = "#ff564a";
-    // likeBtn.style.boxShadow = "0px 0px 16px #f7786f;";
-    likeBtn.classList.add("fas");
-    // likeBtn.style.pointerEvents = "none";
-  }
+  // // already liked
+  // if (liked === "true") {
+  //   // likeBtn.classList.add("liked");
+  //   likeCount.style.color = "#ff5549";
+  //   likeBtn.style.color = "rgb(255, 255, 255)";
+  //   likeBtn.style.backgroundColor = "#ff564a";
+  //   // likeBtn.style.boxShadow = "0px 0px 16px #f7786f;";
+  //   likeBtn.classList.add("fas");
+  //   // likeBtn.style.pointerEvents = "none";
+  // }
 
   // click event
   likeBtn.addEventListener("click", () => {
     // if (liked === "true") return; // for safety
+    if (!liked) {
+      counts++;
+      liked = true;
 
-    counts++;
-    likeCount.textContent = counts;
+      likeCount.textContent = counts;
 
-    localStorage.setItem(storageKey, counts);
-    localStorage.setItem(likedKey, "true");
+      likeBtn.classList.add("fas");
+      likeBtn.classList.remove("far");
 
-    liked = "true";
-    likeBtn.classList.add("liked");
-    likeCount.style.color = "#ff6257";
-    likeBtn.style.color = "rgb(255, 255, 255)";
-    likeBtn.style.backgroundColor = "#ff6257";
-    // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
-    likeBtn.classList.add("fas");
-    // likeBtn.style.pointerEvents = "none";
-  });
+      // localStorage.setItem(storageKey, counts);
+      // localStorage.setItem(likedKey, "true");
 
-  // click event
-  likeBtn.addEventListener("dblclick", () => {
-    if (liked === "false") return; // for safety
+      // likeBtn.classList.add("liked");
+      likeCount.style.color = "#ff6257";
+      likeBtn.style.color = "rgb(255, 255, 255)";
+      likeBtn.style.backgroundColor = "#ff6257";
+      // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
 
-    counts--;
+      // likeBtn.style.pointerEvents = "none";
+      // });
+    } else {
+      // click event
+      // likeBtn.addEventListener("dblclick", () => {
+      // if (liked === "false") return; // for safety
+
+      counts--;
+      liked = false;
+
+      // likeBtn.classList.add("liked");
+      likeCount.style.color = "";
+      likeBtn.style.color = "#20405a";
+      likeBtn.style.backgroundColor = "";
+      // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
+      likeBtn.classList.add("far");
+      likeBtn.classList.remove("fas");
+      // likeBtn.style.pointerEvents = "none";
+      // });
+      // }
+    }
     likeCount.textContent = counts;
 
     localStorage.setItem(storageKey, counts);
     localStorage.setItem(likedKey, "false");
 
-    liked = "false";
-    // likeBtn.classList.add("liked");
-    likeCount.style.color = "rgba(127, 145, 236, 0.08)";
-    likeBtn.style.color = "#20405a";
-    likeBtn.style.backgroundColor = "rgba(127, 145, 236, 0.08)";
-    // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
-    likeBtn.classList.add("far");
-    // likeBtn.style.pointerEvents = "none";
+    likeBtn.classList.add("animate");
+    setTimeout(() => {
+      likeBtn.classList.remove("animate");
+    }, 450);
   });
 
   usersCommentPart.appendChild(userCommentBox);
@@ -293,48 +314,44 @@ function displayUserComment(data) {
   setTimeout(() => {
     commentForm.style.display = "none";
   }, 500);
+
+  // like count
+  // const likeBtn = document.querySelector("#likeBtn");
+  // const likeCount = document.querySelector("#likeCount");
+  // let count = localStorage.getItem("likes");
+
+  // if (count === null) {
+  //   count = 0;
+  // } else {
+  //   count = parseInt(count);
+  //   likeCount.style.color = "#ff493c";
+  //   likeBtn.classList.add("liked");
+  //   likeBtn.style.pointerEvents = "none"; // already click check after button disable
+  // }
+
+  // likeCount.textContent = count;
+  // likeBtn.addEventListener("click", () => {
+  //   likeBtn.classList.add("liked");
+  //   likeCount.style.color = "#f7786f";
+  //   likeBtn.style.pointerEvents = "none"; // already click check after button disable
+  //   count++;
+
+  //   likeCount.textContent = count;
+  //   localStorage.setItem("likes", count);
+  // });
+
+  // ("Please enter your comment");
+  // const totalComments = data.length + comments.length;
+  // console.log(totalComments);
+
+  // // notification
+  // Notification.requestPermission().then((permission) => {
+  //   if (permission === "granted") {
+  //     new Notification("To-Do Reminder", {
+  //       body: "Now your Study Time.",
+  //       icon: "./assets/",
+  //     });
+  //     alert("hi");
+  //   }
+  // });
 }
-
-function resetData() {
-  localStorage.clear();
-  location.reload();
-}
-// like count
-// const likeBtn = document.querySelector("#likeBtn");
-// const likeCount = document.querySelector("#likeCount");
-// let count = localStorage.getItem("likes");
-
-// if (count === null) {
-//   count = 0;
-// } else {
-//   count = parseInt(count);
-//   likeCount.style.color = "#ff493c";
-//   likeBtn.classList.add("liked");
-//   likeBtn.style.pointerEvents = "none"; // already click check after button disable
-// }
-
-// likeCount.textContent = count;
-// likeBtn.addEventListener("click", () => {
-//   likeBtn.classList.add("liked");
-//   likeCount.style.color = "#f7786f";
-//   likeBtn.style.pointerEvents = "none"; // already click check after button disable
-//   count++;
-
-//   likeCount.textContent = count;
-//   localStorage.setItem("likes", count);
-// });
-
-// ("Please enter your comment");
-// const totalComments = data.length + comments.length;
-// console.log(totalComments);
-
-// // notification
-// Notification.requestPermission().then((permission) => {
-//   if (permission === "granted") {
-//     new Notification("To-Do Reminder", {
-//       body: "Now your Study Time.",
-//       icon: "./assets/",
-//     });
-//     alert("hi");
-//   }
-// });
