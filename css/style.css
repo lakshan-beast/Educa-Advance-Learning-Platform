@@ -1248,6 +1248,28 @@ main {
   margin-right: 12px;
 }
 
+#thanksMessage {
+  position: fixed;
+  bottom: 35px;
+  right: 5px;
+  padding: 6px 24px;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s;
+  background-color: #484aee;
+  color: #fcfcfc;
+}
+#thanksMessage i {
+  margin-left: 6px;
+}
+
+#thanksMessage.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .form-container {
   display: none;
   position: fixed;
@@ -1260,6 +1282,16 @@ main {
   background-color: #fcfcfc;
   box-shadow: 0px 8px 20px rgb(78, 106, 185);
 }
+.form-container #nameCharCount,
+.form-container #commentCharCount {
+  color: #20405a;
+  font-size: 9px;
+  font-weight: 600;
+  background: #f3f6ff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  display: none;
+}
 @media only screen and (min-width: 800px) {
   .form-container {
     width: 50%;
@@ -1271,6 +1303,7 @@ main {
 @media only screen and (min-width: 1200px) {
   .form-container {
     width: 30%;
+    height: 55%;
   }
 }
 .form-container button {
@@ -1296,7 +1329,7 @@ main {
   font-size: 1.4rem;
 }
 
-.comment-content {
+.addcomment-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1307,16 +1340,16 @@ main {
   padding: 6px;
   background-color: #fcfcfc;
 }
-.comment-content .comment-counts {
+.addcomment-content .comment-counts {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.comment-content .comment-counts p {
+.addcomment-content .comment-counts p {
   color: rgb(78, 106, 185);
 }
-.comment-content .comment-counts p span {
+.addcomment-content .comment-counts p span {
   color: #5454d9;
   font-weight: 800;
 }
@@ -1383,14 +1416,10 @@ main {
     border: 3px solid #ffffff;
   }
 }
-.all-comments {
-  width: 100%;
-}
 .all-comments h2 {
   font-size: 1.4rem;
   text-align: center;
   color: rgb(78, 106, 185);
-  margin-bottom: 6px;
 }
 .all-comments h2 span {
   font-size: 1rem;
@@ -1401,6 +1430,7 @@ main {
   overflow-x: scroll;
   height: 500px;
   margin: 2rem 0;
+  padding: 0 1rem;
 }
 @media only screen and (min-width: 800px) {
   .reviews-part {
@@ -1416,10 +1446,13 @@ main {
   }
 }
 
+#userCommentPart {
+  display: none;
+}
+
 .comment-box {
-  padding: 0.5rem 1rem;
   margin: 0.5rem 0;
-  background-color: rgba(127, 145, 236, 0.08);
+  background-color: #fcfcfc;
   border-radius: 1rem;
   border: 2px solid #e0e8ff;
   display: flex;
@@ -1434,29 +1467,46 @@ main {
   flex-direction: row;
   gap: 0;
   flex-wrap: nowrap;
+  background: rgba(216, 231, 255, 0.5);
+  padding: 12px;
+  border-radius: 6px 6px 0 0;
 }
 .comment-box .comment-top h2 {
-  color: #5454d9;
+  color: rgb(78, 106, 185);
   font-size: medium;
+  text-align: left;
 }
 .comment-box .comment-top span {
-  color: #484aee;
+  color: #7f91ec;
+}
+.comment-box h3 {
+  color: rgb(78, 106, 185);
+  text-align: left;
+  margin: 6px 0 6px 2rem;
+  font-size: 1.1rem;
 }
 .comment-box .comment-content {
   border-radius: 3px;
   margin: 3px 0;
+  margin-bottom: 6px;
+  color: rgba(30, 80, 161, 0.5019607843);
+  padding: 0 2rem;
+  text-align: left;
 }
 .comment-box .comment-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 0;
-  flex-wrap: nowrap;
+  gap: nowrap;
+  flex-wrap: 0;
   margin-top: 6px;
   border-top: 2px solid #c6d4fa;
   padding-top: 6px;
-  color: #20405a;
+  padding: 6px 8px 6px 12px;
+  color: #4e6ab9;
+  border-radius: 0 0 14px 14px;
+  background: #fcfcfc;
 }
 .comment-box .comment-bottom .comment-like {
   margin: 0 6px;
@@ -1464,25 +1514,47 @@ main {
   cursor: pointer;
 }
 .comment-box .comment-bottom .comment-like span {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #190f8e;
   margin-right: 6px;
 }
 .comment-box .comment-bottom .comment-like i {
   color: #20405a;
-  font-size: 1.5rem;
-  padding: 8px 8px;
+  font-size: 1rem;
+  padding: 6px 6px;
   background-color: rgba(127, 145, 236, 0.08);
-  box-shadow: 0px 0px 16px rgb(78, 106, 185);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
+}
+
+#apiCommentPart .comment-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
 }
 
 #likeBtn.liked {
   background-color: #f7786f;
   color: #fcfcfc;
   box-shadow: 0px 0px 16px #f7786f;
+}
+
+.animate {
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
