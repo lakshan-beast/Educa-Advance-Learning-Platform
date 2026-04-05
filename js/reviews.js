@@ -87,6 +87,40 @@ async function getApiComments() {
 }
 getApiComments();
 
+// input check limit
+const userName = document.getElementById("userName");
+const nameCharCount = document.getElementById("nameCharCount");
+const maxNameCount = 25;
+
+userName.addEventListener("input", () => {
+  nameCharCount.style.display = "inline-block";
+  const namCurrentLength = userName.value.length;
+  nameCharCount.textContent = `${namCurrentLength}/${maxNameCount}`;
+
+  if (namCurrentLength >= maxNameCount) {
+    nameCharCount.style.color = "red"; // limit warning
+  } else {
+    nameCharCount.style.color = "green";
+  }
+});
+
+// commentCharCount
+const userComment = document.getElementById("userComment");
+const commentCharCount = document.getElementById("commentCharCount");
+const maxCommentCount = 200;
+
+userComment.addEventListener("input", () => {
+  commentCharCount.style.display = "inline-block";
+  const commentCurrentLength = userComment.value.length;
+  commentCharCount.textContent = `${commentCurrentLength}/${maxCommentCount}`;
+
+  if (commentCurrentLength >= maxCommentCount) {
+    commentCharCount.style.color = "red"; // limit warning
+  } else {
+    commentCharCount.style.color = "green";
+  }
+});
+
 // user comments
 const form = document.getElementById("comment-form");
 form.addEventListener("submit", (e) => {
@@ -126,14 +160,23 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("userComments", JSON.stringify(comments));
   displayUserComment(newComment);
 
+  const thanksMessage = document.getElementById("thanksMessage");
+  thanksMessage.classList.add("show");
+
+  setTimeout(() => {
+    thanksMessage.classList.remove("show");
+  }, 2000);
+
   console.log(userName);
   console.log(userBatch);
   console.log(selectTeacher);
   console.log(userComment);
 
   const usersCommentsOut = document.getElementById("usersCommentsCount");
+  const commentsCount = comments.length;
   // usersCommentsOut.innerHTML = comments.length + "comments";
   console.log(comments.length);
+  console.log(commentsCount);
 });
 
 function displayUserComment(data) {
@@ -148,7 +191,7 @@ function displayUserComment(data) {
     <div class="comment-box" id="comment-box" data-aos="fade-up">
       <div class="comment-top">
         <h2>${data.name}</h2>
-        <span>${data.batch} O/L batch <i class="fa-solid fa-graduation-cap"></i> </span>
+        <span><i class="fa-solid fa-graduation-cap"></i> | ${data.batch} O/L batch</span>
         </div>
         <h3>${data.teacher}</h3>
       <div class="comment-content">
@@ -177,6 +220,7 @@ function displayUserComment(data) {
     </div>
   `;
 
+  // likes concept
   const likeBtn = userCommentBox.querySelector(`#likeBtn-${data.id}`);
   const likeCount = userCommentBox.querySelector(`#likeCount-${data.id}`);
 
@@ -187,7 +231,7 @@ function displayUserComment(data) {
   let counts = localStorage.getItem(storageKey);
   counts = counts ? parseInt(counts) : 0;
 
-  let liked = localStorage.getItem(likedKey);
+  let liked = localStorage.getItem(likedKey) === "true";
 
   // ui set
   likeCount.textContent = counts;
@@ -205,7 +249,7 @@ function displayUserComment(data) {
 
   // click event
   likeBtn.addEventListener("click", () => {
-    if (liked === "true") return; // for safety
+    // if (liked === "true") return; // for safety
 
     counts++;
     likeCount.textContent = counts;
