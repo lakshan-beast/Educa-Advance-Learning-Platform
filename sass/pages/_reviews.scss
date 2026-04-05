@@ -54,6 +54,28 @@
   }
 }
 
+#thanksMessage {
+  position: fixed;
+  bottom: 35px;
+  right: 5px;
+  padding: 6px 24px;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s;
+  background-color: $dark-purple1;
+  color: $bg-white;
+
+  i {
+    margin-left: 6px;
+  }
+}
+#thanksMessage.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .form-container {
   display: none;
   position: fixed;
@@ -66,6 +88,17 @@
   background-color: $bg-white;
   box-shadow: 0px 8px 20px rgb(78, 106, 185);
 
+  #nameCharCount,
+  #commentCharCount {
+    color: $dark-text;
+    font-size: 9px;
+    font-weight: 600;
+    background: #f3f6ff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: none;
+  }
+
   @include respond(tablet) {
     width: 50%;
     height: 50%;
@@ -74,6 +107,7 @@
   }
   @include respond(desktop) {
     width: 30%;
+    height: 55%;
   }
 
   button {
@@ -99,7 +133,8 @@
     font-size: 1.4rem;
   }
 }
-.comment-content {
+
+.addcomment-content {
   @include flex-custom(space-between, center, column, 0, nowrap);
 
   margin: 6px 0;
@@ -190,14 +225,17 @@
 
 .all-comments {
   // height: 100vh;
-  width: 100%;
+  // width: 100%;
   // overflow: scroll;
+  // // idth: 100%;
+  // background: rgb(204 223 255 / 50%);
+  // padding: 16px 8px;
+  // border-radius: 8px;
 
   h2 {
     font-size: $font-size-h3;
     text-align: center;
     color: $blue-medium;
-    margin-bottom: 6px;
 
     span {
       font-size: $font-size-p;
@@ -215,6 +253,7 @@
   height: 500px;
   // /* width: 100%;
   margin: 2rem 0;
+  padding: 0 1rem;
 
   @include respond(tablet) {
     display: grid;
@@ -226,11 +265,14 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+#userCommentPart {
+  display: none;
+}
 // comment box
 .comment-box {
-  padding: 0.5rem 1rem;
+  // padding: 0.5rem 1rem;
   margin: 0.5rem 0;
-  background-color: $bg-soft;
+  background-color: $bg-white;
   border-radius: 1rem;
   border: 2px solid $bg-light;
 
@@ -240,48 +282,79 @@
   justify-content: space-evenly;
 
   .comment-top {
-    @include flex-custom(space-between, center, row, 0);
+    @include flex-custom(space-between, center, row, 0, nowrap);
+
+    background: rgb(216 231 255 / 50%);
+    padding: 12px;
+    border-radius: 6px 6px 0 0;
 
     h2 {
-      color: $dark-purple2;
+      color: $blue-medium;
       font-size: medium;
+      text-align: left;
     }
+
     span {
-      color: $dark-purple1;
+      color: $label-color;
     }
+  }
+  h3 {
+    color: $blue-medium;
+    text-align: left;
+    margin: 6px 0 6px 2rem;
+    font-size: 1.1rem;
   }
   .comment-content {
     border-radius: 3px;
     margin: 3px 0;
+    margin-bottom: 6px;
+    color: #1e50a180;
+    padding: 0 2rem;
+    text-align: left;
   }
   .comment-bottom {
-    @include flex-custom(space-between, center, row, 0);
+    @include flex-custom(space-between, center, row, nowrap, 0);
 
     margin-top: 6px;
     border-top: 2px solid $blue-light;
     padding-top: 6px;
-    color: $dark-text;
+    padding: 6px 8px 6px 12px;
+    color: #4e6ab9;
+    border-radius: 0 0 14px 14px;
 
+    background: $bg-white;
     .comment-like {
       margin: 0 6px;
       border-radius: 6px;
       cursor: pointer;
       span {
-        font-size: 1.3rem;
+        font-size: 1rem;
         color: $h2-color;
         margin-right: 6px;
       }
       i {
         color: $dark-text;
-        font-size: 1.5rem;
-        padding: 8px 8px;
+        font-size: 1rem;
+        padding: 6px 6px;
         background-color: $bg-soft;
-        box-shadow: 0px 0px 16px $blue-medium;
+        // box-shadow: 0px 0px 16px $blue-medium;
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        width: 28px;
+        height: 28px;
       }
     }
+  }
+}
+
+#apiCommentPart {
+  // display: flex;
+  // flex-direction: column;
+
+  .comment-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
   }
 }
 
@@ -289,4 +362,19 @@
   background-color: $orange;
   color: $bg-white;
   box-shadow: 0px 0px 16px $orange;
+}
+
+.animate {
+  animation: pop 0.6s ease;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
