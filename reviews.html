@@ -52,6 +52,10 @@
           See what our students say about their learning expreince. Share your
           feedback and help others grow with Educa.
         </p>
+        <p id="thanksMessage" class="thanksMessage">
+          Thanks for sharing your experience!
+          <i class="fas fa-heart"></i>
+        </p>
 
         <div class="addcomment-content" data-aos="fade-up">
           <div class="comments-counts">
@@ -110,13 +114,16 @@
               <option value="english-teacher">English Teacher</option>
             </select>
 
-            <label for="userComment">Your Review</label>
+            <label for="userComment"
+              >Your Review <span id="commentCharCount">0/25</span></label
+            >
             <textarea
               rows="10"
               cols="10"
               name="userComment"
               id="userComment"
               placeholder="Write your exprience here..."
+              maxlength="200"
               required></textarea>
             <button type="submit">
               <i class="fa-solid fa-paper-plane"></i> Send Comment
