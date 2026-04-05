@@ -82,7 +82,7 @@ async function getApiComments() {
     console.log("problem : " + error.message);
   } finally {
     console.log("Loaded Completed");
-    // commentsLoadAni.style.display = "none";
+    commentsLoadAni.style.display = "none";
   }
 }
 getApiComments();
@@ -132,7 +132,7 @@ form.addEventListener("submit", (e) => {
   console.log(userComment);
 
   const usersCommentsOut = document.getElementById("usersCommentsCount");
-  usersCommentsOut.innerHTML = comments.length + "comments";
+  // usersCommentsOut.innerHTML = comments.length + "comments";
   console.log(comments.length);
 });
 
@@ -141,15 +141,16 @@ function displayUserComment(data) {
   // const id = Date.now();
 
   const userCommentBox = document.createElement("div");
-  userCommentBox.className = "comment-box";
+  // userCommentBox.className = "comment-box";
   // userCommentBox.classList = "comment-box";
 
   userCommentBox.innerHTML = `
     <div class="comment-box" id="comment-box" data-aos="fade-up">
       <div class="comment-top">
         <h2>${data.name}</h2>
-        <span>${data.batch} O/L batch</span>
-      </div>
+        <span>${data.batch} O/L batch <i class="fa-solid fa-graduation-cap"></i> </span>
+        </div>
+        <h3>${data.teacher}</h3>
       <div class="comment-content">
       <p>
       ${data.body}
@@ -163,13 +164,14 @@ function displayUserComment(data) {
           </p>
           </div>
 
-          <h4>${data.teacher}</h4>
         <div class="comment-like">
           <span id="likeCount-${data.id}">0</span>
           <i
             id="likeBtn-${data.id}"
-            class="far fa-snowflake"
+            class="far fa-heart"
             data-aos="flip-left"></i>
+
+           
         </div>
       </div>
     </div>
@@ -192,10 +194,10 @@ function displayUserComment(data) {
 
   // already liked
   if (liked === "true") {
-    likeBtn.classList.add("liked");
-    likeCount.style.color = "#f7786f";
+    // likeBtn.classList.add("liked");
+    likeCount.style.color = "#ff5549";
     likeBtn.style.color = "rgb(255, 255, 255)";
-    likeBtn.style.backgroundColor = "#f7786f";
+    likeBtn.style.backgroundColor = "#ff564a";
     // likeBtn.style.boxShadow = "0px 0px 16px #f7786f;";
     likeBtn.classList.add("fas");
     // likeBtn.style.pointerEvents = "none";
@@ -213,11 +215,31 @@ function displayUserComment(data) {
 
     liked = "true";
     likeBtn.classList.add("liked");
-    likeCount.style.color = "#f7786f";
+    likeCount.style.color = "#ff6257";
     likeBtn.style.color = "rgb(255, 255, 255)";
-    likeBtn.style.backgroundColor = "#f7786f";
+    likeBtn.style.backgroundColor = "#ff6257";
     // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
     likeBtn.classList.add("fas");
+    // likeBtn.style.pointerEvents = "none";
+  });
+
+  // click event
+  likeBtn.addEventListener("dblclick", () => {
+    if (liked === "false") return; // for safety
+
+    counts--;
+    likeCount.textContent = counts;
+
+    localStorage.setItem(storageKey, counts);
+    localStorage.setItem(likedKey, "false");
+
+    liked = "false";
+    // likeBtn.classList.add("liked");
+    likeCount.style.color = "rgba(127, 145, 236, 0.08)";
+    likeBtn.style.color = "#20405a";
+    likeBtn.style.backgroundColor = "rgba(127, 145, 236, 0.08)";
+    // likeBtn.style.display = `<i class="fa-solid fa-star"></i>`;
+    likeBtn.classList.add("far");
     // likeBtn.style.pointerEvents = "none";
   });
 
@@ -229,6 +251,10 @@ function displayUserComment(data) {
   }, 500);
 }
 
+function resetData() {
+  localStorage.clear();
+  location.reload();
+}
 // like count
 // const likeBtn = document.querySelector("#likeBtn");
 // const likeCount = document.querySelector("#likeCount");
