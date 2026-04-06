@@ -1,3 +1,14 @@
+// slider
+let sliderIndex = 0;
+const statsSlides = document.querySelector(".stats-slides");
+const totalStats = document.querySelectorAll(".slides-para").length;
+
+setInterval(() => {
+  sliderIndex++;
+  if (sliderIndex >= totalStats) sliderIndex = 0;
+  statsSlides.style.transform = `translateX(-${sliderIndex * 100}%)`;
+}, 3000);
+
 // commentsLoadAni
 // window.addEventListener("load", () => {
 // const commentsLoadAni = document.getElementById("commentsLoadAni");
@@ -134,25 +145,25 @@ window.addEventListener("scroll", function () {
 // });
 
 // welcome message
-const welcomeMessage = document.getElementById("welcome-msg");
+// const welcomeMessage = document.getElementById("welcome-msg");
 
-const hours = new Date().getHours();
-const userName = "User";
+// const hours = new Date().getHours();
+// const userName = "User";
 
-const morning = "Good Morning!";
-const afternoon = "Good Afternoon!";
-const evening = "Good Evening!";
-const night = "Good Night!";
+// const morning = "Good Morning!";
+// const afternoon = "Good Afternoon!";
+// const evening = "Good Evening!";
+// const night = "Good Night!";
 
-if (hours < 11) {
-  welcomeMessage.innerHTML += `${morning} <span> ${userName}</span>`;
-} else if (hours < 14) {
-  welcomeMessage.innerHTML += `${afternoon} <span> ${userName}</span>`;
-} else if (hours < 18) {
-  welcomeMessage.innerHTML += `${evening} <span>  ${userName}</span>`;
-} else {
-  welcomeMessage.innerHTML += `${night} <span> ${userName}</span>`;
-}
+// if (hours < 11) {
+//   welcomeMessage.innerHTML += `${morning} <span> ${userName}</span>`;
+// } else if (hours < 14) {
+//   welcomeMessage.innerHTML += `${afternoon} <span> ${userName}</span>`;
+// } else if (hours < 18) {
+//   welcomeMessage.innerHTML += `${evening} <span>  ${userName}</span>`;
+// } else {
+//   welcomeMessage.innerHTML += `${night} <span> ${userName}</span>`;
+// }
 
 // result graph
 const ctx = document.getElementById("olResultChart").getContext("2d");
@@ -160,21 +171,21 @@ const ctx = document.getElementById("olResultChart").getContext("2d");
 const olResultChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["2023", "2024", "2025"],
+    labels: ["2021", "2022", "2023", "2024", "2025"],
     datasets: [
       {
         label: "Maths Class",
-        data: [75, 67, 66],
+        data: [75, 67, 66, 90, 120],
         backgroundColor: "rgb(247, 120, 111)",
       },
       {
         label: "Science Class",
-        data: [78, 77, 69],
+        data: [78, 77, 69, 78, 101],
         backgroundColor: "rgb(78, 106, 185)",
       },
       {
         label: "English Class",
-        data: [95, 87, 86],
+        data: [95, 87, 86, 98, 105],
         backgroundColor: "rgb(38, 19, 109)",
       },
     ],
@@ -186,9 +197,9 @@ const olResultChart = new Chart(ctx, {
     plugins: {
       title: {
         display: true,
-        text: "Year-wise O/L Results",
+        text: "Annual O/L Grade Improvement Analysis (2021-2025) ",
         font: {
-          size: 18,
+          size: 16,
         },
       },
     },
