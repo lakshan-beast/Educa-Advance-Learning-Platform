@@ -57,11 +57,11 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
+  width: 70%;
   max-width: 300px;
   height: 100vh;
   padding: 2rem;
-  background-color: $navbar-white;
+  background-color: $bg-white;
   z-index: 1100;
   transition: right 0.5s ease-in-out;
   @include flex-custom(flex-start, flex-start, column, 0, nowrap);
@@ -106,6 +106,26 @@
   @include respond(large-desktop) {
     padding: 4rem 15rem;
     font-size: 1.2rem;
+  }
+}
+
+.header-copyrights {
+  display: block;
+  position: fixed;
+  bottom: 2rem;
+
+  p {
+    color: $blue-medium;
+    font-size: 0.8rem;
+    margin: 6px 0;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  @include respond(desktop) {
+    display: none;
   }
 }
 
