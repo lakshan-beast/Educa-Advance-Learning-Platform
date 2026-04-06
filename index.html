@@ -533,29 +533,59 @@
       <!-- information section end  -->
 
       <section class="parts contact-us" id="contactUs">
-        <div class="info-content-right">
-          <!-- <h3>Contact us</h3> -->
+        <div class="info-content-left">
+          <h2>Get in Touch</h2>
+          <h3>
+            Have questions about our classes or study materiales? Our team is
+            here to help you.
+          </h3>
+
+          <!-- maths class details  -->
           <h4>Maths Class</h4>
           <a href="tel:+" class="btnx"
-            ><i class="fas fa-mobile"></i>+941234567</a
+            ><i class="fas fa-mobile"></i>+941234567 (Avaliable 7am - 6pm)</a
           >
           <a href="mailto:educa@maths.com"
             ><i class="fas fa-envelope"></i>educa@maths.com</a
           >
+          <label for="location"
+            ><i class="fas fa-location-dot"></i> Visit Our Center</label
+          >
+          <address id="location">
+            No, 123, High Level Road, Colombo, Sri Lanka.
+          </address>
+
+          <!-- science class details  -->
           <h4>Science Class</h4>
           <a href="tel:+" class="btnx"
-            ><i class="fas fa-mobile"></i>+941234567</a
+            ><i class="fas fa-mobile"></i>+9412345 (Avaliable 7am - 6pm)67</a
           >
           <a href="mailto:educa@science.com"
             ><i class="fas fa-envelope"></i>educa@science.com</a
           >
+          <label for="location"
+            ><i class="fas fa-location-dot"></i> Visit Our Center</label
+          >
+          <address id="location">
+            No, 123/1, High Level Road, Colombo, Sri Lanka.
+          </address>
+
+          <!-- english class details  -->
           <h4>English Class</h4>
           <a href="tel:+" class="btnx"
-            ><i class="fas fa-mobile"></i>+941234567</a
+            ><i class="fas fa-mobile"></i>+9412345 (Avaliable 7am - 6pm)67</a
           >
           <a href="mailto:educa@english.com"
             ><i class="fas fa-envelope"></i>educa@english.com</a
           >
+          <label for="location"
+            ><i class="fas fa-location-dot"></i> Visit Our Center</label
+          >
+          <address id="location">
+            No, 123/2, High Level Road, Colombo, Sri Lanka.
+          </address>
+
+          <p>Follow us for daily study tips & exam updates.</p>
         </div>
         <!-- details div end  -->
 
@@ -563,35 +593,38 @@
           <div class="form-containers" id="contact-form" data-aos="fade-up">
             <form action="#" method="post">
               <h2>Have a Question? Drop us a message</h2>
-              <label for="name">Your Name</label>
+              <label for="name">Full Name *</label>
               <input
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Ex: Kamal Perera"
+                placeholder="Ex: Nethmi Fernando"
                 required />
 
-              <label for="mail">Email Address </label>
+              <label for="mail">Email Address *</label>
               <input
                 type="email"
                 name="mail"
                 id="mail"
-                placeholder="Your Email"
+                placeholder="name@example.com"
                 required />
 
-              <label for="mobile">Phone Number</label>
+              <label for="mobile">Whatsapp / Mobile Number</label>
               <input
                 type="tel"
                 name="mobile"
                 id="mobile"
-                placeholder="Enter your number..." />
+                pattern="[0-9]{10}"
+                maxlength="10"
+                placeholder="07X XXX XXXX"
+                required />
 
-              <label for="subject">Subject</label>
+              <label for="subject">Which subject are you interseted in?</label>
               <select name="subject" id="subject" required>
                 <option value="">Select Subject</option>
-                <option value="Maths">Maths</option>
+                <option value="Maths">Mathematics</option>
                 <option value="Science">Science</option>
-                <option value="English">English</option>
+                <option value="English">English Language</option>
               </select>
 
               <label for="content">How can we help you?</label>
@@ -599,17 +632,17 @@
                 <option value="">Select Content</option>
                 <option value="general">General Question</option>
                 <option value="class">Class Information</option>
-                <option value="documents">Papers / Notes</option>
-                <option value="issues">Technical Issues</option>
+                <option value="documents">Request Study Meterials</option>
+                <option value="issues">Technical Support</option>
               </select>
 
-              <label for="message">Message</label>
+              <label for="message">Your Message</label>
               <textarea
                 rows="5"
                 cols="60"
                 name="message"
                 id="message"
-                placeholder="Message "
+                placeholder="Briefly Describe your requirement here..."
                 required></textarea>
 
               <label for="privacyCheck"
@@ -620,7 +653,11 @@
                   checked="checked" />
                 I agree to the terms & privacy policy</label
               >
-              <input type="submit" class="btn" value="Send Message" />
+              <p class="trust-note">
+                We value your privacy. Your contact details will only be used to
+                provide the requested information.
+              </p>
+              <input type="submit" class="btn" value="Send My Message" />
             </form>
           </div>
         </div>
