@@ -1,0 +1,56 @@
+<div class="info-content-right">
+              <div class="form-container" id="contact-form" data-aos="fade-up">
+                <form action="#" method="post">
+                  <h2>Contact Form</h2>
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your name"
+                    required />
+
+                  <label for="mail">Email Address </label>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    placeholder="Your Email"
+                    required />
+
+                  <label for="mobile">Phone Number</label>
+                  <input
+                    type="text"
+                    name="mobile"
+                    id="mobile"
+                    placeholder="Enter your number..." />
+
+                  <label for="subject">Subject</label>
+                  <select name="subject" id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Maths">Maths</option>
+                    <option value="Science">Science</option>
+                    <option value="English">English</option>
+                  </select>
+
+                  <label for="content">Content</label>
+                  <select name="content" id="content" required>
+                    <option value="">Select Content</option>
+                    <option value="general">General Question</option>
+                    <option value="class">Class Information</option>
+                    <option value="documents">Papers / Notes</option>
+                    <option value="issues">Technical Issues</option>
+                  </select>
+
+                  <label for="message">Message</label>
+                  <textarea
+                    rows="5"
+                    cols="60"
+                    name="message"
+                    id="message"
+                    placeholder="Message "
+                    required></textarea>
+                  <input type="submit" class="btn" value="Submit Form" />
+                </form>
+              </div>
+              </div>
