@@ -1,31 +1,17 @@
 // variables.scss
+
 // stores colors and other variables used in the project
-$background: #ffffff;
-$background-linear: linear-gradient(
-  155deg,
-  #5454d9 0%,
-  rgb(255, 255, 255) 5%,
-  rgb(255, 255, 255) 85%,
-  #5454d9 100%
-);
-$desktop-background: linear-gradient(
-  155deg,
-  #5454d9 0%,
-  rgb(255, 255, 255) 5%,
-  rgb(255, 255, 255) 85%,
-  #5454d9 100%
-);
-$orange: #f7786f;
 
-$h2-color: #190f8e;
-
+// brand colors
+$primary-orange: #f7786f;
+$secondary-blue: #1d10ac;
 $blue-light: #c6d4fa;
 $blue-medium: rgb(78, 106, 185);
-$dark-blue: rgb(3, 3, 48);
 
-$label-color: #7f91ec;
-
+// social media icons
 $facebook-color: #1877f2;
+$whatsapp-color: #5bf099;
+$call-color: #2596be;
 $insta-primary-color: #833ab4;
 $insta-original-color: linear-gradient(
   150deg,
@@ -33,24 +19,33 @@ $insta-original-color: linear-gradient(
   rgba(253, 29, 29, 1) 50%,
   rgba(252, 176, 69, 1) 100%
 );
-$whatsapp-color: #5bf099;
-$call-color: #2596be;
 
-$bg-white: #fcfcfc;
+// backgrounds
+// $background-linear: linear-gradient(
+//   155deg,
+//   #5454d9 0%,
+//   rgb(255, 255, 255) 5%,
+//   rgb(255, 255, 255) 85%,
+//   #5454d9 100%
+// ); old background color
+$white: #ffffff;
 $bg-light: #e0e8ff;
-$navbar-white: rgb(235, 235, 235);
+$bg-soft: #7f91ec14;
+$navbar-white: #ebebeb;
+$dark-blue: #303030;
+$footer-dark: #000135;
 
-$bg-soft-blue: rgba(127, 145, 236, 0.08);
-$bg-soft: rgba(127, 145, 236, 0.08);
+// text colors
+$text-light: #f7f7f7;
+$text-medium: #7b808f;
+$text-blue: #7f91ec;
 
-$light-text: #f7f7f7;
-$medium-text: rgb(123, 128, 143);
-$dark-text: #20405a;
-
+// purple colors
 $dark-purple1: #484aee;
 $dark-purple2: #5454d9;
 $dark-purple: #26136d;
 
+// shadow
 $link-shadow: #ddddff;
 
 // fonts
@@ -58,16 +53,16 @@ $font-primary: "Poppins", sans-serif;
 $font-secondary: "Exo 2", sans-serif;
 
 // font-sizes
-$font-size-h1: 2.5rem;
-$font-size-h2: 1.8rem;
-$font-size-h3: 1.4rem;
-$font-size-p: 1rem;
-$font-size-small: 0.8rem;
-$font-size-xsmall: 0.6rem;
-$font-size-xxsmall: 0.5rem;
-$font-size-huge: 1.2rem;
-$font-size-xhuge: 1.5rem;
-$font-size-xxhuge: 2rem;
+$font-size-h1: 2.6rem;
+$font-size-h1-m: 2.2rem;
+
+$font-size-h2: 2.5rem;
+$font-size-h2-m: 1.8rem;
+
+$font-size-h3: 1.5rem;
+$font-size-h3-m: 1.35rem;
+
+$font-size-body: 1rem;
 
 // font-weights
 $font-weight-medium: 500;
