@@ -2,7 +2,7 @@
 footer {
   margin: 0;
   margin-top: 2rem;
-  background-color: $dark-blue;
+  background-color: $footer-dark;
   color: $dark-purple2;
   @include flex-custom(flex-start, flex-start, column);
 
@@ -15,13 +15,16 @@ footer {
     display: block;
     margin: 5px 0;
     transition: 0.3s;
-    color: $light-text;
+    color: $text-light;
+    opacity: 0.8;
     font-size: 0.9rem;
     text-decoration: none;
+    transition: transform 0.3s ease;
 
     &:hover {
-      color: $dark-purple2;
-      padding-left: 5px;
+      color: $primary-orange;
+      transform: translateX(8px);
+      text-decoration: none;
     }
   }
 }
@@ -47,7 +50,7 @@ footer {
 
     p {
       font-size: 0.6rem;
-      color: $medium-text;
+      color: $text-medium;
       padding: 0;
       margin: 0;
     }
@@ -56,7 +59,7 @@ footer {
 
 // footer logo
 .logo {
-  color: $bg-white;
+  color: $white;
   font-size: 1.4rem;
   font-weight: bolder;
   font-family: "Exo 2";
@@ -73,7 +76,7 @@ footer {
 // contact info
 .contact-info {
   h4 {
-    color: $medium-text;
+    color: $text-medium;
     margin: 6px;
     padding-top: 1rem;
   }
@@ -86,16 +89,20 @@ footer {
   }
 }
 
-// socail media
-.socail-content {
+// social media
+.social-content {
   @include flex-custom(flex-start, center, column);
 
   .social-links {
     @include flex-custom(center, center, row, nowrap);
-  }
-  a {
-    font-size: 1.4rem;
-    margin: 0 1rem;
+    a {
+      font-size: 1.5rem;
+      margin: 0 1rem;
+
+      &:hover {
+        color: $primary-orange;
+      }
+    }
   }
 }
 
@@ -109,7 +116,7 @@ footer {
 
 // .footer-credits,
 .footer-copyrights {
-  color: $bg-white;
+  color: $white;
   display: flex;
   flex-direction: column;
 }
