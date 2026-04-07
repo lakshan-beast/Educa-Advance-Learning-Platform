@@ -16,7 +16,7 @@
 // other styles
 *::selection {
   background-color: $dark-purple2;
-  color: $bg-white;
+  color: $white;
 }
 ::-webkit-scrollbar {
   height: 0.3rem;
@@ -35,7 +35,10 @@ html {
 
 // background color
 body {
-  background: $bg-white;
+  background: $white;
+  font-size: $font-size-body;
+  font-size-adjust: from-font;
+  // --font-siz
 }
 
 // font-families
@@ -53,6 +56,37 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-// input[type="number"] {
-// -moz-appearance: textfield;
-// }
+
+// font sizes
+h1 {
+  font-size: $font-size-h2-m;
+  line-height: 1.2;
+  text-shadow: 0px 0px 3px;
+
+  @include respond(desktop) {
+    font-size: $font-size-h1;
+  }
+}
+
+h2 {
+  text-shadow: 0px 0px 3px;
+  font-size: $font-size-h2-m;
+  line-height: 1.3;
+
+  @include respond(desktop) {
+    font-size: $font-size-h2;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3-m;
+
+  @include respond(desktop) {
+    font-size: $font-size-h3;
+  }
+}
+
+p,
+a {
+  font-size: $font-size-body;
+}
