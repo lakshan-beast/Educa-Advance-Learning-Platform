@@ -20,7 +20,7 @@
 }
 ::-webkit-scrollbar {
   height: 0.3rem;
-  width: 0.5rem;
+  width: 0.3rem;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
@@ -37,8 +37,6 @@ html {
 body {
   background: $white;
   font-size: $font-size-body;
-  font-size-adjust: from-font;
-  // --font-siz
 }
 
 // font-families
