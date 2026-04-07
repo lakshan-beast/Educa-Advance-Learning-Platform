@@ -7,10 +7,10 @@
   padding: 0 1rem;
 
   @include respond(tablet) {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
   @include respond(desktop) {
-    padding: 0 10rem;
+    padding: 0 12rem;
   }
 }
 
@@ -22,12 +22,11 @@ main {
 
 // home div style
 .home {
-  min-height: 100svh;
   height: auto;
-  max-width: 1020px;
-  min-width: 350px;
   width: 100%;
-  // padding: 2rem 1rem 4rem 1rem;
+  min-height: 100svh;
+  max-width: 1400px;
+  min-width: 350px;
   z-index: 1;
   overflow: hidden;
 
@@ -36,44 +35,34 @@ main {
   .columns {
     @include flex-custom(center, center, column-reverse);
     padding: 1rem;
-    gap: 1rem;
     margin-top: 2rem;
+    gap: 1rem;
 
     @include respond(desktop) {
       flex-direction: row;
     }
   }
   .column {
+    // heading | main heading
     h1 {
-      transition: $transition-fast;
-      color: $h2-color;
+      margin-bottom: $margin-small;
+      color: $secondary-blue;
       font-weight: $font-weight-semi-bold;
-      margin-bottom: $margin-small;
+      text-shadow: 0px 0px 3px $blue-medium;
+      transition: $transition-fast;
 
       span {
-        color: $dark-purple1;
-        font-size: $font-size-h2;
         display: block;
-
-        @include respond(mobile) {
-          display: inline-block;
-        }
+        color: $primary-orange;
+        font-weight: bold;
+        text-shadow: none;
       }
     }
-    h2 {
-      margin-bottom: $margin-small;
-      color: $h2-color;
-      font-size: $font-size-h2;
-      text-align: left;
-
-      span {
-        color: $dark-purple;
-      }
-    }
-    .home-links {
-      padding: $padding-none;
+    // home buttons
+    .home-buttons {
       display: block;
-      margin-top: 0.5rem;
+      margin-top: 0.8rem;
+      padding: $padding-none;
 
       @include respond(tablet) {
         display: flex;
@@ -83,56 +72,79 @@ main {
       a {
         width: 100%;
         max-width: 200px;
-        border-radius: $border-radius-xlarge;
         padding: 8px 10px;
         margin-top: $margin-small;
         margin-right: 6px;
+        border-radius: $border-radius-xlarge;
         i {
           margin-left: 0.5rem;
         }
       }
     }
+    // hero image
     img {
       margin: 2rem auto;
-      max-width: 100%;
       height: auto;
-      @include center-everything;
+      max-width: 100%;
       object-fit: cover;
+      animation: updown 10s ease-in-out infinite;
+
+      @include center-everything;
     }
   }
+  // description
   .description {
     @include respond(desktop) {
       max-width: 400px;
     }
     p {
       color: $blue-medium;
-      font-size: $font-size-p;
+      line-height: 1.6;
     }
   }
 }
 
-// slider
-.stats-slider {
-  width: 100%;
-  overflow: hidden;
-  margin: 1rem 0;
-
-  .stats-slides {
-    display: flex;
-    transition: 0.5s ease;
-    text-align: center;
-
-    .slides-para {
-      min-width: 100%;
-      padding: 6px 20px;
-      background-color: #d7ecff;
-
-      i {
-        margin-right: 12px;
-      }
-    }
+// hero image for updown animation
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(25px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
+
+// slider - temporary disabled
+// .stats-slider {
+//   width: 100%;
+//   overflow: hidden;
+//   margin: 1rem 0;
+
+//   .stats-slides {
+//     display: flex;
+//     transition: 0.5s ease;
+//     text-align: center;
+
+//     .slides-para {
+//       min-width: 100%;
+//       padding: 6px 20px;
+//       background-color: $blue-light;
+
+//       i {
+//         margin-right: 12px;
+//       }
+//     }
+//   }
+// }
 
 // parts
 .parts {
@@ -155,25 +167,30 @@ main {
   h2 {
     margin: 1rem 0;
     margin-bottom: 2rem;
-    font-size: $font-size-h2;
-    color: $h2-color;
+    // font-size: $font-size-h2;
+    color: $secondary-blue;
     font-weight: $font-weight-bold;
     text-align: center;
     letter-spacing: 1px;
 
+    span {
+      color: $text-blue;
+      display: block;
+    }
+
     @include respond(tablet) {
-      font-size: 1.9rem;
+      // font-size: 1.9rem;
     }
     @include respond(desktop) {
-      font-size: 2rem;
+      // font-size: 2rem;
     }
   }
 }
 
 // featuers
-.features-container {
+.resources-container {
   padding: $padding-none;
-  margin: 0 1rem;
+  // margin: 0 1rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
@@ -191,15 +208,16 @@ main {
     gap: 1rem;
   }
 
-  .features-card {
-    background: $bg-white;
+  .resources-card {
+    background: $white;
     border-radius: $border-radius-medium;
-    @include flex-custom(space-between, center, column);
+    // @include flex-custom(space-between, center, column);
     box-shadow: 0px 1px 8px $blue-light;
 
     @include respond(mobile) {
       text-align: center;
     }
+
     img {
       width: 225px;
       height: 200px;
@@ -207,11 +225,12 @@ main {
       margin: $margin-none;
       margin-bottom: 0.5rem;
       object-fit: cover;
+      margin: 0 auto;
     }
 
     h3 {
-      color: $h2-color;
-      font-size: $font-size-xhuge;
+      color: $secondary-blue;
+      // font-size: $font-size-xhuge;
       text-align: center;
       margin-bottom: 6px;
 
@@ -224,7 +243,7 @@ main {
       text-align: center;
       margin: 0 12px;
       padding: $padding-none;
-      font-size: $font-size-p;
+      // font-size: $font-size-p;
     }
     a {
       padding: 10px 18px;
@@ -236,10 +255,22 @@ main {
   }
 }
 
+.card-badge {
+  background-color: red;
+  color: $white;
+  padding: 5px 8px;
+  text-align: center;
+  border-radius: 3px;
+  position: static;
+  top: 1rem;
+  right: 0;
+  left: 0;
+}
+
 // cources container
 .classes-content {
   .classes-card {
-    background: $bg-white;
+    background: $white;
     padding: $padding-none;
     margin: $margin-none;
     // margin-bottom: 2rem;
@@ -259,14 +290,14 @@ main {
       padding: 0 2rem;
 
       h3 {
-        color: $h2-color;
-        font-size: $font-size-xhuge;
+        color: $secondary-blue;
+        // font-size: $font-size-xhuge;
         text-align: center;
         text-shadow: 0px 1px 3px $link-shadow;
       }
       h4 {
         color: $dark-purple1;
-        font-size: $font-size-p;
+        // font-size: $font-size-p;
         text-align: left;
         margin: 0.8rem 0.3rem;
       }
@@ -274,7 +305,7 @@ main {
         color: $blue-medium;
         margin: 0rem 0.3rem;
         text-align: left;
-        font-size: $font-size-p;
+        // font-size: $font-size-p;
 
         span {
           background: transparent;
@@ -287,7 +318,7 @@ main {
       }
       span {
         background-color: $dark-purple1;
-        color: $bg-white;
+        color: $white;
         padding: 8px 16px;
         margin: 12px 0;
         border-radius: $border-radius-medium;
@@ -356,7 +387,7 @@ main {
         }
       }
       i {
-        font-size: $font-size-xxhuge;
+        // font-size: $font-size-xxhuge;
         padding-left: $padding-xlarge;
       }
     }
@@ -371,8 +402,8 @@ main {
 
       h3 {
         text-align: center;
-        color: $h2-color;
-        font-size: $font-size-xhuge;
+        color: $secondary-blue;
+        // font-size: $font-size-xhuge;
         margin-bottom: 0.5rem;
 
         span {
@@ -381,12 +412,12 @@ main {
       }
       .teacher-details {
         @include flex-custom(flex-start, flex-start, column);
-        border-bottom: 2px solid #c6d4fa;
+        border-bottom: 2px solid $blue-light;
         padding-bottom: 0.5rem;
         width: 100%;
         p {
-          color: $medium-text;
-          font-size: $font-size-p;
+          color: $text-medium;
+          // font-size: $font-size-p;
           display: flex;
           align-items: flex-start;
           margin: $margin-none;
@@ -394,9 +425,9 @@ main {
 
           span {
             padding: 6px 15px;
-            color: #4e6ab9;
+            color: $text-blue;
             margin-left: 0.4rem;
-            background: rgb(245 245 245);
+            background: $white;
             border-radius: 6px;
           }
         }
@@ -406,7 +437,7 @@ main {
 }
 
 .teacher-card {
-  background-color: $bg-white;
+  background-color: $white;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: $shadow-light;
@@ -437,8 +468,8 @@ main {
     width: 100%;
     i {
       background-color: $dark-purple2;
-      color: #fcfcfc;
-      font-size: 1.5rem;
+      color: $white;
+      // font-size: 1.5rem;
       padding: 0.3rem;
       border-radius: 8px;
 
@@ -499,19 +530,19 @@ main {
   }
 
   h2 {
-    color: $h2-color;
-    font-size: $font-size-h2;
+    color: $secondary-blue;
+    // font-size: $font-size-h2;
 
     span {
       color: $dark-purple1;
     }
   }
   p {
-    font-size: $font-size-p;
+    // font-size: $font-size-p;
     padding: 0 1rem;
-    color: $medium-text;
+    color: $text-medium;
 
-    background-color: $bg-soft-blue;
+    background-color: $bg-soft;
     border-radius: 0.5rem;
   }
   .result-container,
@@ -523,35 +554,35 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
-    background-color: $bg-soft-blue;
+    background-color: $bg-soft;
     margin: 1rem 0;
     @include respond(desktop) {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    background-color: $bg-soft-blue;
+    background-color: $bg-soft;
     border-radius: 0.5rem;
     .box {
       padding: 6px 1rem;
       padding-top: 1rem;
-      background-color: #fcfcfc;
+      background-color: $white;
       border-radius: 0.5rem;
-      box-shadow: 0px 0px 6px rgba(30, 80, 161, 0.5);
+      box-shadow: $shadow-light;
 
       @include flex-custom(space-between, center, column);
 
       i {
         font-weight: 800;
-        color: rgb(78, 106, 185);
+        color: $blue-medium;
         text-align: center;
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
       }
       h3 {
         font-weight: $font-weight-extra-bold;
         text-align: center;
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
         margin: 0.3rem;
-        color: $orange;
+        color: $primary-orange;
         font-weight: 800;
         text-align: center;
       }
@@ -560,12 +591,12 @@ main {
         font-weight: 600;
         margin: 0;
         text-align: center;
-        font-size: $font-size-p;
+        // font-size: $font-size-p;
         color: rgba(30, 80, 161, 0.5);
         font-weight: 600;
         margin: 0;
         text-align: center;
-        border-top: 2px solid #e0e8ff;
+        border-top: 2px solid $bg-light;
         width: 100%;
       }
     }
@@ -591,16 +622,16 @@ main {
       margin-bottom: 6px;
       .about-card,
       .contact-card {
-        background-color: $bg-soft-blue;
+        background-color: $bg-soft;
 
         h3 {
           color: $blue-medium;
           margin-left: $margin-xlarge;
         }
         p {
-          color: $medium-text;
+          color: $text-medium;
           padding-left: 16px;
-          font-size: $font-size-p;
+          // font-size: $font-size-p;
           line-height: 1.5;
         }
       }
@@ -609,7 +640,7 @@ main {
     .result-container {
       background: transparent;
       margin-top: 12px;
-      background-color: $bg-soft-blue;
+      background-color: $bg-soft;
       border-radius: 0.5rem;
       width: 100%;
 
@@ -624,7 +655,7 @@ main {
 
       h3 {
         margin: 0.8rem 0;
-        font-size: $font-size-h3;
+        // font-size: $font-size-h3;
         font-weight: $font-weight-bold;
         text-align: center;
         border: none;
@@ -652,7 +683,7 @@ main {
     .contact-cards {
       margin-bottom: 6px;
       .contact-card {
-        background-color: #fcfcfc;
+        background-color: $white;
 
         @include flex-custom(flex-start, flex-start, column);
 
@@ -666,8 +697,8 @@ main {
         a {
           color: $blue-medium;
           padding-left: 16px;
-          font-size: $font-size-p;
-          background-color: $light-text;
+          // font-size: $font-size-p;
+          background-color: $text-light;
           width: 100%;
         }
         i {
@@ -682,7 +713,7 @@ main {
 .contact-us {
   border-radius: $border-radius-medium;
   width: 100%;
-  background-color: $bg-soft-blue;
+  background-color: $bg-soft;
   margin-top: 2rem;
   box-shadow: $shadow-medium;
 
@@ -694,12 +725,12 @@ main {
     padding: 0.6rem 1rem;
     margin: $margin-none;
     width: 100%;
-    background: white;
+    background: $white;
     border-radius: 1rem;
 
     legend {
-      color: $h2-color;
-      font-size: $font-size-huge;
+      color: $secondary-blue;
+      // font-size: $font-size-huge;
       text-align: center;
       font-weight: $font-weight-semi-bold;
       margin-bottom: 1rem;
@@ -717,14 +748,14 @@ main {
       margin-left: 12px;
     }
     label {
-      color: $label-color;
+      color: $text-blue;
       margin: 0 10px;
       padding: $padding-none;
       margin-top: 8px;
     }
     input,
     textarea {
-      background-color: rgba(162, 173, 233, 0.08);
+      background-color: $bg-soft;
       margin-left: 12px;
       border-bottom: 2px solid $link-shadow;
 
@@ -734,13 +765,13 @@ main {
       }
     }
     select {
-      background-color: rgba(162, 173, 233, 0.08);
+      background-color: $bg-soft;
       margin-left: 12px;
       border-bottom: 2px solid $link-shadow;
-      color: $medium-text;
+      color: $text-medium;
 
       &:focus {
-        background-color: $light-text;
+        background-color: $text-light;
       }
     }
   }
@@ -751,7 +782,7 @@ main {
     width: 200px;
     padding: 6px 16px;
     margin: 6px 3%;
-    color: $bg-white;
+    color: $white;
     border-radius: $border-radius-small;
   }
 }
