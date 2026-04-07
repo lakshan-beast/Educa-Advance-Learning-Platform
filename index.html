@@ -74,7 +74,7 @@
           title="Menu"
           id="menu-btn"></i>
         <a href="#home" class="header-logo"
-          ><i class="fa-regular fa-circle"></i> educa.</a
+          ><i class="fa-regular fa-circle"></i> educa<span>.</span></a
         >
 
         <div class="header-navbar" id="header-navbar">
@@ -85,6 +85,9 @@
           <a href="#contacts">Contact us</a>
 
           <div class="header-copyrights">
+            <a href="#home" class="header-logo"
+              ><i class="fa-regular fa-circle"></i> educa<span>.</span></a
+            >
             <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
             <p>
               <i class="fa-regular fa-copyright"></i>
@@ -126,7 +129,7 @@
                 2500+ successful students. Join the most trusted learning
                 platform in Sri Lanka to achieve your dream 'A' grade.
               </p>
-
+              <!-- 
               <div class="stats-slider">
                 <div class="stats-slides">
                   <p class="slides-para">
@@ -143,18 +146,18 @@
                     <i class="fas fa-book-open"></i> free study materials
                   </p>
                 </div>
-              </div>
+              </div> -->
               <!-- slider show -->
 
               <div
                 class="home-buttons"
                 data-aos="fade-right"
                 data-aos-delay="300">
-                <a href="#resources" class="btn">
+                <a href="#resources" class="start-btn">
                   Get Started Now
                   <i class="fa-solid fa-rocket"></i
                 ></a>
-                <a href="#classes" class="btnx">
+                <a href="#classes" class="browse-btn">
                   Browse classes
                   <i class="fa-solid fa-arrow-right"></i
                 ></a>
@@ -182,7 +185,10 @@
 
         <div class="resources-container">
           <div class="resources-card" data-aos="fade-up" data-aos-delay="100">
-            <span class="card-badge" id="update">Updating</span>
+            <span class="card-badge card-badge-new">
+              <i class="fas fa-bolt"></i>new</span
+            >
+            <!-- new badge add after because daily update -->
             <img
               src="./assets/images/questions.webp"
               loading="lazy"
@@ -195,11 +201,13 @@
               skills.
             </p>
             <a href="#" class="btn" target="_blank" rel="noopener noreferrer"
-              >Today's Quesation</a
+              >Try Today's Quesation</a
             >
           </div>
           <div class="resources-card" data-aos="fade-up" data-aos-delay="200">
-            <span class="card-badge" id="">Updating</span>
+            <span class="card-badge card-badge-popular"
+              ><i class="fas fa-fire"></i>popular</span
+            >
             <img
               src="./assets/images/quizs.webp"
               loading="lazy"
@@ -212,11 +220,13 @@
               exmas.
             </p>
             <a href="#" class="btn" target="_blank" rel="noopener noreferrer"
-              >Start Quiz</a
+              >Start Quiz Now</a
             >
           </div>
           <div class="resources-card" data-aos="fade-up" data-aos-delay="300">
-            <span class="card-badge" id="">Updating</span>
+            <span class="card-badge card-badge-members"
+              ><i class="fas fa-crown"></i>Exclusive</span
+            >
             <img
               src="./assets/images/resources.webp"
               loading="lazy"
@@ -231,7 +241,9 @@
             >
           </div>
           <div class="resources-card" data-aos="fade-up" data-aos-delay="400">
-            <span class="card-badge" id="">Updating</span>
+            <span class="card-badge card-badge-free"
+              ><i class="fas fa-gift"></i>free</span
+            >
             <img
               src="./assets/images/study.webp"
               loading="lazy"
@@ -246,7 +258,9 @@
             >
           </div>
           <div class="resources-card" data-aos="fade-up" data-aos-delay="500">
-            <span class="card-badge" id="">Updating</span>
+            <span class="card-badge card-badge-verified"
+              ><i class="fas fa-circle-check"></i>Verified</span
+            >
             <img
               src="./assets/images/comments.webp"
               loading="lazy"
@@ -265,7 +279,9 @@
             id="result-check"
             data-aos="fade-up"
             data-aos-delay="600">
-            <span class="card-badge" id="">Updating</span>
+            <span class="card-badge card-badge-official"
+              ><i class="fas fa-medal"></i> Official</span
+            >
             <img
               src="./assets/images/results.webp"
               loading="lazy"
@@ -910,9 +926,9 @@
         </div>
 
         <!-- footer socail links  -->
-        <div class="socail-content footer-cards">
+        <div class="social-content footer-cards">
           <h3>Follow us</h3>
-          <div class="socail-links">
+          <div class="social-links">
             <a href="#" title="Facebook" target="_blank"
               ><i class="fa-brands fa-facebook"></i
             ></a>
