@@ -1,27 +1,69 @@
 // all btns buttun and buttons
-.btn,
+.start-btn,
+.browse-btn,
 button {
-  background-image: linear-gradient(
-    to right,
-    #f7786f 0%,
-    #484aee 51%,
-    #4e6ab9 100%
-  );
-  color: $bg-white;
-  box-shadow: 0px 0px 6px rgb(208, 208, 228);
-}
-.btn,
-button {
-  text-align: center;
-  transition: all 0.5s ease;
-  background-size: 200% auto;
-  display: block;
   outline: none;
   border: none;
+  display: block;
+  background-size: 200% auto;
+  transition: all 0.5s ease;
+  text-align: center;
+  box-shadow: 0px 0px 6px rgb(208, 208, 228);
 }
 
-.btn:hover,
+.start-btn {
+  background-image: linear-gradient(
+    to right,
+    #ff5a4e 0%,
+    #4548ff 51%,
+    #c0ccf3 100%
+  );
+  color: $white;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// .btn,
+// button {
+//   background-image: linear-gradient(
+//     to right,
+//     #ff5e53 0%,
+//     #474aff 51%,
+//     #5d70a5 100%
+//   );
+// }
+
+.browse-btn {
+  border: 1px solid $secondary-blue;
+  color: $secondary-blue;
+  transition: background 1s ease;
+
+  &:hover {
+    background-color: $blue-light;
+    color: $blue-medium;
+    border: none;
+  }
+}
+.start-btn:hover,
 button:hover {
   background-position: right center;
-  box-shadow: 0px 0px 8px rgb(208, 208, 228);
+  box-shadow: 0px 0px 8px rgb(203, 203, 241);
+}
+
+.resources-card a {
+  outline: none;
+  border: none;
+  display: block;
+  background-size: 200% auto;
+  transition: all 0.5s ease;
+  letter-spacing: 1px;
+  background: #a6bdff;
+
+  &:hover {
+    background-position: right center;
+    background: #4548ff;
+    color: #8aa9ff;
+  }
 }
