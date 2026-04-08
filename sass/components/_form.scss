@@ -2,7 +2,7 @@
 .form-container {
   border-radius: $border-radius-medium;
   width: 100%;
-  background-color: $bg-soft-blue;
+  background-color: $bg-soft;
   margin-top: 2rem;
   box-shadow: $shadow-medium;
 
@@ -18,8 +18,8 @@
     border-radius: 1rem;
 
     legend {
-      color: $h2-color;
-      font-size: $font-size-huge;
+      color: $secondary-blue;
+      // font-size: $font-size-huge;
       text-align: center;
       font-weight: $font-weight-semi-bold;
       margin-bottom: 2rem;
@@ -37,7 +37,7 @@
       // margin-left: 12px;
     }
     label {
-      color: $label-color;
+      color: $text-blue;
       // margin: 0 10px;
       padding: $padding-none;
       margin-top: 8px;
@@ -58,10 +58,10 @@
       background-color: rgba(162, 173, 233, 0.08);
       // margin-left: 12px;
       border-bottom: 2px solid $link-shadow;
-      color: $medium-text;
+      color: $text-medium;
 
       &:focus {
-        background-color: $light-text;
+        background-color: $text-light;
       }
     }
   }
