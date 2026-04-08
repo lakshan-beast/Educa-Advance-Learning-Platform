@@ -535,14 +535,68 @@ main {
   }
 }
 
-.teachers-container,
-.classes-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  @include respond(desktop) {
-    // grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+// .teachers-container,
+// .classes-content {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 1.5rem;
+//   @include respond(desktop) {
+//     // grid-template-columns: repeat(3, 1fr);
+//     gap: 1rem;
+//   }
+// }
+
+.testimonials {
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    padding: 0 1rem;
+
+    @include respond(tablet) {
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(desktop) {
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .comment-top {
+      h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        text-shadow: none;
+        i {
+          color: #2ecc71;
+        }
+      }
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    .comment-content {
+      p {
+        padding: 0;
+      }
+    }
+    .comment-rate {
+      display: flex;
+      color: #ffaa00;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px 0;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+  a {
+    width: 250px;
+    padding: 6px 16px;
+    margin: 6px 3%;
+    color: $white;
+    border-radius: $border-radius-small;
   }
 }
 
