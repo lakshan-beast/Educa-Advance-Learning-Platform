@@ -67,3 +67,12 @@ button:hover {
     color: #8aa9ff;
   }
 }
+
+.contact-btn {
+  background: linear-gradient(to right, #ff5e53 0%, #474aff 100%);
+
+  &:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ff5e5375 0%, #474aff80 100%);
+  }
+}
