@@ -58,8 +58,8 @@ footer {
 
 // footer logo
 .footer-logo {
-  .footer-logo {
-    color: $dark-purple;
+  .logo {
+    color: $white;
     font-size: 2rem;
     font-weight: bolder;
     font-family: "Exo 2";
@@ -71,7 +71,7 @@ footer {
     }
   }
   p {
-    font-size: $font-size-p;
+    font-size: $font-size-body;
   }
 }
 
@@ -93,6 +93,7 @@ footer {
   a {
     margin: 3px 1.2rem;
     text-decoration: underline;
+    text-transform: lowercase;
   }
   i {
     margin-right: 10px;
