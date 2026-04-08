@@ -148,8 +148,29 @@ button:hover {
 }
 .contact-btn:hover,
 .reviews-btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   background: linear-gradient(to right, rgba(255, 94, 83, 0.4588235294) 0%, rgba(71, 74, 255, 0.5019607843) 100%);
+}
+
+.class-btn,
+.fullclass-btn {
+  border-radius: 6px;
+  padding: 6px 0;
+  margin: 12px 0 0 0;
+  color: #ffffff;
+  width: 100%;
+}
+.class-btn:hover,
+.fullclass-btn:hover {
+  transform: scale(1.03);
+}
+
+.class-btn {
+  background-color: #484aee;
+}
+
+.fullclass-btn {
+  background: linear-gradient(to right, #ff5d51 0%, #494cff 100%);
 }
 
 .card {
@@ -906,9 +927,6 @@ main {
   margin-right: 8px;
 }
 
-.classes-content {
-  background-color: red;
-}
 .classes-content h3 {
   color: #1d10ac;
   text-align: center;
@@ -916,18 +934,18 @@ main {
 }
 .classes-content h4 {
   color: #484aee;
-  text-align: left;
-  margin: 0.8rem 0.3rem;
+  text-align: center;
+  margin: 0.8rem 0.5rem;
 }
 @media only screen and (min-width: 1200px) {
   .classes-content {
-    padding: 0 3rem;
+    padding: 1rem 3rem;
     flex-direction: column;
   }
 }
 .classes-content .classes-card {
-  padding: 0;
-  margin: 0;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
   gap: 6px;
   background: #ffffff;
   border-radius: 1rem;
@@ -944,17 +962,41 @@ main {
 }
 @media only screen and (min-width: 1200px) {
   .classes-content .classes-card {
+    width: 900px;
     flex-direction: row;
   }
   .classes-content .classes-card:nth-child(even) {
     flex-direction: row-reverse;
   }
 }
+.classes-content .classes-card .position {
+  background-color: #4e6ab9;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-align: center;
+  box-shadow: 0px 0px 6px #c6d4fa;
+  margin: 12px auto;
+  border-radius: 0 1rem;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  left: -3px;
+  top: -12px;
+}
+.classes-content .classes-card .position:nth-child(even) {
+  right: -3px;
+}
+.classes-content .classes-card .position i {
+  margin-right: 1rem;
+}
 .classes-content .classes-card .classes-column img {
   width: 100%;
   height: auto;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
+}
+.classes-content .classes-card .classes-column img:hover {
+  transform: scale(1.05);
 }
 .classes-content .classes-card .classes-info {
   display: flex;
@@ -963,7 +1005,7 @@ main {
   flex-direction: column;
   gap: 2px;
   flex-wrap: nowrap;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 .classes-content .classes-card .classes-info p {
   color: #4e6ab9;
@@ -977,15 +1019,6 @@ main {
   margin: 3px;
   border: none;
   box-shadow: none;
-}
-.classes-content .classes-card .classes-info span {
-  background-color: #484aee;
-  color: #ffffff;
-  padding: 8px 16px;
-  margin: 12px 0;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 0px 3px 6px #c6d4fa;
 }
 
 .more-btn {

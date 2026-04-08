@@ -293,7 +293,7 @@ main {
 
 // cources container
 .classes-content {
-  background-color: red;
+  // background-color: red;
 
   h3 {
     color: $secondary-blue;
@@ -302,18 +302,17 @@ main {
   }
   h4 {
     color: $dark-purple1;
-    text-align: left;
-    margin: 0.8rem 0.3rem;
+    text-align: center;
+    margin: 0.8rem 0.5rem;
   }
 
   @include respond(desktop) {
-    padding: 0 3rem;
-
+    padding: 1rem 3rem;
     flex-direction: column;
   }
   .classes-card {
-    padding: $padding-none;
-    margin: $margin-none;
+    padding: 1rem 0;
+    margin: 0.5rem 0;
     gap: 6px;
 
     background: $white;
@@ -324,10 +323,35 @@ main {
     position: relative;
 
     @include flex-custom(space-between, center);
+
     @include respond(desktop) {
+      width: 900px;
       flex-direction: row;
       &:nth-child(even) {
         flex-direction: row-reverse;
+      }
+    }
+    .position {
+      background-color: $blue-medium;
+      color: $white;
+      padding: 8px 16px;
+
+      text-align: center;
+      box-shadow: 0px 0px 6px $blue-light;
+
+      margin: 12px auto;
+      border-radius: 0 1rem;
+      text-align: center;
+      width: 50%;
+      position: absolute;
+      left: -3px;
+      top: -12px;
+
+      &:nth-child(even) {
+        right: -3px;
+      }
+      i {
+        margin-right: 1rem;
       }
     }
 
@@ -336,16 +360,19 @@ main {
       height: auto;
       border-radius: $border-radius-styles2;
       object-fit: cover;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     .classes-info {
       @include flex-custom(flex-start, stretch, column, 2px, nowrap);
-      padding: 0 2rem;
+      padding: 0 1rem;
 
       p {
         color: $blue-medium;
         margin: 0rem 0.3rem;
         text-align: left;
-        // font-size: $font-size-p;
 
         span {
           background: transparent;
@@ -355,15 +382,6 @@ main {
           border: none;
           box-shadow: none;
         }
-      }
-      span {
-        background-color: $dark-purple1;
-        color: $white;
-        padding: 8px 16px;
-        margin: 12px 0;
-        border-radius: $border-radius-medium;
-        text-align: center;
-        box-shadow: 0px 3px 6px $blue-light;
       }
     }
   }

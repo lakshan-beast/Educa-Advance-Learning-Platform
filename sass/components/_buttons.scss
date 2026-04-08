@@ -73,7 +73,26 @@ button:hover {
   background: linear-gradient(to right, #ff5e53 0%, #474aff 100%);
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     background: linear-gradient(to right, #ff5e5375 0%, #474aff80 100%);
   }
+}
+
+.class-btn,
+.fullclass-btn {
+  border-radius: 6px;
+  padding: 6px 0;
+  margin: 12px 0 0 0;
+  color: $white;
+  width: 100%;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.class-btn {
+  background-color: $dark-purple1;
+}
+.fullclass-btn {
+  background: linear-gradient(to right, #ff5d51 0%, #494cff 100%);
 }
