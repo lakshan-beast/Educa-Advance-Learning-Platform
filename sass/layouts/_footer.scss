@@ -9,7 +9,7 @@ footer {
   h3 {
     margin-bottom: 8px;
     color: $blue-light;
-    font-size: 1.17rem;
+    font-size: 1.2rem;
   }
   a {
     display: block;
@@ -49,7 +49,6 @@ footer {
     @include flex-custom(flex-start, flex-start, column);
 
     p {
-      font-size: 0.6rem;
       color: $text-medium;
       padding: 0;
       margin: 0;
@@ -60,7 +59,7 @@ footer {
 // footer logo
 .logo {
   color: $white;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bolder;
   font-family: "Exo 2";
 }
@@ -125,7 +124,6 @@ footer {
 .footer-legels {
   a {
     text-decoration: underline;
-    font-size: 0.7rem;
     margin: 0;
   }
 }
@@ -141,7 +139,6 @@ footer {
 .footer-copyrights {
   a {
     color: $dark-purple2;
-    font-size: 0.8rem;
     display: inline-block;
   }
 }
