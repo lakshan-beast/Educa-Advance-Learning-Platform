@@ -142,10 +142,12 @@ button:hover {
   color: #8aa9ff;
 }
 
-.contact-btn {
+.contact-btn,
+.reviews-btn {
   background: linear-gradient(to right, #ff5e53 0%, #474aff 100%);
 }
-.contact-btn:hover {
+.contact-btn:hover,
+.reviews-btn:hover {
   transform: scale(1.05);
   background: linear-gradient(to right, rgba(255, 94, 83, 0.4588235294) 0%, rgba(71, 74, 255, 0.5019607843) 100%);
 }
@@ -1157,62 +1159,98 @@ main {
   opacity: 1;
 }
 
-.teachers-container,
-.classes-content {
+.testimonials .testimonials-container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(1fr);
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 800px) {
+  .testimonials .testimonials-container {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (min-width: 1200px) {
-  .teachers-container,
-  .classes-content {
+  .testimonials .testimonials-container {
     gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+.testimonials .testimonials-container .comment-top h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: none;
+}
+.testimonials .testimonials-container .comment-top h2 i {
+  color: #2ecc71;
+}
+.testimonials .testimonials-container h3 {
+  font-size: 1.1rem;
+}
+.testimonials .testimonials-container .comment-content p {
+  padding: 0;
+}
+.testimonials .testimonials-container .comment-rate {
+  display: flex;
+  color: #ffaa00;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.testimonials .testimonials-container .comment-rate i {
+  font-size: 1rem;
+}
+.testimonials a {
+  width: 250px;
+  padding: 6px 16px;
+  margin: 6px 3%;
+  color: #ffffff;
+  border-radius: 0.5rem;
 }
 
 .info-column {
   margin: 0;
   margin-bottom: 16px;
-  height: 100%;
-  gap: 1.5rem;
   padding: 1rem;
   overflow: hidden;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  gap: 0;
-  flex-wrap: nowrap;
+}
+.info-column .information-conatiner {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 @media only screen and (min-width: 1200px) {
-  .info-column {
-    flex-direction: column;
+  .info-column .information-conatiner {
     gap: 3rem;
-  }
-  .info-column .info-content-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-.info-column h2 {
-  color: #1d10ac;
+.info-column .info-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
-.info-column h2 span {
-  color: #484aee;
-}
-.info-column p {
-  padding: 0 1rem;
-  color: #7b808f;
+.info-column .about-info {
   background-color: rgba(127, 145, 236, 0.0784313725);
-  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
 }
-.info-column .result-container,
-.info-column .about-status,
-.info-column .info-column p {
-  background-color: rgba(127, 145, 236, 0.0784313725);
+.info-column .about-info h4 {
+  color: #4e6ab9;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 12px 0;
+}
+.info-column .about-info h4 i {
+  margin-right: 6px;
+}
+.info-column .about-info p {
+  font-size: 1rem;
+  margin: 6px 0;
 }
 .info-column .about-status {
   display: grid;
@@ -1247,6 +1285,7 @@ main {
   font-weight: 800;
   color: #4e6ab9;
   text-align: center;
+  font-size: 1.5rem;
 }
 .info-column .about-status .box h3 {
   font-weight: 800;
@@ -1267,39 +1306,7 @@ main {
   border-top: 2px solid #e0e8ff;
   width: 100%;
 }
-.info-column .information-conatiner {
-  display: grid;
-  grid-template-columns: repeat(1);
-}
-@media only screen and (min-width: 800px) {
-  .info-column .information-conatiner {
-    grid-auto-flow: column;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-  }
-}
-.info-column .about-content {
-  border-radius: 0.5rem;
-}
-.info-column .about-content .about-cards {
-  margin-bottom: 6px;
-}
-.info-column .about-content .about-cards .about-card,
-.info-column .about-content .about-cards .contact-card {
-  background-color: rgba(127, 145, 236, 0.0784313725);
-}
-.info-column .about-content .about-cards .about-card h3,
-.info-column .about-content .about-cards .contact-card h3 {
-  color: #4e6ab9;
-  margin-left: 2rem;
-}
-.info-column .about-content .about-cards .about-card p,
-.info-column .about-content .about-cards .contact-card p {
-  color: #7b808f;
-  padding-left: 16px;
-  line-height: 1.5;
-}
-.info-column .about-content .result-container {
+.info-column .result-container {
   background: transparent;
   margin-top: 12px;
   background-color: rgba(127, 145, 236, 0.0784313725);
@@ -1308,35 +1315,37 @@ main {
   max-width: 500px;
   margin: 0 auto;
 }
-.info-column .about-content .result-container canvas {
+.info-column .result-container canvas {
   display: block;
   height: auto !important;
   width: 100% !important;
-  padding: 1rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
 }
-.info-column .about-content .result-container h3 {
-  margin: 0.8rem 0;
-  font-weight: 700;
+.info-column .result-container h3 {
+  margin: 1rem 0;
   text-align: center;
   border: none;
 }
-.info-column .about-content .result-container .year-results {
+.info-column .result-container .year-results {
   padding: 0.5rem;
   border-radius: 1rem;
   margin: 30px 0;
   text-align: center;
 }
-.info-column .about-content .result-container .year-results h2 {
+.info-column .result-container .year-results h2 {
   margin-bottom: 20px;
 }
-.info-column .contact-content {
+
+.contact-content {
   margin-top: 6px;
   border-radius: 0.5rem;
 }
-.info-column .contact-content .contact-cards {
+
+.contact-content .contact-cards {
   margin-bottom: 6px;
 }
-.info-column .contact-content .contact-cards .contact-card {
+.contact-content .contact-cards .contact-card {
   background-color: #ffffff;
   display: flex;
   justify-content: flex-start;
@@ -1345,20 +1354,20 @@ main {
   gap: 0;
   flex-wrap: nowrap;
 }
-.info-column .contact-content .contact-cards .contact-card h3 {
+.contact-content .contact-cards .contact-card h3 {
   margin: 0px auto;
   padding: 9px;
   border-radius: 0.5rem;
   color: #4e6ab9;
 }
-.info-column .contact-content .contact-cards .contact-card p,
-.info-column .contact-content .contact-cards .contact-card a {
+.contact-content .contact-cards .contact-card p,
+.contact-content .contact-cards .contact-card a {
   color: #4e6ab9;
   padding-left: 16px;
   background-color: #f7f7f7;
   width: 100%;
 }
-.info-column .contact-content .contact-cards .contact-card i {
+.contact-content .contact-cards .contact-card i {
   margin-right: 12px;
 }
 
