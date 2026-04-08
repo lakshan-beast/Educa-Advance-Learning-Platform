@@ -549,47 +549,50 @@ main {
 .info-column {
   margin: 0;
   margin-bottom: 16px;
-  height: 100%;
-  gap: 1.5rem;
   padding: 1rem;
   overflow: hidden;
   width: 100%;
+  // background-color: #2ecc71;
 
-  @include flex-custom(space-around, center, column);
+  .information-conatiner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 
-  @include respond(desktop) {
+    @include respond(desktop) {
+      gap: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .info-content-left {
+    display: flex;
     flex-direction: column;
-    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .about-info {
+    background-color: $bg-soft;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: $shadow-medium;
+    border-radius: $border-radius-medium;
 
-    .info-content-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: flex-start;
+    h4 {
+      color: $blue-medium;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 12px 0;
+
+      i {
+        margin-right: 6px;
+      }
+    }
+    p {
+      font-size: $font-size-body;
+      margin: 6px 0;
     }
   }
 
-  h2 {
-    color: $secondary-blue;
-    // font-size: $font-size-h2;
-
-    span {
-      color: $dark-purple1;
-    }
-  }
-  p {
-    // font-size: $font-size-p;
-    padding: 0 1rem;
-    color: $text-medium;
-
-    background-color: $bg-soft;
-    border-radius: 0.5rem;
-  }
-  .result-container,
-  .about-status,
-  .info-column p {
-    background-color: $bg-soft;
-  }
   .about-status {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -615,12 +618,11 @@ main {
         font-weight: 800;
         color: $blue-medium;
         text-align: center;
-        // font-size: 1.8rem;
+        font-size: $border-radius-large;
       }
       h3 {
         font-weight: $font-weight-extra-bold;
         text-align: center;
-        // font-size: 1.5rem;
         margin: 0.3rem;
         color: $primary-orange;
         font-weight: 800;
@@ -631,7 +633,6 @@ main {
         font-weight: 600;
         margin: 0;
         text-align: center;
-        // font-size: $font-size-p;
         color: rgba(30, 80, 161, 0.5);
         font-weight: 600;
         margin: 0;
@@ -642,109 +643,70 @@ main {
     }
   }
 
-  .information-conatiner {
-    display: grid;
-    grid-template-columns: repeat(1);
+  .result-container {
+    background: transparent;
+    margin-top: 12px;
+    background-color: $bg-soft;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 
-    @include respond(tablet) {
-      grid-auto-flow: column;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      // padding: 2rem;
-    }
-  }
-
-  .about-content {
-    border-radius: $border-radius-small;
-  }
-  .about-content {
-    .about-cards {
-      margin-bottom: 6px;
-      .about-card,
-      .contact-card {
-        background-color: $bg-soft;
-
-        h3 {
-          color: $blue-medium;
-          margin-left: $margin-xlarge;
-        }
-        p {
-          color: $text-medium;
-          padding-left: 16px;
-          // font-size: $font-size-p;
-          line-height: 1.5;
-        }
-      }
+    canvas {
+      display: block;
+      height: auto !important;
+      width: 100% !important;
+      padding: 1rem 0;
+      margin: 1rem 0;
     }
 
-    .result-container {
-      background: transparent;
-      margin-top: 12px;
-      background-color: $bg-soft;
-      border-radius: 0.5rem;
-      width: 100%;
+    h3 {
+      margin: 1rem 0;
+      text-align: center;
+      border: none;
+    }
 
-      max-width: 500px;
-      margin: 0 auto;
+    .year-results {
+      padding: 0.5rem;
+      border-radius: $border-radius-medium;
+      margin: 30px 0;
+      text-align: center;
 
-      canvas {
-        display: block;
-        height: auto !important;
-        width: 100% !important;
-        padding: 1rem;
+      h2 {
+        margin-bottom: 20px;
       }
+    }
+  }
+}
+
+.contact-content {
+  margin-top: 6px;
+  border-radius: $border-radius-small;
+}
+.contact-content {
+  .contact-cards {
+    margin-bottom: 6px;
+    .contact-card {
+      background-color: $white;
+
+      @include flex-custom(flex-start, flex-start, column);
 
       h3 {
-        margin: 0.8rem 0;
-        // font-size: $font-size-h3;
-        font-weight: $font-weight-bold;
-        text-align: center;
-        border: none;
+        margin: 0px auto;
+        padding: 9px;
+        border-radius: $border-radius-small;
+        color: $blue-medium;
       }
-
-      .year-results {
-        padding: 0.5rem;
-        border-radius: $border-radius-medium;
-        margin: 30px 0;
-        text-align: center;
-
-        h2 {
-          margin-bottom: 20px;
-        }
+      p,
+      a {
+        color: $blue-medium;
+        padding-left: 16px;
+        // font-size: $font-size-p;
+        background-color: $text-light;
+        width: 100%;
       }
-    }
-  }
-
-  .contact-content {
-    margin-top: 6px;
-    border-radius: $border-radius-small;
-  }
-
-  .contact-content {
-    .contact-cards {
-      margin-bottom: 6px;
-      .contact-card {
-        background-color: $white;
-
-        @include flex-custom(flex-start, flex-start, column);
-
-        h3 {
-          margin: 0px auto;
-          padding: 9px;
-          border-radius: $border-radius-small;
-          color: $blue-medium;
-        }
-        p,
-        a {
-          color: $blue-medium;
-          padding-left: 16px;
-          // font-size: $font-size-p;
-          background-color: $text-light;
-          width: 100%;
-        }
-        i {
-          margin-right: 12px;
-        }
+      i {
+        margin-right: 12px;
       }
     }
   }
