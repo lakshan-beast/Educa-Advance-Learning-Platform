@@ -360,7 +360,7 @@ button:hover {
   transition: right 0.5s ease-in-out;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 0;
   flex-wrap: nowrap;
@@ -872,13 +872,24 @@ main {
   padding: 0;
 }
 .resources-container .resources-card a {
-  box-shadow: 0px 0px 6px rgba(92, 92, 231, 0.397);
+  box-shadow: 0px 0px 16px rgba(92, 92, 231, 0.397);
   margin-top: auto;
   border-radius: 0 0;
-  padding: 3px 30px;
-  margin-top: auto;
-  margin-bottom: 6px;
-  border-radius: 3px;
+  padding: 8px 0px;
+  /* margin-top: auto; */
+  /* margin-bottom: 6px; */
+  /* border-radius: 3px 0 1rem 0; */
+  position: relative;
+  bottom: 0;
+  /* margin: auto -0rem 0rem auto; */
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
+  color: #ffffff;
+  background: #f7786f;
+}
+.resources-container .resources-card a:hover {
+  opacity: 0.8;
+  border-top: 2px solid #4e6ab9;
 }
 
 .card-badge {
@@ -906,6 +917,9 @@ main {
 .card-badge.card-badge-popular {
   color: #1d10ac;
   background: rgb(255, 251, 0);
+}
+.card-badge.card-badge-popular i {
+  color: red;
 }
 .card-badge.card-badge-new {
   background: red;
@@ -947,6 +961,8 @@ main {
   padding: 1rem 0;
   margin: 0.5rem 0;
   gap: 6px;
+  max-width: 700px;
+  width: 100%;
   background: #ffffff;
   border-radius: 1rem;
   box-shadow: 0px 1px 8px #c6d4fa;
@@ -975,25 +991,24 @@ main {
   padding: 8px 16px;
   text-align: center;
   box-shadow: 0px 0px 6px #c6d4fa;
-  margin: 12px auto;
-  border-radius: 0 1rem;
+  margin: 12px auto 0px auto;
+  border-radius: 6px;
   text-align: center;
-  width: 50%;
-  position: absolute;
-  left: -3px;
-  top: -12px;
-}
-.classes-content .classes-card .position:nth-child(even) {
-  right: -3px;
 }
 .classes-content .classes-card .position i {
   margin-right: 1rem;
 }
 .classes-content .classes-card .classes-column img {
   width: 100%;
+  max-width: 800px;
   height: auto;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
+}
+@media only screen and (min-width: 1200px) {
+  .classes-content .classes-card .classes-column img {
+    max-width: 100%;
+  }
 }
 .classes-content .classes-card .classes-column img:hover {
   transform: scale(1.05);
@@ -1035,13 +1050,7 @@ main {
   border-radius: 2rem;
   padding: 12px 25px;
   width: auto;
-  margin: 1rem auto;
-}
-
-.teachers p {
-  color: #4e6ab9;
-  padding: 0 1rem;
-  margin: 1rem 0;
+  margin: 0rem auto;
 }
 
 .teachers-container .teacher-card {
@@ -1055,54 +1064,35 @@ main {
   margin-bottom: 1rem;
   border-radius: 1rem;
   box-shadow: 0px 4px 15px #c6d4fa;
-}
-.teachers-container .teacher-card img {
-  width: 100%;
-  min-width: 100%;
-  height: 100%;
-  background-origin: border-box;
-  background-attachment: fixed;
-  background-clip: border-box;
-  background-size: auto;
-  background-position: center;
-  object-fit: cover;
-}
-.teachers-container .teacher-card .share {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: nowrap;
+  gap: 0;
   flex-wrap: nowrap;
-  margin: 1rem;
-  padding: 0 1rem;
-  width: 100%;
-}
-.teachers-container .teacher-card .share a {
-  border-radius: 1rem;
-  background-color: transparent;
-  color: #5454d9;
-  padding: 0.5rem;
-}
-.teachers-container .teacher-card .share a:hover {
-  scale: 1.05;
-  transition: 0.3s ease;
-}
-.teachers-container .teacher-card .share i {
-  padding-left: 2rem;
 }
 .teachers-container .teacher-card .teacher-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: nowrap;
-  flex-wrap: 0;
+  gap: 0;
+  flex-wrap: nowrap;
   margin: 0;
-  padding: 1rem 0.5rem;
   padding: 0.8rem 0.5rem;
-  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
   width: 100%;
+}
+.teachers-container .teacher-card .teacher-info mark {
+  background-color: #7f91ec;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.teachers-container .teacher-card .teacher-info mark:hover {
+  background-color: #26136d;
+  border-radius: 5px;
+  border-bottom: 2px solid #f7786f;
 }
 .teachers-container .teacher-card .teacher-info h3 {
   text-align: center;
@@ -1111,6 +1101,8 @@ main {
 }
 .teachers-container .teacher-card .teacher-info h3 span {
   color: #26136d;
+  color: #4e6ab9;
+  font-size: 1.2rem;
 }
 .teachers-container .teacher-card .teacher-info .teacher-details {
   display: flex;
@@ -1131,20 +1123,12 @@ main {
   flex-direction: column;
 }
 .teachers-container .teacher-card .teacher-info .teacher-details p span {
-  padding: 6px 15px;
+  padding: 6px;
   color: #7f91ec;
-  margin-left: 0.4rem;
   background: #ffffff;
   border-radius: 6px;
 }
 
-.teacher-card {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
 .teacher-card__img-box {
   position: relative;
   height: 30rem;
@@ -1152,11 +1136,12 @@ main {
 }
 .teacher-card__img-box img {
   width: 100%;
-  height: 100%;
+  max-width: 800px;
+  height: auto;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-.teacher-card__socails {
+.teacher-card__socials {
   display: flex;
   gap: 0.5rem;
   transition: all 0.4s ease;
@@ -1168,16 +1153,17 @@ main {
   padding: 0.7rem 0.5rem 0 0.5rem;
   width: 100%;
 }
-.teacher-card__socails i {
+.teacher-card__socials i {
   background-color: #5454d9;
   color: #ffffff;
-  padding: 0.3rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   border-radius: 8px;
 }
-.teacher-card__socails i:hover {
+.teacher-card__socials i:hover {
   background-color: #4e6ab9;
 }
-.teacher-card__socails i a {
+.teacher-card__socials i a {
   width: 45px;
   height: 45px;
 }
@@ -1411,10 +1397,6 @@ main {
   margin-top: 2rem;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: grid;
-  grid-template-columns: repeat(1fr, 1.5fr);
-  grid-auto-flow: row;
-  gap: 1rem;
 }
 @media only screen and (min-width: 1200px) {
   .contact-container {

@@ -6,7 +6,7 @@ const totalStats = document.querySelectorAll(".slides-para").length;
 setInterval(() => {
   sliderIndex++;
   if (sliderIndex >= totalStats) sliderIndex = 0;
-  statsSlides.style.transform = `translateX(-${sliderIndex * 100}%)`;
+  // statsSlides.style.transform = `translateX(-${sliderIndex * 100}%)`;
 }, 3000);
 
 // commentsLoadAni

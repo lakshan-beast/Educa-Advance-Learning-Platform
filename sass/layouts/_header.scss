@@ -73,7 +73,7 @@
   background-color: $white;
   z-index: 1100;
   transition: right 0.5s ease-in-out;
-  @include flex-custom(flex-start, flex-start, column, 0, nowrap);
+  @include flex-custom(flex-start, center, column, 0, nowrap);
 
   a {
     margin: 0.5rem 0;
