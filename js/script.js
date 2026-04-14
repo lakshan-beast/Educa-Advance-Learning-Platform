@@ -257,25 +257,60 @@ overlay.onclick = () => {
 };
 
 // email.js
+// (function () {
+
+//   emailjs.init("cYLtOC68Gl3EQUFD-"); // pbulic key
+// })();
+
+// window.onload = function () {
+//   document
+//     .getElementById("contact-form")
+//     .addEventListener("submit", function (event) {
+//       event.preventDefault();
+
+//       emailjs
+//         .sendForm("service_4c6wctj", "template_6fgr6ym", this) // service id / template id
+//         .then(
+//           function () {
+//             alert("Send");
+//           },
+//           function (error) {
+//             alert("not");
+//           },
+//         );
+//     });
+// };
+
+// 1. EmailJS SDK එක මුලින්ම Initialize කරන්න (ඔබේ Public Key එක මෙතැනට දාන්න)
 (function () {
-  emailjs.init("cYLtOC68Gl3EQUFD-"); // pbulic key
+  emailjs.init("cYLtOC68Gl3EQUFD-");
 })();
 
 window.onload = function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
+  const contactForm = document.getElementById("contact-form");
 
-      emailjs
-        .sendForm("service_4c6wctj", "template_6fgr6ym", this) // service id / template id
-        .then(
-          function () {
-            alert("Send");
-          },
-          function (error) {
-            alert("not");
-          },
-        );
-    });
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Submit button එක disable කිරීම (දෙපාරක් එබීම වැළැක්වීමට)
+    const submitBtn = contactForm.querySelector(".contact-btn");
+    submitBtn.value = "Sending...";
+    submitBtn.disabled = true;
+
+    // Form එකේ තියෙන දත්ත EmailJS වෙත යැවීම
+    // ලිපිනයන්: Service ID, Template ID
+    emailjs.sendForm("service_4c6wctj", "template_6fgr6ym", this).then(
+      function () {
+        alert("පණිවිඩය සාර්ථකව යැවුණා! ස්තූතියි.");
+        contactForm.reset(); // Form එක හිස් කිරීම
+        submitBtn.value = "Send My Message";
+        submitBtn.disabled = false;
+      },
+      function (error) {
+        alert("කණගාටුයි, දෝෂයක් සිදු වුණා: " + JSON.stringify(error));
+        submitBtn.value = "Send My Message";
+        submitBtn.disabled = false;
+      },
+    );
+  });
 };
