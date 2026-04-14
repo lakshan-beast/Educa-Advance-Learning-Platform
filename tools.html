@@ -7,7 +7,7 @@
 
     <title>Educa - Study Tools</title>
 
-    <link rel="stylesheet" href="sass/pages/_tools.scss" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <link
       rel="stylesheet"
@@ -26,32 +26,43 @@
     <!-- header section start  -->
     <header id="header" class="header-section">
       <nav class="header">
-        <div class="header-menu">
-          <i
-            class="fa-solid fa-bars-staggered"
-            title="Menu"
-            id="menu-btn"
-            class="menu-btn"></i>
-        </div>
+        <i
+          class="fa-solid fa-bars-staggered menu-btn"
+          title="Menu"
+          id="menu-btn"></i>
         <a href="#home" class="header-logo"
-          ><i class="fa-regular fa-circle"></i> educa.</a
+          ><i class="fa-regular fa-circle"></i> educa<span>.</span></a
         >
+
         <div class="header-navbar" id="header-navbar">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
+          <a href="#resources">Resources</a>
           <a href="#classes">Classes</a>
           <a href="#teachers">Teachers</a>
           <a href="#about">About us</a>
           <a href="#contacts">Contact us</a>
+
+          <div class="header-copyrights">
+            <a href="#home" class="header-logo"
+              ><i class="fa-regular fa-circle"></i> educa<span>.</span></a
+            >
+            <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
+            <p>
+              <i class="fa-regular fa-copyright"></i>
+              <span id="year"></span> All rights reserved.
+            </p>
+            <p>
+              This template is made with <i class="fa-solid fa-heart"></i> by
+              <a
+                href="http://github.com/lakshan-beast"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Lakshan</a
+              >
+            </p>
+          </div>
         </div>
         <div class="header-actions">
-          <a href="login page/html/login.html" class="btn" id="formBtn"
-            >sign in</a
-          >
-          <a href="login page/html/login.html" class="btn" id="profile"
-            >k
-            <i class="fa-solid fa-user"></i>
-          </a>
+          <a href="#" class="sign-btn" id="formBtn">sign in</a>
         </div>
       </nav>
     </header>
@@ -201,11 +212,19 @@
     </div>
 
     <!-- footer content start  -->
-    <footer data-aos-offset="300">
+    <footer>
       <div class="footer-contents" data-aos="fade-down">
+        <!-- footer logo -->
         <div class="footer-logo footer-cards">
-          <a href="#home" class="logo"
-            ><i class="fa-solid fa-earth"></i> educa.</a
+          <a href="#home" class="logo">
+            <i class="fa-regular fa-circle"></i>
+            <!-- <img
+              src="./assets/images/logo.jpg"
+              alt="Logo"
+              width="20px"
+              height="20px"
+              style="border-radius: 6px" /> -->
+            educa<span>.</span></a
           >
           <p>
             Helping students learn better with simple lessons & smart study
@@ -213,70 +232,71 @@
           </p>
         </div>
 
+        <!-- footer quick link  -->
+        <div class="footer-links footer-cards">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#resources">Resources</a>
+          <a href="#classes">Classes</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#about">About us</a>
+          <a href="#contacts">Contact</a>
+        </div>
+
+        <!-- footer resources  -->
+        <div class="footer-links footer-cards">
+          <h3>Resources</h3>
+          <a href="#">Teaching Philosoply</a>
+          <a href="#">Papers</a>
+          <a href="#">Daily Quiz</a>
+          <a href="#">Study Tools</a>
+          <a href="https://www.doenets.lk/examresults">O/L Results</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+
+        <!-- footer contact us -->
         <div class="contact-info footer-cards">
           <h3>Contact us</h3>
           <h4>Maths Class</h4>
-          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
+          <a href="tel:+" class="btnx"
+            ><i class="fas fa-mobile"></i>+941234567</a
+          >
           <a href="mailto:educa@maths.com"
             ><i class="fas fa-envelope"></i>educa@maths.com</a
           >
           <h4>Science Class</h4>
-          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
-          <a href="mailto:educa@maths.com"
+          <a href="tel:+" class="btnx"
+            ><i class="fas fa-mobile"></i>+941234567</a
+          >
+          <a href="mailto:educa@science.com"
             ><i class="fas fa-envelope"></i>educa@science.com</a
           >
           <h4>English Class</h4>
-          <a href="#" class="btnx"><i class="fas fa-mobile"></i>+941234567</a>
-          <a href="mailto:educa@maths.com"
+          <a href="tel:+" class="btnx"
+            ><i class="fas fa-mobile"></i>+941234567</a
+          >
+          <a href="mailto:educa@english.com"
             ><i class="fas fa-envelope"></i>educa@english.com</a
           >
         </div>
 
-        <div class="footer-links footer-cards">
-          <h3>Quick Links</h3>
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#classes">Classes</a>
-          <a href="#teachers">Teachers</a>
-          <a href="#about">About</a>
-          <a href="#contacts">Contact</a>
-        </div>
-
-        <div class="footer-links footer-cards">
-          <h3>Resourves</h3>
-          <a href="#">Notes</a>
-          <a href="#">Papers</a>
-          <a href="#">Daily Qiuz</a>
-          <a href="#">Study Tools</a>
-          <a href="#">O/L Results</a>
-          <a href="#">Reviews</a>
-        </div>
-
-        <div class="socail-links footer-cards">
+        <!-- footer socail links  -->
+        <div class="social-content footer-cards">
           <h3>Follow us</h3>
-          <a href="#" title="Facebook" target="_blank"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="#" title="Instagram" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="#" title="Whatsapp" target="_blank"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
-          <a href="#" title="Email" target="_blank"
-            ><i class="fa-regular fa-envelope"></i
-          ></a>
-        </div>
-
-        <div class="badge-levelup footer-cards">
-          <h3>for Sri Lanka | O/L Students</h3>
-          <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
-          <p><i class="fa-regular fa-square-check"></i>Verified Links</p>
-          <p>
-            <i class="fa-solid fa-laptop-code"></i>last updated
-            <span>2026 March</span>
-          </p>
-          <p><i class="fa-solid fa-users"></i>Comminuty reviewed</p>
+          <div class="social-links">
+            <a href="#" title="Facebook" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" title="Instagram" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" title="Whatsapp" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="#" title="Email" target="_blank"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </div>
         </div>
       </div>
       <!-- end first footer-contents -->
@@ -286,11 +306,25 @@
         class="footer-contents footer-bottom"
         id="footer-bottom"
         data-aos="fade-right">
+        <!-- footer legel options  -->
         <div class="footer-legels footer-cards">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
         </div>
 
+        <!-- footer level up  -->
+        <div class="badge-levelup footer-cards">
+          <h3>for Sri Lanka | O/L Students</h3>
+          <p><i class="fa-solid fa-rocket"></i>Version 1.0</p>
+          <p><i class="fa-regular fa-square-check"></i>Verified Links</p>
+          <p>
+            <i class="fa-solid fa-laptop-code"></i>last updated
+            <span>2026 April</span>
+          </p>
+          <p><i class="fa-solid fa-users"></i>Community reviewed</p>
+        </div>
+
+        <!-- footer copy rights  -->
         <div class="footer-copyrights footer-cards">
           <p>
             <i class="fa-regular fa-copyright"></i> <span id="year"></span> All
@@ -325,6 +359,6 @@
 
     <!-- custom js file link -->
     <script src="../js/script.js"></script>
-    <script src="./js/tools.js"></script>
+    <script src="./js/tools scripts/tasks.js"></script>
   </body>
 </html>

@@ -255,3 +255,27 @@ overlay.onclick = () => {
   barsIcon.classList.toggle("fa-bars-staggered");
   barsIcon.classList.toggle("fa-xmark");
 };
+
+// email.js
+(function () {
+  emailjs.init("cYLtOC68Gl3EQUFD-"); // pbulic key
+})();
+
+window.onload = function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      emailjs
+        .sendForm("service_4c6wctj", "template_6fgr6ym", this) // service id / template id
+        .then(
+          function () {
+            alert("Send");
+          },
+          function (error) {
+            alert("not");
+          },
+        );
+    });
+};
